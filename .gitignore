@@ -139,8 +139,7 @@ Thumbs.db
 # ts build
 **/tsconfig.tsbuildinfo
 
-docs/deployment
-docs/deployment-options
+docs/
 
 # DB dumps
 dump

@@ -61,8 +61,6 @@ export class AuthService {
       },
       staleTime: 5 * 60 * 1000, // 5 minutes
       retry: false,
-      // Only run query if we have initial data or a token exists
-      enabled: initialData !== undefined || (typeof window !== 'undefined' && !!TokenManager.getToken()),
     });
   }
 

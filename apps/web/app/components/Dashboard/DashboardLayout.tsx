@@ -54,8 +54,15 @@ export default function DashboardLayout({ children, lang, initialUser }: Dashboa
     }
   };
 
-  // Redirect to appropriate default page based on role
+  // Handle authentication and redirects
   useEffect(() => {
+    // Redirect to login if not authenticated
+    if (!isLoading && !user) {
+      router.push(`/${lang}/login`);
+      return;
+    }
+
+    // Redirect to appropriate default page based on role
     if (!isLoading && user && pathname === `/${lang}/dashboard`) {
       const defaultPath = isAdmin ? `/${lang}/dashboard/members` : `/${lang}/dashboard/matches`;
       router.replace(defaultPath);
@@ -63,7 +70,7 @@ export default function DashboardLayout({ children, lang, initialUser }: Dashboa
   }, [user, isLoading, pathname, router, lang, isAdmin]);
 
   // Show loading skeleton while fetching user
-  if (isLoading || !user) {
+  if (isLoading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
@@ -74,8 +81,9 @@ export default function DashboardLayout({ children, lang, initialUser }: Dashboa
     );
   }
 
+  // If no user, will redirect to login via useEffect
   if (!user) {
-    return null; // Will redirect via useEffect
+    return null;
   }
 
   const navigationItems: NavigationItem[] = [
