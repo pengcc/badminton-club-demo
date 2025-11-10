@@ -141,3 +141,6 @@ Thumbs.db
 
 docs/deployment
 docs/deployment-options
+
+# DB dumps
+dump

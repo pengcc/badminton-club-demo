@@ -18,13 +18,18 @@ const nextConfig = {
       },
     ];
   },
+  // Only use rewrites in development
   async rewrites() {
-    return [
-      {
-        source: '/api/:path*',
-        destination: 'http://localhost:5000/api/:path*',
-      },
-    ];
+    if (process.env.NODE_ENV === 'development') {
+      const devApiOrigin = process.env.DEV_API_ORIGIN || 'http://localhost:3003';
+      return [
+        {
+          source: '/api/:path*',
+          destination: `${devApiOrigin}/api/:path*`,
+        },
+      ];
+    }
+    return [];
   },
   images: {
     domains: ['localhost'],

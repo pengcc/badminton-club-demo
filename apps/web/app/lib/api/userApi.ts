@@ -34,6 +34,7 @@ export const getUsersWithFilters = async (
     '/users/filter',
     { params }
   );
+  // API returns the paginated response directly (not wrapped in ApiResponse)
   return response.data;
 };
 
