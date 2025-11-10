@@ -1,0 +1,278 @@
+{
+  "club_name": "DEMO CLUB",
+
+  "club_introduction": "The club was established in 2009. Since then, we have been committed to providing a good environment for badminton fans, for both advanced players and beginners. Currently we have around 60 members. To help players improve their skills, regular training sessions take place every week.",
+  "address": "Address",
+  "club_address_placeholder": "123 Sports Avenue, City, State, 12345",
+  "contact_info_placeholder": "Email: info@badmintonclub.com\nPhone: (123) 456-7890",
+  "login": "Login",
+  "name": "Name",
+  "email": "Email",
+  "register": "Register",
+  "logout": "Logout",
+  "home": "Home",
+  "dashboard": "Dashboard",
+  "about_us": "About Us",
+  "training_time": "Training Times",
+  "trial_training": "Trial Training",
+  "documents": "Documents",
+  "about_p1": "Welcome to the German-Chinese Badminton Club. Here you will find information about the club and our latest developments.",
+  "about_p2": "The German-Chinese Badminton Club was founded in 2009. We currently have about 60 members. We have always strived to provide badminton fans with a good playing environment. Here you will find your own playing partners, whether you are a beginner or an advanced player. The club has weekly training times to help everyone learn more about badminton and improve their techniques.",
+  "about_p3": "If you share our passion for badminton, simply contact us and join us.",
+  "about_p4": "📣 For the upcoming season, we are currently looking for strong players for our teams.",
+  "contact_p1": "Please contact us if you have any questions.",
+  "contact_club": "For club questions",
+  "contact_membership": "For trial training and membership applications",
+  "trial_p1": "Unfortunately, we cannot accept new players into our club at the moment due to capacity reasons. Exceptions: We are looking for players for our teams with competition experience.",
+  "trial_p2": "If you are interested in a trial training, please be sure to contact us in advance.",
+  "membership_application": "Membership Application",
+  "sepa_mandate": "SEPA Direct Debit Mandate",
+  "fee_regulation": "Fee Regulation",
+  "statutes": "Statutes",
+  "imprint": "Imprint",
+  "monday": "Monday",
+  "tuesday": "Tuesday",
+  "wednesday": "Wednesday",
+  "thursday": "Thursday",
+  "friday": "Friday",
+  "saturday": "Saturday",
+  "sunday": "Sunday",
+  "privacy_policy": "Privacy Policy",
+   "navigation": {
+    "about": "About us",
+    "training": "Training time",
+    "trial": "Trial training",
+    "contact": "Contact",
+    "documents": "Documents",
+    "language": "Language"
+  },
+  "hero": {
+    "welcome": "Welcome to Our Badminton Club"
+  },
+  "visitUs": {
+    "title": "Visit Us",
+    "description": "You are warmly welcome! To ensure your visit goes smoothly, we kindly ask you to schedule an appointment in advance. This helps us make sure that the court is not occupied by events and that there is enough capacity available for you.",
+    "openingHours": "Opening Hours",
+    "locations": {
+      "main": {
+        "name": "Sports Hall: TU",
+        "address": "Muster Ufer 19, 10963 Berlin"
+      },
+      "secondary": {
+        "name": "Sports Hall: PU",
+        "address": "Muster Str. 16, 10409 Berlin"
+      }
+    }
+  },
+  "updates": {
+    "title": "Announcements",
+    "type" : {
+      "info": "Info",
+      "important": "Important",
+      "warning": "Warning"
+    },
+    "1": {
+      "title": "New season starts in September",
+      "content": "For the upcoming season, we are currently looking for strong players for our teams.",
+      "date": "2025.08.01"
+    },
+    "2": {
+      "title": "Limited Capacity for Trial Training",
+      "content": "In order to continue providing optimal conditions for all members, our capacities are currently exhausted. Therefore, we are temporarily unable to accept new members. Good news for competitive players: You are exempt! If you would like to strengthen us with your experience, we look forward to seeing you!",
+      "date": "2025.09.01"
+    }
+  },
+  "about": {
+    "title": "About Our Club",
+    "content": "The German-Chinese Badminton Club was founded in 2009. We currently have approximately 60 members. We have always been committed to providing badminton fans with an excellent playing environment. Here, whether you are a beginner or an advanced player, you will find your own playing partners. The club offers weekly training sessions to help everyone learn more about badminton and improve their skills."
+  },
+
+  "contact": {
+    "title": "Contact",
+    "subtitle": "We'd love to hear from you",
+    "description": "If you have any questions, please feel free to contact us. Reach out through any of the following methods:",
+    "general": {
+      "title": "General Inquiries",
+      "description": "For questions about club information"
+    },
+    "membership": {
+      "title": "Membership & Trial Training",
+      "description": "For trial training and membership applications"
+    },
+    "buttons": {
+      "trial_training": "Request Trial Training",
+      "membership": "Become a Member"
+    }
+  },
+  "footer": {
+    "imprint": "Imprint",
+    "privacy": "Data Privacy",
+    "copyright": "All rights reserved."
+  },
+  "applicationForm": {
+    "contactInfo": "Contact Information",
+    "submissionMode": "What would you like to submit?",
+    "submissionModes": {
+      "full": "Complete membership application",
+      "membershipOnly": "Membership application only",
+      "sepaOnly": "SEPA direct debit mandate only"
+    },
+    "downloadDocuments": "Download Documents",
+    "downloadDocumentsDesc": "Download your membership documents for printing and signing.",
+    "downloadApplication": "Download Application Form",
+    "downloadSEPA": "Download SEPA Mandate",
+    "downloadPackage": "Download Complete Package",
+    "personalInfo": "Personal Information",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "email": "Email Address",
+    "address": "Street Address",
+    "postalCode": "Postal Code",
+    "city": "City",
+    "country": "Country",
+    "nationality": "Nationality",
+    "phone": "Phone Number",
+    "birthday": "Date of Birth",
+    "gender": "Gender",
+    "genderOptions": {
+      "female": "Female",
+      "male": "Male",
+      "other": "Other"
+    },
+    "emergencyContact": "Emergency Contact",
+    "emergencyContactName": "Contact Name",
+    "emergencyContactRelationship": "Relationship",
+    "emergencyContactPhone": "Contact Phone",
+    "membershipType": "Membership Type",
+    "membershipTypeSelection": "Select Membership Type",
+    "membershipTypes": {
+      "regular": "Regular Membership",
+      "student": "Student Membership"
+    },
+    "sepaTitle": "SEPA Direct Debit Information",
+    "addSEPADebit": "Add SEPA Direct Debit Information",
+    "debitFrequency": "Payment Frequency",
+    "debitOptions": {
+      "quarterly": "Quarterly",
+      "annually": "Annually"
+    },
+    "accountHolderNote": "Account holder information (if different from applicant):",
+    "accountHolderSelection": "Account Holder Information",
+    "accountHolderDetails": "Account Holder Details",
+    "accountHolderOptions": {
+      "same": "Same as applicant",
+      "different": "Different from applicant"
+    },
+    "accountHolderPreview": "Account holder information (based on applicant details):",
+    "accountHolderName": "Name",
+    "accountHolderFirstName": "Account Holder First Name",
+    "accountHolderLastName": "Account Holder Last Name",
+    "accountHolderAddress": "Account Holder Address",
+    "bankName": "Bank Name",
+    "bic": "BIC/Swift Code",
+    "iban": "IBAN",
+    "submit": "Submit Application",
+    "submitting": "Submitting...",
+    "submitted": "Application Submitted!",
+    "submittedMessage": "Thank you for your membership application. We will review it and get back to you soon."
+  },
+  "validation": {
+    "required": "This field is required",
+    "email": "Please enter a valid email address",
+    "phone": "Please enter a valid phone number",
+    "birthday": "Please enter a valid date (minimum age 14)",
+    "invalidIBAN": "Please enter a valid German IBAN",
+    "invalidName": "Please enter a valid name"
+  },
+  "pages": {
+    "membership": "Membership Application",
+    "trialTraining": "Trial Training",
+    "imprint": "Imprint"
+  },
+  "trialTraining": {
+    "title": "Trial Training Request",
+    "subtitle": "Join us for a trial session to experience our badminton community",
+    "playerLevel": "Player Level",
+    "playerLevelOptions": {
+      "beginner": {
+        "label": "Beginner",
+        "description": "I'm new to badminton or have very limited experience"
+      },
+      "experienced": {
+        "label": "Experienced Player",
+        "description": "I have significant badminton experience and play regularly"
+      },
+      "selfAssessed": {
+        "label": "Self-Assessment",
+        "description": "I'd like to assess my level during the trial"
+      }
+    },
+    "notices": {
+      "beginnerNotice": {
+        "title": "Limited Capacity Notice",
+        "message": "Unfortunately, we cannot accept new beginners at the moment due to capacity reasons. We are currently looking for experienced players for our teams."
+      },
+      "experiencedInfo": {
+        "title": "Welcome Experienced Players!",
+        "message": "Great! We're actively looking for strong players to join our teams. Please provide your contact details so we can get in touch."
+      }
+    },
+    "form": {
+      "fullName": "Full Name",
+      "email": "Email Address",
+      "message": "Additional Message",
+      "messagePlaceholder": "Tell us about your badminton experience, preferred playing times, or any questions you have...",
+      "submit": "Submit Request",
+      "submitting": "Submitting..."
+    },
+    "success": {
+      "title": "Request Submitted Successfully!",
+      "message": "Thank you for your interest. We will contact you soon with more information about trial training opportunities.",
+      "submitAnother": "Submit Another Request"
+    }
+  },
+  "errors": {
+    "404": "Page not found",
+    "500": "Internal server error",
+    "network": "Network error",
+    "unauthorized": "Unauthorized access",
+    "forbidden": "Access forbidden"
+  },
+  "player": {
+    "skillLevel": "Skill Level",
+    "skillLevels": {
+      "beginner": "Beginner",
+      "intermediate": "Intermediate",
+      "advanced": "Advanced",
+      "professional": "Professional"
+    },
+    "positions": {
+      "singles": "Singles",
+      "doubles": "Doubles",
+      "mixed-doubles": "Mixed Doubles"
+    },
+    "roles": {
+      "player": "Player",
+      "captain": "Captain",
+      "vice-captain": "Vice Captain"
+    },
+    "ranking": "Ranking",
+    "availability": "Availability",
+    "isActive": "Active Player",
+    "teamAffiliations": "Team Memberships"
+  },
+  "team": {
+    "teamType": "Team Type",
+    "teamTypes": {
+      "competitive": "Competitive",
+      "recreational": "Recreational",
+      "youth": "Youth",
+      "mixed": "Mixed"
+    },
+    "maxMembers": "Maximum Members",
+    "captain": "Captain",
+    "viceCaptain": "Vice Captain",
+    "members": "Members",
+    "description": "Description"
+  }
+}

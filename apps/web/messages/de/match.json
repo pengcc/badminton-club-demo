@@ -1,0 +1,131 @@
+{
+  "title": "Spiele Verwaltung",
+  "status": {
+    "scheduled": "Geplant",
+    "in_progress": "Im Gange",
+    "completed": "Abgeschlossen",
+    "cancelled": "Abgesagt"
+  },
+  "actions": {
+    "edit": "Spiel bearbeiten",
+    "delete": "Spiel löschen",
+    "saveLineup": "Aufstellung speichern",
+    "viewDetails": "Details ansehen",
+    "scheduleMatch": "Spiel planen",
+    "close": "Schließen",
+    "save": "Speichern",
+    "cancel": "Abbrechen"
+  },
+  "matchCard": {
+    "editLineup": "Aufstellung",
+    "updateMatch": "Bearbeiten",
+    "delete": "Löschen"
+  },
+  "modals": {
+    "scheduleMatch": {
+      "title": "Neues Spiel planen",
+      "matchDetails": "Spiel Details",
+      "date": "Datum",
+      "time": "Uhrzeit",
+      "location": "Ort",
+      "homeTeam": "Heimmannschaft",
+      "opponent": "Gegnermannschaft",
+      "placeholders": {
+        "selectTeam": "Team auswählen",
+        "enterOpponent": "Gegnerteam-Namen eingeben",
+        "enterLocation": "Spielort eingeben (z.B., Sporthalle A, Adresse)"
+      },
+      "validation": {
+        "dateRequired": "Spieldatum ist erforderlich",
+        "datePast": "Spieldatum darf nicht in der Vergangenheit liegen",
+        "timeRequired": "Spielzeit ist erforderlich",
+        "locationRequired": "Ort ist erforderlich",
+        "teamRequired": "Bitte ein Team auswählen"
+      },
+      "success": "Spiel erfolgreich geplant!",
+      "error": "Fehler beim Planen des Spiels"
+    },
+    "editMatch": {
+      "title": "Spiel bearbeiten",
+      "basicInfo": "Grundinformationen",
+      "matchStatus": "Spielstatus",
+      "matchScores": "Spielstand",
+      "homeScore": "Heimteam Punkte",
+      "awayScore": "Auswärtsteam Punkte",
+      "cancellationReason": "Absagegrund",
+      "cancellationPlaceholder": "Grund für die Absage eingeben (z.B. Schlechtes Wetter, Halle nicht verfügbar...)",
+      "unsavedChanges": "Sie haben ungespeicherte Änderungen. Möchten Sie wirklich schließen?",
+      "success": "Spiel erfolgreich aktualisiert!",
+      "error": "Fehler beim Aktualisieren des Spiels"
+    },
+    "matchDetails": {
+      "title": "Spiel Details",
+      "matchInfo": "Spielinformationen",
+      "venue": "Spielort",
+      "versus": "gegen",
+      "lineup": "Aufstellung",
+      "noLineup": "Noch keine Aufstellung zugewiesen",
+      "playerAvailability": "Spielerverfügbarkeit",
+      "available": "Verfügbar",
+      "unavailable": "Nicht verfügbar",
+      "cancellationInfo": "Absageinformationen",
+      "cancelled": "Dieses Spiel wurde abgesagt"
+    },
+    "matchLineup": {
+      "title": "Spiel Aufstellung",
+      "versus": "gegen",
+      "tbd": "Noch offen",
+      "matchDetails": "Spiel Details",
+      "lineupValidationWarnings": "Aufstellungs-Validierungswarnungen",
+      "warnings": {
+        "tooManyPositions": "ist {count} Positionen zugewiesen (maximal 2 erlaubt)",
+        "player": "Spieler"
+      },
+      "lineupPositions": {
+        "men_singles": "Herren Einzel",
+        "women_singles": "Damen Einzel",
+        "men_doubles": "Herren Doppel",
+        "women_doubles": "Damen Doppel",
+        "mixed_doubles": "Mixed Doppel",
+        "men_singles_1": "Herren Einzel 1",
+        "men_singles_2": "Herren Einzel 2",
+        "men_singles_3": "Herren Einzel 3",
+        "mens_doubles_1": "Herren Doppel 1",
+        "mens_doubles_2": "Herren Doppel 2"
+      },
+      "genderRequirements": {
+        "maleFemale": "Mann/Frau",
+        "femaleMale": "Frau/Mann"
+      },
+      "selectPlayer": "Spieler auswählen",
+      "noPlayersAvailable": "Keine verfügbaren Spieler",
+      "success": "Aufstellung erfolgreich gespeichert!",
+      "error": "Fehler beim Speichern der Aufstellung",
+      "unknownTeam": "Unbekanntes Team",
+      "unknownError": "Unbekannter Fehler"
+    }
+  },
+  "table": {
+    "date": "Datum",
+    "time": "Uhrzeit",
+    "homeTeam": "Heimteam",
+    "opponent": "Gegner",
+    "location": "Ort",
+    "status": "Status",
+    "score": "Punkte",
+    "lineup": "Aufstellung",
+    "actions": "Aktionen",
+    "noMatches": "Keine Spiele gefunden",
+    "lineupSlots": "Aufstellungsplätze"
+  },
+  "confirmation": {
+    "deleteMatch": "Sind Sie sicher, dass Sie dieses Spiel löschen möchten? Diese Aktion kann nicht rückgängig gemacht werden.",
+    "deleteSuccess": "Spiel erfolgreich gelöscht!",
+    "deleteError": "Fehler beim Löschen des Spiels"
+  },
+  "common": {
+    "loading": "Lade Spiele...",
+    "error": "Fehler beim Laden der Spiele",
+    "retry": "Wiederholen"
+  }
+}

@@ -1,0 +1,275 @@
+{
+  "club_name": "DEMO CLUB",
+  "club_introduction": "Der DEMO Badminton CLUB wurde in 2009 gegründet. Derzeit haben wir ca. 60 Mitglieder. Wir haben uns stets dafür eingesetzt, die Badminton-Fans ein gutes Spielumfeld zu bieten. Hier findest du, egal ob du Anfänger oder fortgeschrittene Spieler bist, deine eigenen Spielpartner. Der Club hat jede Woche Trainingszeiten, um allen dabei zu helfen, mehr über Badminton zu lernen und ihre Techniken zu verbessern.",
+  "address": "Adresse",
+  "club_address_placeholder": "123 Sportallee, Stadt, Bundesland, 12345",
+  "contact_info_placeholder": "E-Mail: info@badmintonclub.com\nTelefon: (123) 456-7890",
+  "login": "Anmelden",
+  "register": "Registrieren",
+  "logout": "Abmelden",
+  "home": "Startseite",
+  "dashboard": "Dashboard",
+  "about_us": "Über uns",
+  "training_time": "Trainingszeiten",
+  "trial_training": "Probetraining",
+  "documents": "Unterlagen",
+  "about_p1": "Willkommen beim Deutsch-Chinesischen Badminton Verein. Hier erfahren Sie über die Informationen des Vereins und unsere neuesten Entwicklungen.",
+  "about_p2": "Der Deutsch-Chinesische Badminton Verein wurde in 2009 gegründet. Derzeit haben wir ca. 60 Mitglieder. Wir haben uns stets dafür eingesetzt, die Badminton-Fans ein gutes Spielumfeld zu bieten. Hier findest du, egal ob du Anfänger oder fortgeschrittene Spieler bist, deine eigenen Spielpartner. Der Club hat jede Woche Trainingszeiten, um allen dabei zu helfen, mehr über Badminton zu lernen und ihre Techniken zu verbessern.",
+  "about_p3": "Wenn du wie wir die Leidenschaft für Badminton hast, wende dich einfach an uns und schließe dich uns an.",
+  "about_p4": "📣 Für die kommende Saison, suchen wir derzeit nach starken Spieler:innen für unsere Mannschaften.",
+  "contact_p1": "Bitte melde dich bei uns, falls du Fragen hast.",
+  "contact_club": "Für Fragen zum Verein",
+  "contact_membership": "Für Probetraining und Mitgliedsantrag",
+  "trial_p1": "Leider können wir momentan wegen Kapazitätsgründen keine neue Spieler*innen in unserem Verein aufnehmen. Ausnahmen: Wir suchen Spieler*innen für unsere Mannschaften mit Wettkampferfahrung.",
+  "trial_p2": "Wenn du Interesse an einem Probetraining hast, bitte kontaktiere uns unbedingt vorab.",
+  "membership_application": "Aufnahmeantrag",
+  "sepa_mandate": "SEPA Basis Lastschriftmandat",
+  "fee_regulation": "Beitragsordnung",
+  "statutes": "Satzung",
+  "imprint": "Impressum",
+  "privacy_policy": "Datenschutz",
+  "monday": "Montag",
+  "tuesday": "Dienstag",
+  "wednesday": "Mittwoch",
+  "thursday": "Donnerstag",
+  "friday": "Freitag",
+  "saturday": "Samstag",
+  "sunday": "Sonntag",
+  "navigation": {
+    "about": "Über uns",
+    "training": "Trainingszeiten",
+    "trial": "Probitraining",
+    "contact": "Kontakt",
+    "documents": "Dokumente",
+    "language": "Sprache"
+  },
+  "hero": {
+    "welcome": "Willkommen in unserem Badminton Verein"
+  },
+  "visitUs": {
+    "title": "Besuchen Sie uns",
+    "description": "Herzlich willkommen! Damit Ihr Besuch garantiert klappt, bitten wir um vorherige Terminvereinbarung.So stellen wir sicher, dass das Spielfeld nicht durch Veranstaltungen belegt ist und genügend Kapazität für Sie frei ist.",
+    "openingHours": "Öffnungszeiten",
+    "locations": {
+      "main": {
+        "name": "Sporthalle: TU",
+        "address": "Muster Ufer 19, 10963 Berlin"
+      },
+      "secondary": {
+        "name": "Sporthalle: PU",
+        "address": "Muster Str. 16, 10409 Berlin"
+      }
+    }
+  },
+  "updates": {
+    "title": "Ankündigungen",
+    "type" : {
+      "info": "Info",
+      "important": "Wichtig",
+      "warning": "Warnung"
+    },
+    "1": {
+      "title": "Neue Saison beginnt im September",
+      "content": "Für die kommende Saison, suchen wir derzeit nach starken Spieler:innen für unsere Mannschaften.",
+      "date": "01.08.2025"
+    },
+    "2": {
+      "title": "Begrenzte Kapazität für Probetraining",
+      "content": "Um allen Mitgliedern weiterhin optimale Bedingungen zu bieten, sind unsere Kapazitäten derzeit leider erschöpft. Daher können wir vorläufig keine neuen Mitglieder aufnehmen. Gute Nachricht für Wettkampfspieler*innen: Sie sind ausgenommen! Wenn Sie uns mit Ihrer Erfahrung verstärken möchten, freuen wir uns sehr auf Sie!",
+      "date": "01.09.2025"
+    }
+  },
+  "about": {
+    "title": "Über unseren Club",
+    "content": "Der Deutsch-Chinesischer Badminton Verein wurde in 2009 gegründet. Derzeit haben wir ca. 60 Mitglieder. Wir haben uns stets dafür eingesetzt, die Badminton-Fans ein gutes Spielumfeld zu bieten. Hier findest du, egal ob du Anfänger oder fortgeschrittene Spieler bist, deine eigenen Spielpartner. Der Club hat jede Woche Trainingszeiten, um allen dabei zu helfen, mehr über Badminton zu lernen und ihre Techniken zu verbessern."
+  },
+  "contact": {
+    "title": "Kontakt",
+    "subtitle": "Wir freuen uns von Ihnen zu hören",
+    "description": "Bei Fragen stehen wir Ihnen gerne zur Verfügung. Kontaktieren Sie uns über einen der folgenden Wege:",
+    "general": {
+      "title": "Allgemeine Anfragen",
+      "description": "Für Informationen über den Club"
+    },
+    "membership": {
+      "title": "Mitgliedschaft & Probitraining",
+      "description": "Für Probitraining und Mitgliedsanträge"
+    },
+    "buttons": {
+      "trial_training": "Probetraining anfragen",
+      "membership": "Mitglied werden"
+    }
+  },
+  "footer": {
+    "imprint": "Impressum",
+    "privacy": "Datenschutz",
+    "copyright": "Alle Rechte vorbehalten."
+  },
+  "applicationForm": {
+    "contactInfo": "Kontaktinformationen",
+    "submissionMode": "Was möchten Sie einreichen?",
+    "submissionModes": {
+      "full": "Vollständiger Mitgliedsantrag",
+      "membershipOnly": "Nur Mitgliedsantrag",
+      "sepaOnly": "Nur SEPA-Lastschriftmandat"
+    },
+    "downloadDocuments": "Dokumente herunterladen",
+    "downloadDocumentsDesc": "Laden Sie Ihre Mitgliedschaftsdokumente zum Drucken und Unterschreiben herunter.",
+    "downloadApplication": "Aufnahmeantrag herunterladen",
+    "downloadSEPA": "SEPA-Mandat herunterladen",
+    "downloadPackage": "Komplettpaket herunterladen",
+    "personalInfo": "Persönliche Informationen",
+    "firstName": "Vorname",
+    "lastName": "Nachname",
+    "email": "E-Mail-Adresse",
+    "address": "Straße und Hausnummer",
+    "postalCode": "Postleitzahl",
+    "city": "Stadt",
+    "country": "Land",
+    "nationality": "Staatsangehörigkeit",
+    "phone": "Telefonnummer",
+    "birthday": "Geburtsdatum",
+    "gender": "Geschlecht",
+    "genderOptions": {
+      "female": "Weiblich",
+      "male": "Männlich",
+      "other": "Divers"
+    },
+    "emergencyContact": "Notfallkontakt",
+    "emergencyContactName": "Name des Kontakts",
+    "emergencyContactRelationship": "Verwandtschaftsverhältnis",
+    "emergencyContactPhone": "Telefonnummer des Kontakts",
+    "membershipType": "Mitgliedschaftstyp",
+    "membershipTypeSelection": "Mitgliedschaftstyp auswählen",
+    "membershipTypes": {
+      "regular": "Reguläre Mitgliedschaft",
+      "student": "Studenten-Mitgliedschaft"
+    },
+    "sepaTitle": "SEPA-Lastschriftverfahren",
+    "addSEPADebit": "SEPA-Lastschriftinformationen hinzufügen",
+    "debitFrequency": "Zahlungsrhythmus",
+    "debitOptions": {
+      "quarterly": "Vierteljährlich",
+      "annually": "Jährlich"
+    },
+    "accountHolderNote": "Kontoinhaberangaben (falls abweichend vom Antragsteller):",
+    "accountHolderSelection": "Kontoinhaber-Informationen",
+    "accountHolderDetails": "Kontoinhaber-Details",
+    "accountHolderOptions": {
+      "same": "Gleich wie Antragsteller",
+      "different": "Abweichend vom Antragsteller"
+    },
+    "accountHolderPreview": "Kontoinhaber-Informationen (basierend auf Antragstellerdaten):",
+    "accountHolderName": "Name",
+    "accountHolderFirstName": "Vorname des Kontoinhabers",
+    "accountHolderLastName": "Nachname des Kontoinhabers",
+    "accountHolderAddress": "Adresse des Kontoinhabers",
+    "bankName": "Name der Bank",
+    "bic": "BIC/Swift-Code",
+    "iban": "IBAN",
+    "submit": "Antrag absenden",
+    "submitting": "Wird gesendet...",
+    "submitted": "Antrag eingereicht!",
+    "submittedMessage": "Vielen Dank für Ihren Mitgliedsantrag. Wir werden ihn prüfen und uns bald bei Ihnen melden."
+  },
+  "validation": {
+    "required": "Dieses Feld ist erforderlich",
+    "email": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
+    "phone": "Bitte geben Sie eine gültige Telefonnummer ein",
+    "birthday": "Bitte geben Sie ein gültiges Datum ein (Mindestalter 14)",
+    "invalidIBAN": "Bitte geben Sie eine gültige deutsche IBAN ein",
+    "invalidName": "Bitte geben Sie einen gültigen Namen ein",
+    "minLength": "Name muss mindestens 2 Zeichen haben"
+  },
+  "pages": {
+    "membership": "Mitgliedsantrag",
+    "trialTraining": "Probetraining",
+    "imprint": "Impressum"
+  },
+  "trialTraining": {
+    "title": "Probetraining anfragen",
+    "subtitle": "Besuchen Sie uns für eine Probestunde und erleben Sie unsere Badminton-Gemeinschaft",
+    "playerLevel": "Spielerniveau",
+    "playerLevelOptions": {
+      "beginner": {
+        "label": "Anfänger",
+        "description": "Ich bin neu im Badminton oder habe sehr wenig Erfahrung"
+      },
+      "experienced": {
+        "label": "Erfahrener Spieler",
+        "description": "Ich habe viel Badminton-Erfahrung und spiele regelmäßig"
+      },
+      "selfAssessed": {
+        "label": "Selbsteinschätzung",
+        "description": "Ich möchte mein Niveau während des Probetrainings einschätzen"
+      }
+    },
+    "notices": {
+      "beginnerNotice": {
+        "title": "Hinweis zur begrenzten Kapazität",
+        "message": "Leider können wir momentan wegen Kapazitätsgründen keine neuen Anfänger aufnehmen. Wir suchen derzeit erfahrene Spieler für unsere Mannschaften."
+      },
+      "experiencedInfo": {
+        "title": "Willkommen erfahrene Spieler!",
+        "message": "Großartig! Wir suchen aktiv starke Spieler für unsere Mannschaften. Bitte teilen Sie uns Ihre Kontaktdaten mit, damit wir uns bei Ihnen melden können."
+      }
+    },
+    "form": {
+      "fullName": "Vollständiger Name",
+      "email": "E-Mail-Adresse",
+      "message": "Zusätzliche Nachricht",
+      "messagePlaceholder": "Erzählen Sie uns von Ihrer Badminton-Erfahrung, bevorzugten Spielzeiten oder Fragen, die Sie haben...",
+      "submit": "Anfrage absenden",
+      "submitting": "Wird gesendet..."
+    },
+    "success": {
+      "title": "Anfrage erfolgreich gesendet!",
+      "message": "Vielen Dank für Ihr Interesse. Wir werden uns bald mit weiteren Informationen über Probetraining-Möglichkeiten bei Ihnen melden.",
+      "submitAnother": "Eine weitere Anfrage senden"
+    }
+  },
+  "errors": {
+    "404": "Seite nicht gefunden",
+    "500": "Interner Serverfehler",
+    "network": "Netzwerkfehler",
+    "unauthorized": "Unbefugter Zugriff",
+    "forbidden": "Zugriff verweigert"
+  },
+  "player": {
+    "skillLevel": "Spielstärke",
+    "skillLevels": {
+      "beginner": "Anfänger",
+      "intermediate": "Fortgeschritten",
+      "advanced": "Erfahren",
+      "professional": "Profi"
+    },
+    "positions": {
+      "singles": "Einzel",
+      "doubles": "Doppel",
+      "mixed-doubles": "Mixed-Doppel"
+    },
+    "roles": {
+      "player": "Spieler",
+      "captain": "Kapitän",
+      "vice-captain": "Vize-Kapitän"
+    },
+    "ranking": "Ranking",
+    "availability": "Verfügbarkeit",
+    "isActive": "Aktiver Spieler",
+    "teamAffiliations": "Team-Mitgliedschaften"
+  },
+  "team": {
+    "teamType": "Team-Typ",
+    "teamTypes": {
+      "competitive": "Wettkampf",
+      "recreational": "Freizeit",
+      "youth": "Jugend",
+      "mixed": "Gemischt"
+    },
+    "maxMembers": "Maximale Mitglieder",
+    "captain": "Kapitän",
+    "viceCaptain": "Vize-Kapitän",
+    "members": "Mitglieder",
+    "description": "Beschreibung"
+  }
+}

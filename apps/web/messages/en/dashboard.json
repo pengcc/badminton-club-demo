@@ -1,0 +1,200 @@
+{
+  "dashboard": "Dashboard",
+  "overview": "Overview",
+  "members": "Members",
+  "teams": "Teams",
+  "matches": "Matches",
+  "settings": "Settings",
+  "total_members": "Total Members",
+  "total_teams": "Total Teams",
+  "upcoming_matches": "Upcoming Matches",
+  "active_players": "Active Players",
+  "recent_activity": "Recent Activity",
+  "no_recent_activity": "No recent activity",
+  "add_member": "Add Member",
+  "add_team": "Add Team",
+  "add_match": "Add Match",
+  "all": "All",
+  "active": "Active",
+  "players": "Players",
+  "search_members": "Search members...",
+  "firstName": "First Name",
+  "lastName": "Last Name",
+  "email": "Email",
+  "role": "Role",
+  "status": "Status",
+  "actions": "Actions",
+  "edit": "Edit",
+  "delete": "Delete",
+  "inactive": "Inactive",
+  "search_teams": "Search teams...",
+  "search_matches": "Search matches...",
+  "scheduled": "Scheduled",
+  "completed": "Completed",
+  "opponent_unknown": "Opponent TBA",
+  "lineup_slots": "lineup slots",
+
+  "modals": {
+    "addMember": {
+      "title": "Add New Member",
+      "subtitle": "Create a new member profile",
+      "basicInfo": "Basic Information",
+      "membershipDetails": "Membership Details"
+    },
+    "editMember": {
+      "title": "Edit Member",
+      "subtitle": "Update member information",
+      "basicInfo": "Basic Information",
+      "membershipDetails": "Membership Details"
+    },
+    "batchUpdate": {
+      "title": "Batch Update Members",
+      "subtitle": "Update multiple members at once",
+      "updateSettings": "Update Settings",
+      "selectionSummary": "Selection Summary",
+      "searchMembers": "Search Members",
+      "selectAll": "Select All",
+      "selected": "selected",
+      "member_one": "member",
+      "member_other": "members",
+      "noMembersFound": "No members found matching your criteria"
+    }
+  },
+
+  "form": {
+    "fullName": "Full Name",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "emailAddress": "Email Address",
+    "gender": "Gender",
+    "dateOfBirth": "Date of Birth",
+    "membershipStatus": "Membership Status",
+    "registerAsPlayer": "Register as Player",
+    "isPlayer": "Player Status",
+
+    "placeholders": {
+      "enterFullName": "Enter full name",
+      "enterFirstName": "Enter first name",
+      "enterLastName": "Enter last name",
+      "enterEmail": "Enter email address",
+      "searchByNameOrEmail": "Search by name or email...",
+      "allStatus": "All Status",
+      "allRoles": "All Roles",
+      "allMembers": "All Members",
+      "allGenders": "All Genders"
+    },
+
+    "validation": {
+      "nameRequired": "Name is required",
+      "emailRequired": "Email is required",
+      "emailInvalid": "Please enter a valid email address"
+    }
+  },
+
+  "gender": {
+    "male": "Male",
+    "female": "Female",
+    "nonBinary": "Non-binary"
+  },
+
+  "roles": {
+    "admin": "Admin",
+    "member": "Member",
+    "guestPlayer": "Guest Player",
+    "applicant": "Applicant"
+  },
+
+  "membershipStatus": {
+    "active": "Active",
+    "inactive": "Inactive",
+    "suspended": "Suspended"
+  },
+
+  "filter": {
+    "playersOnly": "Players Only",
+    "nonPlayersOnly": "Non-Players Only"
+  },
+
+  "batchUpdate": {
+    "updateMembershipStatus": "Update Membership Status",
+    "updatePlayerStatus": "Update Player Status",
+    "updateRole": "Update Role",
+    "yesIsPlayer": "Yes, is Player",
+    "noNotPlayer": "No, not Player",
+    "updateSummaryPrefix": "Set status to:",
+    "updatePlayerSummaryPrefix": "Set player status to:",
+    "updateRoleSummaryPrefix": "Set role to:",
+    "yes": "Yes",
+    "no": "No"
+  },
+
+  "buttons": {
+    "cancel": "Cancel",
+    "save": "Save",
+    "saving": "Saving...",
+    "addMember": "Add Member",
+    "saveChanges": "Save Changes",
+    "update": "Update",
+    "updating": "Updating...",
+    "addingMember": "Adding Member..."
+  },
+
+  "alerts": {
+    "selectAtLeastOne": "Please select at least one member to update.",
+    "specifyUpdateField": "Please specify at least one field to update.",
+    "createMemberFailed": "Failed to create member",
+    "updateMemberFailed": "Failed to update member"
+  },
+
+  "matchCenter": {
+    "title": "Match Center",
+    "tabs": {
+      "players": "Players",
+      "upcomingMatches": "Upcoming Matches",
+      "matchHistory": "Match History",
+      "matchManagement": "Match Management",
+      "teamManagement": "Team Management"
+    }
+  },
+
+  "player": {
+    "role": {
+      "player": "Player",
+      "captain": "Captain",
+      "vice-captain": "Vice Captain"
+    }
+  },
+
+  "teamManagement": {
+    "title": "Team Management",
+    "createTeam": "Create Team",
+    "editTeam": "Edit Team",
+    "deleteTeam": "Delete Team",
+    "confirmDelete": "Are you sure you want to delete this team?",
+    "stats": {
+      "totalPlayers": "Total Players",
+      "male": "Male",
+      "female": "Female",
+      "matchLevel": "Match Level"
+    },
+    "fields": {
+      "name": "Team Name",
+      "matchLevel": "Match Level"
+    },
+    "placeholders": {
+      "noTeams": "No teams found. Create one to get started.",
+      "enterTeamName": "Enter team name",
+      "matchLevel": "Match Level"
+    },
+    "validation": {
+      "nameRequired": "Team name is required",
+      "nameMinLength": "Team name must be at least 2 characters",
+      "nameMaxLength": "Team name must not exceed 100 characters"
+    },
+    "errors": {
+      "createFailed": "Failed to create team",
+      "updateFailed": "Failed to update team",
+      "deleteFailed": "Failed to delete team"
+    }
+  }
+}

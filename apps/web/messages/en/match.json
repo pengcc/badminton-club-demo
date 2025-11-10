@@ -1,0 +1,129 @@
+{
+  "title": "Match Management",
+  "status": {
+    "scheduled": "Scheduled",
+    "in_progress": "In Progress",
+    "completed": "Completed",
+    "cancelled": "Cancelled"
+  },
+  "actions": {
+    "edit": "Edit Match",
+    "delete": "Delete Match",
+    "saveLineup": "Save Lineup",
+    "viewDetails": "View Details",
+    "scheduleMatch": "Schedule Match",
+    "close": "Close",
+    "save": "Save",
+    "cancel": "Cancel"
+  },
+  "matchCard": {
+    "editLineup": "Lineup",
+    "updateMatch": "Edit",
+    "delete": "Delete"
+  },
+  "modals": {
+    "scheduleMatch": {
+      "title": "Schedule New Match",
+      "matchDetails": "Match Details",
+      "date": "Date",
+      "time": "Time",
+      "location": "Location",
+      "homeTeam": "Home Team",
+      "opponent": "Opponent Team",
+      "placeholders": {
+        "selectTeam": "Select a team",
+        "enterOpponent": "Enter opponent team name",
+        "enterLocation": "Enter match location (e.g., Sports Hall A, Address)"
+      },
+      "validation": {
+        "dateRequired": "Match date is required",
+        "datePast": "Match date cannot be in the past",
+        "timeRequired": "Match time is required",
+        "locationRequired": "Location is required",
+        "teamRequired": "Please select a team"
+      },
+      "success": "Match scheduled successfully!",
+      "error": "Failed to schedule match"
+    },
+    "editMatch": {
+      "title": "Edit Match",
+      "basicInfo": "Basic Information",
+      "matchStatus": "Match Status",
+      "matchScores": "Match Scores",
+      "homeScore": "Home Score",
+      "awayScore": "Away Score",
+      "cancellationReason": "Cancellation Reason",
+      "cancellationPlaceholder": "Enter reason for cancellation (e.g., Bad weather, venue unavailable...)",
+      "unsavedChanges": "You have unsaved changes. Are you sure you want to close?",
+      "success": "Match updated successfully!",
+      "error": "Failed to update match"
+    },
+    "matchDetails": {
+      "title": "Match Details",
+      "matchInfo": "Match Information",
+      "venue": "Venue",
+      "versus": "vs",
+      "lineup": "Lineup",
+      "noLineup": "No lineup assigned yet",
+      "playerAvailability": "Player Availability",
+      "available": "Available",
+      "unavailable": "Unavailable",
+      "cancellationInfo": "Cancellation Information",
+      "cancelled": "This match has been cancelled"
+    },
+    "matchLineup": {
+      "title": "Match Lineup",
+      "versus": "vs",
+      "tbd": "TBD",
+      "matchDetails": "Match Details",
+      "lineupValidationWarnings": "Lineup Validation Warnings",
+      "warnings": {
+        "tooManyPositions": "is assigned to {count} positions (max 2 allowed)",
+        "player": "Player"
+      },
+      "lineupPositions": {
+        "men_singles_1": "Men's Singles 1",
+        "men_singles_2": "Men's Singles 2",
+        "men_singles_3": "Men's Singles 3",
+        "women_singles": "Women's Singles",
+        "mens_doubles_1": "Men's Doubles 1",
+        "mens_doubles_2": "Men's Doubles 2",
+        "women_doubles": "Women's Doubles",
+        "mixed_doubles": "Mixed Doubles"
+      },
+      "genderRequirements": {
+        "maleFemale": "Male/Female",
+        "femaleMale": "Female/Male"
+      },
+      "selectPlayer": "Select Player",
+      "noPlayersAvailable": "No available players",
+      "success": "Lineup saved successfully!",
+      "error": "Failed to save lineup",
+      "unknownTeam": "Unknown Team",
+      "unknownError": "Unknown error"
+    }
+  },
+  "table": {
+    "date": "Date",
+    "time": "Time",
+    "homeTeam": "Home Team",
+    "opponent": "Opponent",
+    "location": "Location",
+    "status": "Status",
+    "score": "Score",
+    "lineup": "Lineup",
+    "actions": "Actions",
+    "noMatches": "No matches found",
+    "lineupSlots": "lineup slots"
+  },
+  "confirmation": {
+    "deleteMatch": "Are you sure you want to delete this match? This action cannot be undone.",
+    "deleteSuccess": "Match deleted successfully!",
+    "deleteError": "Failed to delete match"
+  },
+  "common": {
+    "loading": "Loading matches...",
+    "error": "Error loading matches",
+    "retry": "Retry"
+  }
+}

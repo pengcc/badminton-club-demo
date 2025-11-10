@@ -1,0 +1,15 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "types": ["jest", "node", "jest-environment-jsdom", "@testing-library/jest-dom"],
+    "noEmit": true
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "../**/*.ts",
+    "../**/*.tsx",
+    "../../global.d.ts"
+  ],
+  "exclude": []
+}

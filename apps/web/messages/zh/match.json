@@ -1,0 +1,129 @@
+{
+  "title": "比赛管理",
+  "status": {
+    "scheduled": "已安排",
+    "in_progress": "进行中",
+    "completed": "已完成",
+    "cancelled": "已取消"
+  },
+  "actions": {
+    "edit": "编辑比赛",
+    "delete": "删除比赛",
+    "saveLineup": "保存阵容",
+    "viewDetails": "查看详情",
+    "scheduleMatch": "安排比赛",
+    "close": "关闭",
+    "save": "保存",
+    "cancel": "取消"
+  },
+  "matchCard": {
+    "editLineup": "阵容",
+    "updateMatch": "编辑",
+    "delete": "删除"
+  },
+  "modals": {
+    "scheduleMatch": {
+      "title": "安排新比赛",
+      "matchDetails": "比赛详情",
+      "date": "日期",
+      "time": "时间",
+      "location": "地点",
+      "homeTeam": "主队",
+      "opponent": "对手队伍",
+      "placeholders": {
+        "selectTeam": "选择队伍",
+        "enterOpponent": "输入对手队伍名称",
+        "enterLocation": "输入比赛地点（例如：体育馆A，地址）"
+      },
+      "validation": {
+        "dateRequired": "比赛日期为必填项",
+        "datePast": "比赛日期不能是过去的日期",
+        "timeRequired": "比赛时间为必填项",
+        "locationRequired": "地点为必填项",
+        "teamRequired": "请选择一个队伍"
+      },
+      "success": "比赛安排成功！",
+      "error": "安排比赛失败"
+    },
+    "editMatch": {
+      "title": "编辑比赛",
+      "basicInfo": "基本信息",
+      "matchStatus": "比赛状态",
+      "matchScores": "比赛分数",
+      "homeScore": "主队分数",
+      "awayScore": "客队分数",
+      "cancellationReason": "取消原因",
+      "cancellationPlaceholder": "输入取消原因（例如：天气不好、场地不可用...）",
+      "unsavedChanges": "您有未保存的更改。确定要关闭吗？",
+      "success": "比赛更新成功！",
+      "error": "更新比赛失败"
+    },
+    "matchDetails": {
+      "title": "比赛详情",
+      "matchInfo": "比赛信息",
+      "venue": "场地",
+      "versus": "对",
+      "lineup": "阵容",
+      "noLineup": "尚未分配阵容",
+      "playerAvailability": "球员可用性",
+      "available": "可用",
+      "unavailable": "不可用",
+      "cancellationInfo": "取消信息",
+      "cancelled": "此比赛已被取消"
+    },
+    "matchLineup": {
+      "title": "比赛阵容",
+      "versus": "对",
+      "tbd": "待定",
+      "matchDetails": "比赛详情",
+      "lineupValidationWarnings": "阵容验证警告",
+      "warnings": {
+        "tooManyPositions": "被分配到{count}个位置（最多允许2个）",
+        "player": "球员"
+      },
+      "lineupPositions": {
+        "men_singles_1": "男子单打 1",
+        "men_singles_2": "男子单打 2",
+        "men_singles_3": "男子单打 3",
+        "women_singles": "女子单打",
+        "mens_doubles_1": "男子双打 1",
+        "mens_doubles_2": "男子双打 2",
+        "women_doubles": "女子双打",
+        "mixed_doubles": "混合双打"
+      },
+      "genderRequirements": {
+        "maleFemale": "男/女",
+        "femaleMale": "女/男"
+      },
+      "selectPlayer": "选择球员",
+      "noPlayersAvailable": "没有可用球员",
+      "success": "阵容保存成功！",
+      "error": "保存阵容失败",
+      "unknownTeam": "未知队伍",
+      "unknownError": "未知错误"
+    }
+  },
+  "table": {
+    "date": "日期",
+    "time": "时间",
+    "homeTeam": "主队",
+    "opponent": "对手",
+    "location": "地点",
+    "status": "状态",
+    "score": "分数",
+    "lineup": "阵容",
+    "actions": "操作",
+    "noMatches": "未找到比赛",
+    "lineupSlots": "阵容位置"
+  },
+  "confirmation": {
+    "deleteMatch": "确定要删除这场比赛吗？此操作无法撤消。",
+    "deleteSuccess": "比赛删除成功！",
+    "deleteError": "删除比赛失败"
+  },
+  "common": {
+    "loading": "加载比赛中...",
+    "error": "加载比赛出错",
+    "retry": "重试"
+  }
+}

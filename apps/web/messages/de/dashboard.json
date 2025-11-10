@@ -1,0 +1,200 @@
+{
+  "dashboard": "Dashboard",
+  "overview": "Übersicht",
+  "members": "Mitglieder",
+  "teams": "Teams",
+  "matches": "Spiele",
+  "settings": "Einstellungen",
+  "total_members": "Mitglieder insgesamt",
+  "total_teams": "Teams insgesamt",
+  "upcoming_matches": "Bevorstehende Spiele",
+  "active_players": "Aktive Spieler",
+  "recent_activity": "Letzte Aktivität",
+  "no_recent_activity": "Keine recenten Aktivitäten",
+  "add_member": "Mitglied hinzufügen",
+  "add_team": "Team hinzufügen",
+  "add_match": "Spiel hinzufügen",
+  "all": "Alle",
+  "active": "Aktiv",
+  "players": "Spieler",
+  "search_members": "Mitglieder suchen...",
+  "firstName": "Vorname",
+  "lastName": "Nachname",
+  "email": "E-Mail",
+  "role": "Rolle",
+  "status": "Status",
+  "actions": "Aktionen",
+  "edit": "Bearbeiten",
+  "delete": "Löschen",
+  "inactive": "Inaktiv",
+  "search_teams": "Teams suchen...",
+  "search_matches": "Spiele suchen...",
+  "scheduled": "Geplant",
+  "completed": "Abgeschlossen",
+  "opponent_unknown": "Gegner unbekannt",
+  "lineup_slots": "Aufstellungsplätze",
+
+  "modals": {
+    "addMember": {
+      "title": "Neues Mitglied hinzufügen",
+      "subtitle": "Neues Mitgliedsprofil erstellen",
+      "basicInfo": "Grundinformationen",
+      "membershipDetails": "Mitgliedschaftsdetails"
+    },
+    "editMember": {
+      "title": "Mitglied bearbeiten",
+      "subtitle": "Mitgliedsinformationen aktualisieren",
+      "basicInfo": "Grundinformationen",
+      "membershipDetails": "Mitgliedschaftsdetails"
+    },
+    "batchUpdate": {
+      "title": "Mitglieder stapelweise aktualisieren",
+      "subtitle": "Mehrere Mitglieder gleichzeitig aktualisieren",
+      "updateSettings": "Aktualisierungseinstellungen",
+      "selectionSummary": "Auswahlzusammenfassung",
+      "searchMembers": "Mitglieder suchen",
+      "selectAll": "Alle auswählen",
+      "selected": "ausgewählt",
+      "member_one": "Mitglied",
+      "member_other": "Mitglieder",
+      "noMembersFound": "Keine Mitglieder gefunden, die Ihren Kriterien entsprechen"
+    }
+  },
+
+  "form": {
+    "fullName": "Vollständiger Name",
+    "firstName": "Vorname",
+    "lastName": "Nachname",
+    "emailAddress": "E-Mail-Adresse",
+    "gender": "Geschlecht",
+    "dateOfBirth": "Geburtsdatum",
+    "membershipStatus": "Mitgliedschaftsstatus",
+    "registerAsPlayer": "Als Spieler registrieren",
+    "isPlayer": "Spielerstatus",
+
+    "placeholders": {
+      "enterFullName": "Vollständigen Namen eingeben",
+      "enterFirstName": "Vornamen eingeben",
+      "enterLastName": "Nachnamen eingeben",
+      "enterEmail": "E-Mail-Adresse eingeben",
+      "searchByNameOrEmail": "Nach Name oder E-Mail suchen...",
+      "allStatus": "Alle Status",
+      "allRoles": "Alle Rollen",
+      "allMembers": "Alle Mitglieder",
+      "allGenders": "Alle Geschlechter"
+    },
+
+    "validation": {
+      "nameRequired": "Name ist erforderlich",
+      "emailRequired": "E-Mail ist erforderlich",
+      "emailInvalid": "Bitte geben Sie eine gültige E-Mail-Adresse ein"
+    }
+  },
+
+  "gender": {
+    "male": "Männlich",
+    "female": "Weiblich",
+    "nonBinary": "Nicht-binär"
+  },
+
+  "roles": {
+    "admin": "Administrator",
+    "member": "Mitglied",
+    "guestPlayer": "Gastspieler",
+    "applicant": "Bewerber"
+  },
+
+  "membershipStatus": {
+    "active": "Aktiv",
+    "inactive": "Inaktiv",
+    "suspended": "Suspendiert"
+  },
+
+  "filter": {
+    "playersOnly": "Nur Spieler",
+    "nonPlayersOnly": "Nur Nicht-Spieler"
+  },
+
+  "batchUpdate": {
+    "updateMembershipStatus": "Mitgliedschaftsstatus aktualisieren",
+    "updatePlayerStatus": "Spielerstatus aktualisieren",
+    "updateRole": "Rolle aktualisieren",
+    "yesIsPlayer": "Ja, ist Spieler",
+    "noNotPlayer": "Nein, kein Spieler",
+    "updateSummaryPrefix": "Status setzen auf:",
+    "updatePlayerSummaryPrefix": "Spielerstatus setzen auf:",
+    "updateRoleSummaryPrefix": "Rolle setzen auf:",
+    "yes": "Ja",
+    "no": "Nein"
+  },
+
+  "buttons": {
+    "cancel": "Abbrechen",
+    "save": "Speichern",
+    "saving": "Wird gespeichert...",
+    "addMember": "Mitglied hinzufügen",
+    "saveChanges": "Änderungen speichern",
+    "update": "Aktualisieren",
+    "updating": "Wird aktualisiert...",
+    "addingMember": "Mitglied wird hinzugefügt..."
+  },
+
+  "alerts": {
+    "selectAtLeastOne": "Bitte wählen Sie mindestens ein Mitglied zum Aktualisieren aus.",
+    "specifyUpdateField": "Bitte geben Sie mindestens ein zu aktualisierendes Feld an.",
+    "createMemberFailed": "Fehler beim Erstellen des Mitglieds",
+    "updateMemberFailed": "Fehler beim Aktualisieren des Mitglieds"
+  },
+
+  "matchCenter": {
+    "title": "Spiel-Center",
+    "tabs": {
+      "players": "Spieler",
+      "upcomingMatches": "Kommende Spiele",
+      "matchHistory": "Spiel-Historie",
+      "matchManagement": "Spiel-Verwaltung",
+      "teamManagement": "Team-Verwaltung"
+    }
+  },
+
+  "player": {
+    "role": {
+      "player": "Spieler",
+      "captain": "Kapitän",
+      "vice-captain": "Vize-Kapitän"
+    }
+  },
+
+  "teamManagement": {
+    "title": "Team-Verwaltung",
+    "createTeam": "Team erstellen",
+    "editTeam": "Team bearbeiten",
+    "deleteTeam": "Team löschen",
+    "confirmDelete": "Möchten Sie dieses Team wirklich löschen?",
+    "stats": {
+      "totalPlayers": "Spieler gesamt",
+      "male": "Männlich",
+      "female": "Weiblich",
+      "matchLevel": "Spielniveau"
+    },
+    "fields": {
+      "name": "Teamname",
+      "matchLevel": "Spielniveau"
+    },
+    "placeholders": {
+      "noTeams": "Keine Teams gefunden. Erstellen Sie eines, um zu beginnen.",
+      "enterTeamName": "Teamnamen eingeben",
+      "matchLevel": "Spielniveau"
+    },
+    "validation": {
+      "nameRequired": "Teamname ist erforderlich",
+      "nameMinLength": "Teamname muss mindestens 2 Zeichen lang sein",
+      "nameMaxLength": "Teamname darf 100 Zeichen nicht überschreiten"
+    },
+    "errors": {
+      "createFailed": "Fehler beim Erstellen des Teams",
+      "updateFailed": "Fehler beim Aktualisieren des Teams",
+      "deleteFailed": "Fehler beim Löschen des Teams"
+    }
+  }
+}

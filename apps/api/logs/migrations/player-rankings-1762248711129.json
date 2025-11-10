@@ -1,0 +1,346 @@
+[
+  {
+    "playerId": "6904cf2e7e7ed0d0cfe770ec",
+    "userEmail": "peter.schaefer2@dcbev.de",
+    "oldRanking": 11,
+    "newSinglesRanking": 11,
+    "newDoublesRanking": 11,
+    "timestamp": "2025-11-04T09:31:51.048Z"
+  },
+  {
+    "playerId": "6904cf2e7e7ed0d0cfe770f0",
+    "userEmail": "julia.weiss3@dcbev.de",
+    "oldRanking": 12,
+    "newSinglesRanking": 12,
+    "newDoublesRanking": 12,
+    "timestamp": "2025-11-04T09:31:51.082Z"
+  },
+  {
+    "playerId": "6904cf2e7e7ed0d0cfe770f4",
+    "userEmail": "sabine.schulz4@dcbev.de",
+    "oldRanking": 0,
+    "newSinglesRanking": 0,
+    "newDoublesRanking": 0,
+    "timestamp": "2025-11-04T09:31:51.084Z"
+  },
+  {
+    "playerId": "6904cf2e7e7ed0d0cfe770f8",
+    "userEmail": "tim.schulz5@dcbev.de",
+    "oldRanking": 0,
+    "newSinglesRanking": 0,
+    "newDoublesRanking": 0,
+    "timestamp": "2025-11-04T09:31:51.086Z"
+  },
+  {
+    "playerId": "6904cf2e7e7ed0d0cfe770fc",
+    "userEmail": "jan.richter6@dcbev.de",
+    "oldRanking": 0,
+    "newSinglesRanking": 0,
+    "newDoublesRanking": 0,
+    "timestamp": "2025-11-04T09:31:51.087Z"
+  },
+  {
+    "playerId": "6904cf2e7e7ed0d0cfe77100",
+    "userEmail": "sarah.krueger7@dcbev.de",
+    "oldRanking": 0,
+    "newSinglesRanking": 0,
+    "newDoublesRanking": 0,
+    "timestamp": "2025-11-04T09:31:51.088Z"
+  },
+  {
+    "playerId": "6904cf2e7e7ed0d0cfe77104",
+    "userEmail": "martin.herrmann8@dcbev.de",
+    "oldRanking": 0,
+    "newSinglesRanking": 0,
+    "newDoublesRanking": 0,
+    "timestamp": "2025-11-04T09:31:51.090Z"
+  },
+  {
+    "playerId": "6904cf2e7e7ed0d0cfe77108",
+    "userEmail": "jan.braun9@dcbev.de",
+    "oldRanking": 0,
+    "newSinglesRanking": 0,
+    "newDoublesRanking": 0,
+    "timestamp": "2025-11-04T09:31:51.091Z"
+  },
+  {
+    "playerId": "6904cf2e7e7ed0d0cfe7710c",
+    "userEmail": "julian.herrmann10@dcbev.de",
+    "oldRanking": 0,
+    "newSinglesRanking": 0,
+    "newDoublesRanking": 0,
+    "timestamp": "2025-11-04T09:31:51.092Z"
+  },
+  {
+    "playerId": "6904cf2e7e7ed0d0cfe77110",
+    "userEmail": "stefan.becker11@dcbev.de",
+    "oldRanking": 0,
+    "newSinglesRanking": 0,
+    "newDoublesRanking": 0,
+    "timestamp": "2025-11-04T09:31:51.093Z"
+  },
+  {
+    "playerId": "6904cf2e7e7ed0d0cfe77114",
+    "userEmail": "michael.schulz12@dcbev.de",
+    "oldRanking": 0,
+    "newSinglesRanking": 0,
+    "newDoublesRanking": 0,
+    "timestamp": "2025-11-04T09:31:51.094Z"
+  },
+  {
+    "playerId": "6904cf2e7e7ed0d0cfe77118",
+    "userEmail": "susanne.lang13@dcbev.de",
+    "oldRanking": 0,
+    "newSinglesRanking": 0,
+    "newDoublesRanking": 0,
+    "timestamp": "2025-11-04T09:31:51.095Z"
+  },
+  {
+    "playerId": "6904cf2e7e7ed0d0cfe7711c",
+    "userEmail": "stefan.richter14@dcbev.de",
+    "oldRanking": 0,
+    "newSinglesRanking": 0,
+    "newDoublesRanking": 0,
+    "timestamp": "2025-11-04T09:31:51.096Z"
+  },
+  {
+    "playerId": "6904cf2e7e7ed0d0cfe77120",
+    "userEmail": "silke.mueller15@dcbev.de",
+    "oldRanking": 0,
+    "newSinglesRanking": 0,
+    "newDoublesRanking": 0,
+    "timestamp": "2025-11-04T09:31:51.097Z"
+  },
+  {
+    "playerId": "6904cf2e7e7ed0d0cfe77124",
+    "userEmail": "simon.hofmann16@dcbev.de",
+    "oldRanking": 0,
+    "newSinglesRanking": 0,
+    "newDoublesRanking": 0,
+    "timestamp": "2025-11-04T09:31:51.098Z"
+  },
+  {
+    "playerId": "6904cf2e7e7ed0d0cfe77128",
+    "userEmail": "benjamin.hahn17@dcbev.de",
+    "oldRanking": 0,
+    "newSinglesRanking": 0,
+    "newDoublesRanking": 0,
+    "timestamp": "2025-11-04T09:31:51.099Z"
+  },
+  {
+    "playerId": "6904cf2e7e7ed0d0cfe7712c",
+    "userEmail": "anna.kaiser18@dcbev.de",
+    "oldRanking": 0,
+    "newSinglesRanking": 0,
+    "newDoublesRanking": 0,
+    "timestamp": "2025-11-04T09:31:51.100Z"
+  },
+  {
+    "playerId": "6904cf2e7e7ed0d0cfe77130",
+    "userEmail": "claudia.schmid19@dcbev.de",
+    "oldRanking": 0,
+    "newSinglesRanking": 0,
+    "newDoublesRanking": 0,
+    "timestamp": "2025-11-04T09:31:51.101Z"
+  },
+  {
+    "playerId": "6904cf2e7e7ed0d0cfe77134",
+    "userEmail": "susanne.lang20@dcbev.de",
+    "oldRanking": 0,
+    "newSinglesRanking": 0,
+    "newDoublesRanking": 0,
+    "timestamp": "2025-11-04T09:31:51.102Z"
+  },
+  {
+    "playerId": "6904cf2e7e7ed0d0cfe77138",
+    "userEmail": "laura.mueller21@dcbev.de",
+    "oldRanking": 0,
+    "newSinglesRanking": 0,
+    "newDoublesRanking": 0,
+    "timestamp": "2025-11-04T09:31:51.103Z"
+  },
+  {
+    "playerId": "6904cf2e7e7ed0d0cfe7713c",
+    "userEmail": "tim.lang22@dcbev.de",
+    "oldRanking": 0,
+    "newSinglesRanking": 0,
+    "newDoublesRanking": 0,
+    "timestamp": "2025-11-04T09:31:51.104Z"
+  },
+  {
+    "playerId": "6904cf2e7e7ed0d0cfe77140",
+    "userEmail": "peter.werner23@dcbev.de",
+    "oldRanking": 0,
+    "newSinglesRanking": 0,
+    "newDoublesRanking": 0,
+    "timestamp": "2025-11-04T09:31:51.105Z"
+  },
+  {
+    "playerId": "6904cf2e7e7ed0d0cfe77144",
+    "userEmail": "christina.hartmann24@dcbev.de",
+    "oldRanking": 0,
+    "newSinglesRanking": 0,
+    "newDoublesRanking": 0,
+    "timestamp": "2025-11-04T09:31:51.106Z"
+  },
+  {
+    "playerId": "6904cf2e7e7ed0d0cfe77148",
+    "userEmail": "max.jung25@dcbev.de",
+    "oldRanking": 0,
+    "newSinglesRanking": 0,
+    "newDoublesRanking": 0,
+    "timestamp": "2025-11-04T09:31:51.107Z"
+  },
+  {
+    "playerId": "6904cf2e7e7ed0d0cfe7714c",
+    "userEmail": "benjamin.schubert26@dcbev.de",
+    "oldRanking": 0,
+    "newSinglesRanking": 0,
+    "newDoublesRanking": 0,
+    "timestamp": "2025-11-04T09:31:51.108Z"
+  },
+  {
+    "playerId": "6904cf2e7e7ed0d0cfe77150",
+    "userEmail": "peter.krause27@dcbev.de",
+    "oldRanking": 0,
+    "newSinglesRanking": 0,
+    "newDoublesRanking": 0,
+    "timestamp": "2025-11-04T09:31:51.110Z"
+  },
+  {
+    "playerId": "6904cf2e7e7ed0d0cfe77158",
+    "userEmail": "maria.schwarz30@dcbev.de",
+    "oldRanking": 0,
+    "newSinglesRanking": 0,
+    "newDoublesRanking": 0,
+    "timestamp": "2025-11-04T09:31:51.111Z"
+  },
+  {
+    "playerId": "6904cf2e7e7ed0d0cfe7715c",
+    "userEmail": "michelle.krause32@dcbev.de",
+    "oldRanking": 0,
+    "newSinglesRanking": 0,
+    "newDoublesRanking": 0,
+    "timestamp": "2025-11-04T09:31:51.112Z"
+  },
+  {
+    "playerId": "6904cf2e7e7ed0d0cfe77160",
+    "userEmail": "lisa.lang33@dcbev.de",
+    "oldRanking": 0,
+    "newSinglesRanking": 0,
+    "newDoublesRanking": 0,
+    "timestamp": "2025-11-04T09:31:51.112Z"
+  },
+  {
+    "playerId": "6904cf2e7e7ed0d0cfe77164",
+    "userEmail": "christina.schubert34@dcbev.de",
+    "oldRanking": 0,
+    "newSinglesRanking": 0,
+    "newDoublesRanking": 0,
+    "timestamp": "2025-11-04T09:31:51.115Z"
+  },
+  {
+    "playerId": "6904cf2e7e7ed0d0cfe77168",
+    "userEmail": "maria.jung35@dcbev.de",
+    "oldRanking": 0,
+    "newSinglesRanking": 0,
+    "newDoublesRanking": 0,
+    "timestamp": "2025-11-04T09:31:51.116Z"
+  },
+  {
+    "playerId": "6904cf2e7e7ed0d0cfe7716c",
+    "userEmail": "jan.wolf36@dcbev.de",
+    "oldRanking": 0,
+    "newSinglesRanking": 0,
+    "newDoublesRanking": 0,
+    "timestamp": "2025-11-04T09:31:51.117Z"
+  },
+  {
+    "playerId": "6904cf2e7e7ed0d0cfe77170",
+    "userEmail": "carmen.kaiser37@dcbev.de",
+    "oldRanking": 0,
+    "newSinglesRanking": 0,
+    "newDoublesRanking": 0,
+    "timestamp": "2025-11-04T09:31:51.118Z"
+  },
+  {
+    "playerId": "6904cf2e7e7ed0d0cfe77174",
+    "userEmail": "nina.wolf38@dcbev.de",
+    "oldRanking": 0,
+    "newSinglesRanking": 0,
+    "newDoublesRanking": 0,
+    "timestamp": "2025-11-04T09:31:51.119Z"
+  },
+  {
+    "playerId": "6904cf2e7e7ed0d0cfe77178",
+    "userEmail": "patrick.krueger39@dcbev.de",
+    "oldRanking": 0,
+    "newSinglesRanking": 0,
+    "newDoublesRanking": 0,
+    "timestamp": "2025-11-04T09:31:51.120Z"
+  },
+  {
+    "playerId": "6904cf2e7e7ed0d0cfe7717c",
+    "userEmail": "maria.weiss40@dcbev.de",
+    "oldRanking": 0,
+    "newSinglesRanking": 0,
+    "newDoublesRanking": 0,
+    "timestamp": "2025-11-04T09:31:51.121Z"
+  },
+  {
+    "playerId": "6904cf2e7e7ed0d0cfe77180",
+    "userEmail": "katharina.richter41@dcbev.de",
+    "oldRanking": 0,
+    "newSinglesRanking": 0,
+    "newDoublesRanking": 0,
+    "timestamp": "2025-11-04T09:31:51.122Z"
+  },
+  {
+    "playerId": "6904cf2e7e7ed0d0cfe77184",
+    "userEmail": "petra.koch42@dcbev.de",
+    "oldRanking": 0,
+    "newSinglesRanking": 0,
+    "newDoublesRanking": 0,
+    "timestamp": "2025-11-04T09:31:51.123Z"
+  },
+  {
+    "playerId": "6904cf2e7e7ed0d0cfe77188",
+    "userEmail": "laura.werner49@dcbev.de",
+    "oldRanking": 0,
+    "newSinglesRanking": 0,
+    "newDoublesRanking": 0,
+    "timestamp": "2025-11-04T09:31:51.124Z"
+  },
+  {
+    "playerId": "6904cf2e7e7ed0d0cfe7718c",
+    "userEmail": "petra.braun50@dcbev.de",
+    "oldRanking": 0,
+    "newSinglesRanking": 0,
+    "newDoublesRanking": 0,
+    "timestamp": "2025-11-04T09:31:51.125Z"
+  },
+  {
+    "playerId": "6904cf2e7e7ed0d0cfe77190",
+    "userEmail": "petra.meyer53@dcbev.de",
+    "oldRanking": 0,
+    "newSinglesRanking": 0,
+    "newDoublesRanking": 0,
+    "timestamp": "2025-11-04T09:31:51.126Z"
+  },
+  {
+    "playerId": "6904cf2e7e7ed0d0cfe77194",
+    "userEmail": "tobias.herrmann54@dcbev.de",
+    "oldRanking": 0,
+    "newSinglesRanking": 0,
+    "newDoublesRanking": 0,
+    "timestamp": "2025-11-04T09:31:51.127Z"
+  },
+  {
+    "playerId": "6904cf2e7e7ed0d0cfe77198",
+    "userEmail": "vanessa.becker55@dcbev.de",
+    "oldRanking": 0,
+    "newSinglesRanking": 0,
+    "newDoublesRanking": 0,
+    "timestamp": "2025-11-04T09:31:51.128Z"
+  }
+]

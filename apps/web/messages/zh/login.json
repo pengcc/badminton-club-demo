@@ -1,0 +1,27 @@
+{
+  "email": "邮箱",
+  "password": "密码",
+  "full_name": "姓名",
+  "gender": "性别",
+  "select_gender": "请选择性别",
+  "male": "男",
+  "female": "女",
+  "other": "其他",
+  "date_of_birth": "出生日期",
+  "date_format_hint": "格式：YYYY.MM.DD",
+  "no_account": "还没有账号？",
+  "register_here": "去注册",
+  "apply_membership": "申请会员资格",
+  "have_account": "已有账号？",
+  "login_here": "去登录",
+  "submit": "提交",
+  "logging_in": "正在登录...",
+  "show_password": "显示密码",
+  "hide_password": "隐藏密码",
+  "error_generic": "发生错误，请稍后重试。",
+  "error_invalid_credentials": "账号或密码错误",
+  "success_login": "登录成功"
+}
+
+
+
