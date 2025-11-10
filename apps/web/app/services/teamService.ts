@@ -5,7 +5,7 @@
  */
 
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
-import { TeamView } from '@club/shared-types/view/team';
+import type { TeamView } from '@club/shared-types/view/team';
 import { TeamViewTransformers } from '@club/shared-types/view/transformers/team';
 import * as teamApi from '@app/lib/api/teamApi';
 import { BaseService } from './baseService';

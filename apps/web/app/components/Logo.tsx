@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
-import { is } from 'date-fns/locale';
 
 interface LogoProps {
   isInHeader?: boolean; // Whether the logo is used in the header

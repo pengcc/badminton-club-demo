@@ -1,5 +1,4 @@
 import { z } from 'zod';
-import { Domain, TeamSchema } from '../domain/team';
 
 /**
  * API layer types for Team

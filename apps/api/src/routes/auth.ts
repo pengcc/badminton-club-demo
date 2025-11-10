@@ -1,7 +1,9 @@
-import express, { Router } from 'express';
+import type { Router } from 'express';
+import express from 'express';
 import jwt from 'jsonwebtoken';
 import { User } from '../models/User.js';
-import { protect, AuthenticatedRequest } from '../middleware/auth.js';
+import type { AuthenticatedRequest } from '../middleware/auth.js';
+import { protect } from '../middleware/auth.js';
 
 const router: Router = express.Router();
 
@@ -49,21 +51,6 @@ router.post('/login', async (req, res) => {
 // Register
 router.post('/register', async (req, res) => {
   try {
-    // Demo-mode registration guards
-    if (process.env.DEMO_MODE === 'true') {
-      if (process.env.DEMO_DISABLE_REGISTER === 'true') {
-        return res.status(403).json({ message: 'Registration is disabled in demo mode' });
-      }
-
-      const maxUsers = Number(process.env.DEMO_MAX_USERS || 0);
-      if (maxUsers > 0) {
-        const currentCount = await User.estimatedDocumentCount();
-        if (currentCount >= maxUsers) {
-          return res.status(403).json({ message: 'Registration limit reached for demo environment' });
-        }
-      }
-    }
-
     const { email, password, firstName, lastName, gender, dateOfBirth } = req.body;
 
     // Validation

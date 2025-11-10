@@ -1,6 +1,6 @@
 import { z } from 'zod';
 import { MatchStatus, LineupPosition } from '../core/enums';
-import { BaseLineupPlayer } from '../core/base';
+import type { BaseLineupPlayer } from '../core/base';
 
 /**
  * Core match domain types - pure business logic without infrastructure concerns

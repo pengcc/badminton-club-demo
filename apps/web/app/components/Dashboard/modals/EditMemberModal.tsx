@@ -10,8 +10,9 @@ import { RadioGroup, RadioGroupItem } from '@app/components/ui/radio-group';
 import { Checkbox } from '@app/components/ui/checkbox';
 import { X, Save, Mail, Calendar, User as UserIcon, Edit2 } from 'lucide-react';
 import { UserService } from '@app/services/userService';
-import { User, UserFormData } from '@app/lib/types';
-import { UserRole, Gender, MembershipStatus } from '@club/shared-types/core/enums';
+import type { User, UserFormData } from '@app/lib/types';
+import type { Gender} from '@club/shared-types/core/enums';
+import { UserRole, MembershipStatus } from '@club/shared-types/core/enums';
 import { MEMBER_ROLES, GENDERS, MEMBERSHIP_STATUSES } from '@app/lib/constants/member-options';
 
 interface EditMemberModalProps {
@@ -23,7 +24,6 @@ interface EditMemberModalProps {
 
 export default function EditMemberModal({ isOpen, onClose, member, onMemberUpdated }: EditMemberModalProps) {
   const t = useTranslations('dashboard');
-  const tCommon = useTranslations('common');
   const updateUserMutation = UserService.useUpdateUser();
 
   const [formData, setFormData] = useState<UserFormData>({

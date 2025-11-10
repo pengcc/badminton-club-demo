@@ -16,7 +16,7 @@ import { useTranslations } from 'next-intl';
 import { Card, CardContent } from '@app/components/ui/card';
 import { Button } from '@app/components/ui/button';
 import { Badge } from '@app/components/ui/badge';
-import { Match, User } from '@app/lib/types';
+import type { Match } from '@app/lib/types';
 import {
   formatMatchDate,
   getResultBadgeConfig
@@ -29,7 +29,6 @@ import {
   Users,
   Edit2,
   Trash2,
-  BarChart3,
   CheckCircle
 } from 'lucide-react';
 
@@ -67,7 +66,6 @@ export default function MatchCard({
   onViewDetails,
   onPlayerAvailability,
   onViewLineup,
-  onViewStats,
   onEditMatch,
   onDeleteMatch
 }: MatchCardProps) {

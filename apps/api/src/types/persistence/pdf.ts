@@ -1,5 +1,5 @@
-import { Document, Types } from 'mongoose';
-import { Domain } from '@club/shared-types/domain/pdf';
+import type { Document, Types } from 'mongoose';
+import type { Domain } from '@club/shared-types/domain/pdf';
 
 /**
  * Persistence layer types for PDF documents

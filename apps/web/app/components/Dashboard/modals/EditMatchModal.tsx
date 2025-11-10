@@ -8,16 +8,12 @@ import { Input } from '@app/components/ui/input';
 import { Label } from '@app/components/ui/label';
 import { Textarea } from '@app/components/ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@app/components/ui/select';
-import { Match, Team } from '@app/lib/types';
+import type { Match, Team } from '@app/lib/types';
 import { MatchService } from '@app/services/matchService';
 import { MatchStatus } from '@club/shared-types/core/enums';
 import { useModalBehavior } from '@/app/hooks/useModalBehavior';
 import {
   Calendar,
-  Clock,
-  MapPin,
-  Users,
-  Trophy,
   X,
   Save
 } from 'lucide-react';
@@ -51,8 +47,6 @@ export default function EditMatchModal({
   match,
   teams
 }: EditMatchModalProps) {
-  const t = useTranslations('dashboard');
-  const tCommon = useTranslations('common');
   const tMatch = useTranslations('match');
   const updateMatchMutation = MatchService.useUpdateMatch();
 
@@ -92,7 +86,7 @@ export default function EditMatchModal({
   }, [formData, match, isOpen]);
 
   // ESC key handler with unsaved changes warning
-  const { handleCloseAttempt, modalProps } = useModalBehavior({
+  const { handleCloseAttempt, modalProps: _modalProps } = useModalBehavior({
     isOpen,
     onClose,
     hasUnsavedChanges,
@@ -166,8 +160,6 @@ export default function EditMatchModal({
         id: match.id,
         formData: formData as any
       });
-
-      console.log('Match updated successfully:', updatedMatch);
 
       // Update parent component with the updated match data
       onMatchUpdated(updatedMatch);

@@ -28,9 +28,7 @@ export class AuthService {
    * Cached for 5 minutes, automatically refetches on window focus
    * @param initialData - Optional initial user data from server-side fetch
    */
-  static useSession(
-    initialData?: Api.User | null
-  ): UseQueryResult<Api.User | null, Error> {
+  static useSession(initialData?: Api.User | null): UseQueryResult<Api.User | null, Error> {
     const queryClient = useQueryClient();
 
     // If we have server-provided initial data, set it in cache immediately
@@ -39,8 +37,7 @@ export class AuthService {
       if (initialData !== undefined) {
         queryClient.setQueryData(SESSION_KEY, initialData);
       }
-    }, [initialData, queryClient]);
-    return useQuery({
+    }, [initialData, queryClient]);    return useQuery({
       queryKey: SESSION_KEY,
       queryFn: async () => {
         const token = TokenManager.getToken();
@@ -56,7 +53,7 @@ export class AuthService {
         try {
           const user = await authApi.verifyToken();
           return user;
-        } catch (error) {
+        } catch (_error) {
           // Token invalid, clear it
           TokenManager.clearToken();
           return null;
@@ -65,9 +62,7 @@ export class AuthService {
       staleTime: 5 * 60 * 1000, // 5 minutes
       retry: false,
       // Only run query if we have initial data or a token exists
-      enabled:
-        initialData !== undefined ||
-        (typeof window !== 'undefined' && !!TokenManager.getToken()),
+      enabled: initialData !== undefined || (typeof window !== 'undefined' && !!TokenManager.getToken()),
     });
   }
 
@@ -162,7 +157,11 @@ export class AuthService {
    *
    * Updates access token using refresh token
    */
-  static useRefreshToken(): UseMutationResult<Api.LoginResponse, Error, void> {
+  static useRefreshToken(): UseMutationResult<
+    Api.LoginResponse,
+    Error,
+    void
+  > {
     return useMutation({
       mutationKey: ['auth', 'refresh'],
       mutationFn: async () => {

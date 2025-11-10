@@ -1,11 +1,11 @@
-import { Types } from 'mongoose';
-import { Domain } from '@club/shared-types/domain/membershipApplication';
-import { MembershipApplicationPersistence } from '../types/persistence/membershipApplication';
-import {
+import type { Domain } from '@club/shared-types/domain/membershipApplication';
+import type { MembershipApplicationPersistence } from '../types/persistence/membershipApplication';
+import type {
   CreateMembershipApplicationRequest,
   UpdateMembershipApplicationRequest,
   MembershipApplicationResponse
 } from '@club/shared-types/api/membershipApplication';
+import type { BaseDocument } from '../types/persistence/base';
 import { MemberApplicationStatus } from '@club/shared-types/core/enums';
 
 /**
@@ -17,7 +17,7 @@ export class MembershipApplicationPersistenceTransformer {
    * Transform MembershipApplicationPersistence to Domain.MembershipApplication
    * Converts ObjectId to string for domain layer
    * Maps reviewer/reviewDate to reviewer/reviewDate for domain consistency
-   * 
+   *
    * Note: dateOfBirth is kept as string (YYYY-MM-DD) to match persistence layer.
    * Previously attempted Date conversion here, but that bypassed Mongoose schema
    * validation which expects string format. Now just pass-through.
@@ -52,7 +52,7 @@ export class MembershipApplicationPersistenceTransformer {
    */
   static toPersistence(
     application: Omit<Domain.MembershipApplication, 'id' | 'createdAt' | 'updatedAt'>
-  ): Omit<MembershipApplicationPersistence, keyof import('../types/persistence/base').BaseDocument> {
+  ): Omit<MembershipApplicationPersistence, keyof BaseDocument> {
     return {
       personalInfo: {
         ...application.personalInfo,
@@ -83,9 +83,9 @@ export class MembershipApplicationApiTransformer {
    * Converts Date to ISO string
    *
    * Note: dateOfBirth is already a YYYY-MM-DD string in domain layer, no conversion needed.
-   * Previously converted Date → string here (.toISOString().split('T')[0]), but now 
+   * Previously converted Date → string here (.toISOString().split('T')[0]), but now
    * dateOfBirth stays as string throughout backend layers for consistency.
-   * 
+   *
    * Note: Domain layer incorrectly uses MembershipStatus instead of MemberApplicationStatus
    * We cast to work around this type system inconsistency
    */
@@ -127,7 +127,7 @@ export class MembershipApplicationApiTransformer {
    * Transform CreateMembershipApplicationRequest to partial Domain.MembershipApplication
    * Converts ISO string to Date
    * Note: Returns partial application data for creation
-   * 
+   *
    * Note: dateOfBirth is preserved as string (YYYY-MM-DD). Previously converted to Date
    * here (new Date(...)), but that caused Mongoose validation to fail since the schema
    * expects string format. Now transformer just passes through the string.

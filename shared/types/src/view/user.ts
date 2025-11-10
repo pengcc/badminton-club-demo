@@ -1,6 +1,7 @@
-import { Api } from '../api/user';
+import type { Api } from '../api/user';
 import { z } from 'zod';
-import { MembershipStatus, UserRole } from '../core/enums';
+import type { MembershipStatus} from '../core/enums';
+import { UserRole } from '../core/enums';
 
 /**
  * View layer types for User components

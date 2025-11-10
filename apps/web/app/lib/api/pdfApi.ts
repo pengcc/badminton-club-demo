@@ -1,5 +1,5 @@
 import apiClient from './client';
-import { Api } from '@club/shared-types/api/pdf';
+import type { Api } from '@club/shared-types/api/pdf';
 
 /**
  * PDF Generation API module

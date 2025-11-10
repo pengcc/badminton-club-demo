@@ -1,5 +1,5 @@
 import { useMemo, useState, useCallback } from 'react';
-import { Match, Team, SearchFilters } from '@app/lib/types';
+import type { Match, Team, SearchFilters } from '@app/lib/types';
 
 interface MatchFilters extends SearchFilters {
   team: 'all' | 'team1' | 'team2';

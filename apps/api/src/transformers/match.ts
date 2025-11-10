@@ -1,7 +1,8 @@
 import { Types } from 'mongoose';
-import { Domain } from '@club/shared-types/domain/match';
-import { Persistence } from '../types/persistence/match';
-import { Api } from '@club/shared-types/api/match';
+import type { Domain } from '@club/shared-types/domain/match';
+import type { Persistence } from '../types/persistence/match';
+import type { Api } from '@club/shared-types/api/match';
+import type { BaseDocument } from '../types/persistence/base';
 import { MatchStatus } from '@club/shared-types/core/enums';
 
 /**
@@ -47,7 +48,7 @@ export class MatchPersistenceTransformer {
    */
   static toPersistence(
     match: Omit<Domain.Match, 'id' | 'createdAt' | 'updatedAt'>
-  ): Omit<Persistence.MatchDocument, keyof import('../types/persistence/base').BaseDocument> {
+  ): Omit<Persistence.MatchDocument, keyof BaseDocument> {
     // Validate ObjectId fields before conversion
     if (!match.homeTeamId || !Types.ObjectId.isValid(match.homeTeamId)) {
       throw new Error(`Invalid homeTeamId: ${match.homeTeamId}`);

@@ -1,18 +1,17 @@
 'use client';
 
 import React, { useState } from 'react';
-import { useTranslations } from 'next-intl';
 import { useAuth } from '@app/hooks/useAuth';
 import { MatchService } from '@app/services/matchService';
 import { TeamService } from '@app/services/teamService';
 import { PlayerService } from '@app/services/playerService';
-import { Card, CardContent, CardHeader, CardTitle } from '@app/components/ui/card';
+import { Card, CardHeader, CardTitle } from '@app/components/ui/card';
 import { Checkbox } from '@app/components/ui/checkbox';
 import { Label } from '@app/components/ui/label';
 import { Pagination } from '@app/components/ui/Pagination';
 import { SkeletonMatchCards } from '@app/components/ui/SkeletonMatchCard';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@app/components/ui/select';
-import { Match } from '@app/lib/types';
+import type { Match } from '@app/lib/types';
 import UnifiedMatchCard from '../MatchCard';
 import MatchDetailsModal from '../modals/MatchDetailsModal';
 import MatchLineupModal from '../modals/MatchLineupModal';
@@ -34,8 +33,6 @@ import MatchLineupModal from '../modals/MatchLineupModal';
  * - ✅ Skeleton loading states for better UX
  */
 export default function MatchHistoryTab() {
-  const t = useTranslations('dashboard');
-  const tCommon = useTranslations('common');
   const { user } = useAuth();
 
   // Local state for UI

@@ -1,10 +1,11 @@
 import { Player } from '../models/Player';
 import { Team } from '../models/Team';
 import { Match } from '../models/Match';
-import mongoose, { Schema, Types } from 'mongoose';
+import type { Schema} from 'mongoose';
+import mongoose, { Types } from 'mongoose';
 import { PlayerPersistenceTransformer, PlayerApiTransformer } from '../transformers/player';
-import { Domain } from '@club/shared-types/domain/player';
-import { Api } from '@club/shared-types/api/player';
+import type { Domain } from '@club/shared-types/domain/player';
+import type { Api } from '@club/shared-types/api/player';
 
 /**
  * Helper: Check if MongoDB supports transactions (replica set required)
@@ -18,7 +19,7 @@ async function supportsTransactions(): Promise<boolean> {
     const result = await admin.command({ isMaster: 1 });
     // Check if it's a replica set member or mongos (sharded cluster)
     return !!(result.setName || result.msg === 'isdbgrid');
-  } catch (error) {
+  } catch (_error) {
     return false;
   }
 }
@@ -399,7 +400,7 @@ export class PlayerService {
         await session.abortTransaction();
         throw error;
       } finally {
-        session.endSession();
+        await session.endSession();
       }
     } else {
       // Fallback: Sequential operations (local dev with standalone MongoDB)

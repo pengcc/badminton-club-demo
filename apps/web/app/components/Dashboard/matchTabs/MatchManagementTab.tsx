@@ -6,21 +6,20 @@ import { useAuth } from '@app/hooks/useAuth';
 import { MatchService } from '@app/services/matchService';
 import { TeamService } from '@app/services/teamService';
 import { PlayerService } from '@app/services/playerService';
-import { Card, CardContent, CardHeader, CardTitle } from '@app/components/ui/card';
+import { Card, CardHeader, CardTitle } from '@app/components/ui/card';
 import { Button } from '@app/components/ui/button';
 import { Input } from '@app/components/ui/input';
 import { Checkbox } from '@app/components/ui/checkbox';
 import { Label } from '@app/components/ui/label';
 import { Pagination } from '@app/components/ui/Pagination';
 import { SkeletonMatchCards } from '@app/components/ui/SkeletonMatchCard';
-import { Match } from '@app/lib/types';
+import type { Match } from '@app/lib/types';
 import UnifiedMatchCard from '../MatchCard';
 import ScheduleMatchModal from '../modals/ScheduleMatchModal';
 import EditMatchModal from '../modals/EditMatchModal';
 import MatchLineupModal from '../modals/MatchLineupModal';
 import {
-  Plus,
-  Calendar
+  Plus
 } from 'lucide-react';
 
 /**
@@ -63,7 +62,6 @@ export default function MatchManagementTab() {
   const { data: players = [] } = PlayerService.usePlayerList();
   const deleteMutation = MatchService.useDeleteMatch();
 
-  const isAdmin = user?.role === 'admin';
   const isLoading = matchesLoading;
 
   // Filter and sort matches
@@ -156,9 +154,7 @@ export default function MatchManagementTab() {
     }
 
     try {
-      console.log('🗑️ Deleting match:', matchId);
       await deleteMutation.mutateAsync(matchId);
-      console.log('✅ Match deleted successfully');
       alert(tMatch('confirmation.deleteSuccess'));
     } catch (error: any) {
       console.group('❌ Error deleting match');

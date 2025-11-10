@@ -4,15 +4,12 @@ import React, { useState, useMemo } from 'react';
 import { useTranslations } from 'next-intl';
 import { Button } from '@app/components/ui/button';
 import GenderIcon from '@app/components/ui/GenderIcon';
-import { Player } from '@app/lib/types';
+import type { Player } from '@app/lib/types';
 import {
   User,
-  Mars,
-  Venus,
   CalendarCheck,
   CalendarX
 } from 'lucide-react';
-import { is } from 'date-fns/locale';
 
 interface PlayerAvailabilityProps {
   players: Player[];
@@ -29,7 +26,6 @@ export default function PlayerAvailability({
   availabilityMap,
   currentUserId,
   isUpcoming,
-  isAdmin,
   onToggleAvailability
   // onSyncPlayers removed - auto-sync on backend
 }: PlayerAvailabilityProps) {
@@ -86,16 +82,6 @@ export default function PlayerAvailability({
       ...unavailablePlayers.filter(p => p.id !== currentPlayer.id)
     ];
   }, [unavailablePlayers, currentPlayer]);
-
-  // Debug logging
-  if (currentUserId && !currentPlayer) {
-    console.log('PlayerAvailability Debug:', {
-      currentUserId,
-      players: players.map(p => ({ id: p.id, userId: p.userId, userName: p.userName })),
-      currentPlayer,
-      canToggle
-    });
-  }
 
   const handleToggleAvailability = async (playerId: string) => {
     if (!onToggleAvailability || !canToggle) return;

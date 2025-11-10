@@ -1,7 +1,8 @@
 import { z } from 'zod';
-import { Types } from 'mongoose';
-import { BaseDocument } from './base';
-import { Domain, membershipApplicationSchema } from '@club/shared-types/domain/membershipApplication';
+import type { Types } from 'mongoose';
+import type { BaseDocument } from './base';
+import type { Domain} from '@club/shared-types/domain/membershipApplication';
+import { membershipApplicationSchema } from '@club/shared-types/domain/membershipApplication';
 import { MembershipStatus } from '@club/shared-types/core/enums';
 
 /**

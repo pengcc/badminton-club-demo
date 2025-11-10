@@ -1,6 +1,6 @@
 {
-  "club_name": "DEMO CLUB",
-  "club_introduction": "Der DEMO Badminton CLUB wurde in 2009 gegründet. Derzeit haben wir ca. 60 Mitglieder. Wir haben uns stets dafür eingesetzt, die Badminton-Fans ein gutes Spielumfeld zu bieten. Hier findest du, egal ob du Anfänger oder fortgeschrittene Spieler bist, deine eigenen Spielpartner. Der Club hat jede Woche Trainingszeiten, um allen dabei zu helfen, mehr über Badminton zu lernen und ihre Techniken zu verbessern.",
+  "club_name": "DCBEV",
+  "club_introduction": "Der Deutsch-Chinesische Badminton Verein wurde in 2009 gegründet. Derzeit haben wir ca. 60 Mitglieder. Wir haben uns stets dafür eingesetzt, die Badminton-Fans ein gutes Spielumfeld zu bieten. Hier findest du, egal ob du Anfänger oder fortgeschrittene Spieler bist, deine eigenen Spielpartner. Der Club hat jede Woche Trainingszeiten, um allen dabei zu helfen, mehr über Badminton zu lernen und ihre Techniken zu verbessern.",
   "address": "Adresse",
   "club_address_placeholder": "123 Sportallee, Stadt, Bundesland, 12345",
   "contact_info_placeholder": "E-Mail: info@badmintonclub.com\nTelefon: (123) 456-7890",
@@ -53,11 +53,11 @@
     "locations": {
       "main": {
         "name": "Sporthalle: TU",
-        "address": "Muster Ufer 19, 10963 Berlin"
+        "address": "Tempelhofer Ufer 19, 10963 Berlin"
       },
       "secondary": {
         "name": "Sporthalle: PU",
-        "address": "Muster Str. 16, 10409 Berlin"
+        "address": "Gürtelstraße 16, 10409 Berlin"
       }
     }
   },

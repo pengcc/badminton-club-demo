@@ -7,7 +7,8 @@ interface CheckboxProps extends React.ComponentProps<"input"> {
 
 const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
   ({ className, label, id, ...props }, ref) => {
-    const checkboxId = id || React.useId()
+    const generatedId = React.useId()
+    const checkboxId = id || generatedId
 
     if (label) {
       return (

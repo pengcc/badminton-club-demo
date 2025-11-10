@@ -8,7 +8,7 @@ import { Input } from '@app/components/ui/input';
 import { Label } from '@app/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@app/components/ui/select';
 import { MatchService } from '@app/services/matchService';
-import { Team } from '@app/lib/types';
+import type { Team } from '@app/lib/types';
 import { useModalBehavior } from '@/app/hooks/useModalBehavior';
 import {
   Calendar,
@@ -41,8 +41,6 @@ export default function ScheduleMatchModal({
   onMatchCreated,
   teams
 }: ScheduleMatchModalProps) {
-  const t = useTranslations('dashboard');
-  const tCommon = useTranslations('common');
   const tMatch = useTranslations('match');
   const createMatchMutation = MatchService.useCreateMatch();
 
@@ -116,8 +114,6 @@ export default function ScheduleMatchModal({
     setIsSubmitting(true);
 
     try {
-      console.log('📝 Creating match with form data:', formData);
-
       // Transform form data to match API expectations
       const matchData: any = {
         date: formData.date,
@@ -128,11 +124,8 @@ export default function ScheduleMatchModal({
         lineup: {}, // Empty lineup for new match
       };
 
-      console.log('📤 Sending to API:', matchData);
-
       const newMatch = await createMatchMutation.mutateAsync(matchData as any);
 
-      console.log('✅ Match created successfully:', newMatch);
       alert(tMatch('modals.scheduleMatch.success'));
 
       // Pass the created match to parent component

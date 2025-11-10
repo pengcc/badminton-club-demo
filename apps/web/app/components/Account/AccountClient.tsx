@@ -8,7 +8,7 @@ import Header from '@app/components/Header';
 import { Card, CardContent, CardHeader, CardTitle } from '@app/components/ui/card';
 import { Button } from '@app/components/ui/button';
 import { FormField } from '@app/components/FormField';
-import { Key, User, Mail, CheckCircle2 } from 'lucide-react';
+import { Key, User } from 'lucide-react';
 import { AuthService } from '@app/services/authService';
 
 function AccountClient() {

@@ -1,27 +1,18 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/navigation';
 import { Card, CardContent } from '@app/components/ui/card';
 import { Button } from '@app/components/ui/button';
 import { Label } from '@app/components/ui/label';
 import { RadioGroup, RadioGroupItem } from '@app/components/ui/radio-group';
-import { Checkbox } from '@app/components/ui/checkbox';
 import { FormField } from '@app/components/FormField';
 import { submitMembershipApplication, generateMembershipApplicationPDF, generateSEPAMandatePDF, generateMembershipPackagePDF } from '@app/lib/api';
-import { validateForm, formatIBAN, cleanIBAN, type FormData, type ValidationErrors } from '@app/lib/validation';
-import { cn } from '@app/lib/utils';
-import { format } from 'date-fns';
+import { validateForm, formatIBAN, cleanIBAN, type FormData } from '@app/lib/validation';
 
-interface MembershipFormClientProps {
-  onClose?: () => void;
-  onSubmit?: (data: any) => Promise<void>;
-  mode?: 'standalone' | 'embedded';
-  lang: string;
-}
 
-export default function MembershipFormClient({ onClose, onSubmit, mode = 'standalone', lang }: MembershipFormClientProps) {
+export default function MembershipFormClient() {
   const t = useTranslations('common');
   const router = useRouter();
   const [isSubmitting, setIsSubmitting] = useState(false);

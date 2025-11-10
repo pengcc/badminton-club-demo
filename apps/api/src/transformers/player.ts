@@ -1,7 +1,8 @@
 import { Types } from 'mongoose';
-import { Domain } from '@club/shared-types/domain/player';
-import { Persistence } from '../types/persistence/player';
-import { Api } from '@club/shared-types/api/player';
+import type { Domain } from '@club/shared-types/domain/player';
+import type { Persistence } from '../types/persistence/player';
+import type { Api } from '@club/shared-types/api/player';
+import type { BaseDocument } from '../types/persistence/base';
 
 /**
  * Player Persistence ↔ Domain Transformers
@@ -42,7 +43,7 @@ export class PlayerPersistenceTransformer {
    */
   static toPersistence(
     player: Omit<Domain.Player, 'id' | 'matchIds' | 'createdAt' | 'updatedAt'>
-  ): Omit<Persistence.PlayerDocument, keyof import('../types/persistence/base').BaseDocument> {
+  ): Omit<Persistence.PlayerDocument, keyof BaseDocument> {
     return {
       userId: new Types.ObjectId(player.userId),
       singlesRanking: player.singlesRanking,

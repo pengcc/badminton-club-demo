@@ -1,6 +1,5 @@
-import { Types } from 'mongoose';
-import { Domain } from '@club/shared-types/domain/user';
-import { BaseDocument } from './base';
+import type { Domain } from '@club/shared-types/domain/user';
+import type { BaseDocument } from './base';
 
 /**
  * Persistence layer types for User

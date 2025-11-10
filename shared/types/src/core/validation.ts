@@ -122,24 +122,24 @@ export const SchemaBuilder = {
   /**
    * Make all properties optional
    */
-  optional: <T extends z.ZodObject<any>>(schema: T) =>
+  optional: <T extends z.ZodObject<any>>(schema: T): z.ZodObject<any> =>
     schema.partial(),
 
   /**
    * Make all properties required
    */
-  required: <T extends z.ZodObject<any>>(schema: T) =>
+  required: <T extends z.ZodObject<any>>(schema: T): z.ZodObject<any> =>
     schema.required(),
 
   /**
    * Add timestamp fields
    */
-  withTimestamp: <T extends z.ZodObject<any>>(schema: T) =>
+  withTimestamp: <T extends z.ZodObject<any>>(schema: T): z.ZodObject<any> =>
     schema.extend(CommonSchemas.timestamp),
 
   /**
    * Add string ID field
    */
-  withStringId: <T extends z.ZodObject<any>>(schema: T) =>
+  withStringId: <T extends z.ZodObject<any>>(schema: T): z.ZodObject<any> =>
     schema.extend(CommonSchemas.stringId)
 };

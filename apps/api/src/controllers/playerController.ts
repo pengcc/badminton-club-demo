@@ -1,7 +1,7 @@
-import { Request, Response, NextFunction } from 'express';
+import type { Request, Response, NextFunction } from 'express';
 import { PlayerService } from '../services/playerService';
 import { UserService } from '../services/userService';
-import { Api } from '@club/shared-types/api/player';
+import type { Api } from '@club/shared-types/api/player';
 
 /**
  * Controller for Player entity operations
@@ -260,8 +260,6 @@ export class PlayerController {
     next: NextFunction
   ): Promise<void> {
     try {
-      const domainPlayer = await PlayerService.addPlayerToTeam(req.params.playerId, req.params.teamId);
-
       // Get player with user info for response
       const playerWithUserInfo = await PlayerService.getPlayerByIdWithUserInfo(req.params.playerId);
 
@@ -284,8 +282,6 @@ export class PlayerController {
     next: NextFunction
   ): Promise<void> {
     try {
-      const domainPlayer = await PlayerService.removePlayerFromTeam(req.params.playerId, req.params.teamId);
-
       // Get player with user info for response
       const playerWithUserInfo = await PlayerService.getPlayerByIdWithUserInfo(req.params.playerId);
 

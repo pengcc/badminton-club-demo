@@ -1,6 +1,5 @@
-import { Document, Types } from 'mongoose';
-import { UserRole } from '@club/shared-types/core/enums';
-import { Domain } from '@club/shared-types/domain/auth';
+import type { Document, Types } from 'mongoose';
+import type { Domain } from '@club/shared-types/domain/auth';
 
 /**
  * Persistence layer types for authentication data

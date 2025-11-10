@@ -1,4 +1,4 @@
-import { describe, it, expect } from '@jest/globals';
+import { describe, it } from '@jest/globals';
 import { z } from 'zod';
 import { CommonSchemas, SchemaBuilder } from '../validation';
 import { TypeAssert, TestData } from './testUtils';

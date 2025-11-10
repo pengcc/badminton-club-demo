@@ -1,7 +1,7 @@
-import { Types } from 'mongoose';
-import { Domain } from '@club/shared-types/domain/user';
-import { Persistence } from '../types/persistence/user';
-import { Api } from '@club/shared-types/api/user';
+import type { Domain } from '@club/shared-types/domain/user';
+import type { Persistence } from '../types/persistence/user';
+import type { Api } from '@club/shared-types/api/user';
+import type { BaseDocument } from '../types/persistence/base';
 
 /**
  * User Persistence ↔ Domain Transformers
@@ -38,7 +38,7 @@ export class UserPersistenceTransformer {
    */
   static toPersistence(
     user: Omit<Domain.User, 'id' | 'createdAt' | 'updatedAt'>
-  ): Omit<Persistence.UserDocument, keyof import('../types/persistence/base').BaseDocument> {
+  ): Omit<Persistence.UserDocument, keyof BaseDocument> {
     return {
       email: user.email,
       firstName: user.firstName,
@@ -63,7 +63,7 @@ export class UserApiTransformer {
    * Transform Domain.User to Api.UserResponse
    * Converts Date to ISO string and adds computed fields
    */
-  static toApi(user: Domain.User, options?: {
+  static toApi(user: Domain.User, _options?: {
     includePlayerInfo?: boolean;
     teamCount?: number;
     matchCount?: number;

@@ -238,6 +238,12 @@ importers:
       eslint-config-next:
         specifier: ^15.0.3
         version: 15.5.6(eslint@9.38.0(jiti@1.21.7))(typescript@5.9.3)
+      eslint-plugin-react:
+        specifier: ^7.37.2
+        version: 7.37.5(eslint@9.38.0(jiti@1.21.7))
+      eslint-plugin-react-hooks:
+        specifier: ^5.0.0
+        version: 5.2.0(eslint@9.38.0(jiti@1.21.7))
       jest:
         specifier: ^30.2.0
         version: 30.2.0(@types/node@20.19.24)(ts-node@10.9.2(@types/node@20.19.24)(typescript@5.9.3))
@@ -260,6 +266,15 @@ importers:
       '@types/jest':
         specifier: ^30.0.0
         version: 30.0.0
+      '@typescript-eslint/eslint-plugin':
+        specifier: ^8.0.0
+        version: 8.46.2(@typescript-eslint/parser@8.46.2(eslint@9.38.0(jiti@1.21.7))(typescript@5.9.3))(eslint@9.38.0(jiti@1.21.7))(typescript@5.9.3)
+      '@typescript-eslint/parser':
+        specifier: ^8.0.0
+        version: 8.46.2(eslint@9.38.0(jiti@1.21.7))(typescript@5.9.3)
+      eslint:
+        specifier: ^9.19.0
+        version: 9.38.0(jiti@1.21.7)
       jest:
         specifier: ^30.2.0
         version: 30.2.0(@types/node@20.19.24)(ts-node@10.9.2(@types/node@20.19.24)(typescript@5.9.3))

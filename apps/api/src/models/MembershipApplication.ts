@@ -5,8 +5,8 @@ import {
   MemberApplicationStatus
 } from '@club/shared-types/core/enums';
 import { validationPlugin } from '../plugins/mongooseValidation';
-import { BaseDocument } from '../types/persistence/base';
-import { Types } from 'mongoose';
+import type { BaseDocument } from '../types/persistence/base';
+import type { Types } from 'mongoose';
 
 /**
  * Mongoose schema for MembershipApplication

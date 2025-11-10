@@ -1,4 +1,4 @@
-import { Domain } from '../domain/pdf';
+import type { Domain } from '../domain/pdf';
 
 /**
  * API types for PDF operations

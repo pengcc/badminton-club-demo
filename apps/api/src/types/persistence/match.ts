@@ -1,8 +1,8 @@
-import { Types } from 'mongoose';
-import { Domain } from '@club/shared-types/domain/match';
-import { BaseLineupPlayer } from '@club/shared-types/core/base';
-import { BaseDocument } from './base';
-import { LineupPosition } from '@club/shared-types/core/enums';
+import type { Types } from 'mongoose';
+import type { Domain } from '@club/shared-types/domain/match';
+import type { BaseLineupPlayer } from '@club/shared-types/core/base';
+import type { BaseDocument } from './base';
+import type { LineupPosition } from '@club/shared-types/core/enums';
 
 /**
  * Persistence layer types for Match

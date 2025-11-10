@@ -1,4 +1,4 @@
-import { Document, Model, Schema, UpdateQuery, FilterQuery } from 'mongoose';
+import type { Document, Model, Schema, UpdateQuery, FilterQuery } from 'mongoose';
 
 /**
  * Base timestamp interface with readonly fields

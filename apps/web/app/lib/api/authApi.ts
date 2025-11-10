@@ -1,6 +1,5 @@
 import apiClient from './client';
-import { ApiResponse } from './types';
-import { Api } from '@club/shared-types/api/auth';
+import type { Api } from '@club/shared-types/api/auth';
 
 /**
  * Authentication API module

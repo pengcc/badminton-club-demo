@@ -1,7 +1,7 @@
-import express, { Router } from 'express';
+import type { Router } from 'express';
+import express from 'express';
 import { protect, authorize } from '../middleware/auth';
 import { MatchController } from '../controllers/matchController';
-import { asyncHandler } from '../utils/controllerHelpers';
 import { ADMIN_ROLES, MEMBER_ROLES } from '../utils/roles';
 
 const router: Router = express.Router();

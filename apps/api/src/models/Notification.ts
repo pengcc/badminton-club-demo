@@ -1,5 +1,5 @@
 import { Schema, model } from 'mongoose';
-import { BaseDocument } from '../types/persistence/base';
+import type { BaseDocument } from '../types/persistence/base';
 import { validationPlugin } from '../plugins/mongooseValidation';
 
 /**

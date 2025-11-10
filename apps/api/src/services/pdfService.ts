@@ -1,4 +1,4 @@
-import { PDFDocument, StandardFonts, rgb } from 'pdf-lib';
+import { PDFDocument, StandardFonts } from 'pdf-lib';
 import fontkit from '@pdf-lib/fontkit';
 
 // Page layout configuration
@@ -76,16 +76,16 @@ export class PDFService {
     de: {
       membershipApplication: {
         header: 'Aufnahmeantrag',
-        subtitle: 'Badminton Demo Club e.V.',
-        introduction: 'Hiermit beantrage ich die Mitgliedschaft im Badminton Demo Club e.V. Die folgenden Angaben sind für die Durchführung des Mitgliedschaftsverhältnisses erforderlich.',
+        subtitle: 'Deutsch-Chinesischer Badminton Verein e.V.',
+        introduction: 'Hiermit beantrage ich die Mitgliedschaft im Deutsch-Chinesischer Badminton Verein e.V. Die folgenden Angaben sind für die Durchführung des Mitgliedschaftsverhältnisses erforderlich.',
         personalInfo: 'Persönliche Angaben',
         membershipInfo: 'Mitgliedschaft',
         membershipFee: {
           title: 'Mitgliedsbetrag',
-          text: 'Der Mitgliedsbeitrag wird mittels SEPA-Lastschriftmandat eingezogen. Das Formular für das SEPA-Lastschriftmandat und die Beitragsordnung finden Sie unter club-demo.de/#documents.'
+          text: 'Der Mitgliedsbeitrag wird mittels SEPA-Lastschriftmandat eingezogen. Das Formular für das SEPA-Lastschriftmandat und die Beitragsordnung finden Sie unter https://dcbev.de/#documents.'
         },
         checklist: [
-          'Die Datenschutzhinweise in der Anlage 1 (unter club-demo.de/#documents) habe ich erhalten und zur Kenntnis genommen.',
+          'Die Datenschutzhinweise in der Anlage 1 (unter https://dcbev.de/#documents) habe ich erhalten und zur Kenntnis genommen.',
           'Ich bin mit dem Verein hinsichtlich der Nutzung und Zuweisung von Hallen für die Mitglieder einverstanden.',
           'Mit meiner Unterschrift erkenne ich die Satzung und Ordnungen des Vereins in der jeweils gültigen Fassung an.'
         ],
@@ -96,7 +96,7 @@ export class PDFService {
       },
       sepaMandate: {
         header: 'SEPA-Basis-Lastschriftmandat',
-        introduction: 'Ich ermächtige (Wir ermächtigen) Badminton Demo Club, Zahlungen von meinem (unserem) Konto mittels Lastschrift einzuziehen. Zugleich weise ich mein (weisen wir unser) Kreditinstitut an, die von Badminton Demo Club auf mein (unser) Konto gezogenen Lastschriften einzulösen.',
+        introduction: 'Ich ermächtige (Wir ermächtigen) Deutsch-Chinesischer Badminton Verein, Zahlungen von meinem (unserem) Konto mittels Lastschrift einzuziehen. Zugleich weise ich mein (weisen wir unser) Kreditinstitut an, die von Deutsch-Chinesischer Badminton Verein auf mein (unser) Konto gezogenen Lastschriften einzulösen.',
         notice: {
           title: 'Hinweis',
           text: 'Ich kann (Wir können) innerhalb von acht Wochen, beginnend mit dem Belastungsdatum, die Erstattung des belasteten Betrages verlangen. Es gelten dabei die mit meinem (unserem) Kreditinstitut vereinbarten Bedingungen.'

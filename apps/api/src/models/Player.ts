@@ -1,6 +1,6 @@
-import { Schema, model, Document } from 'mongoose';
+import type { Document } from 'mongoose';
+import { Schema, model } from 'mongoose';
 import { PlayerPosition } from '@club/shared-types/core/enums';
-import { Persistence } from '../types/persistence/player';
 
 /**
  * MongoDB document interface for Player entity

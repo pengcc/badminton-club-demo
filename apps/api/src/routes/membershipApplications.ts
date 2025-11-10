@@ -1,4 +1,5 @@
-import express, { Router } from 'express';
+import type { Router } from 'express';
+import express from 'express';
 import { protect, authorize } from '../middleware/auth';
 import { MembershipApplicationController } from '../controllers/membershipApplicationController';
 import { ADMIN_ROLES } from '../utils/roles';

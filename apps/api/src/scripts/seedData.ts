@@ -37,7 +37,6 @@ const cities = ['Berlin', 'Hamburg', 'Munich', 'Cologne', 'Frankfurt', 'Stuttgar
 const streets = ['Hauptstraße', 'Schulstraße', 'Kirchstraße', 'Bahnhofstraße', 'Gartenstraße', 'Dorfstraße', 'Mühlenstraße', 'Lindenstraße', 'Marktstraße', 'Bergstraße', 'Feldstraße', 'Waldstraße', 'Parkstraße', 'Rosenstraße', 'Sportstraße', 'Vereinsstraße', 'Clubstraße', 'Badmintonstraße', 'Trainingsplatz', 'Spielerweg'];
 
 const positions = ['singles', 'doubles', 'mixed-doubles'];
-const teamRoles = ['player', 'captain', 'vice-captain'];
 
 // Generate random data helpers
 const getRandomElement = (array: any[]) => array[Math.floor(Math.random() * array.length)];

@@ -13,19 +13,19 @@ export default async function TrialTrainingPage({ params }: { params: Promise<{ 
     <div className="container mx-auto px-4 py-8">
       <Header lang={lang} />
       <div className="max-w-2xl mx-auto pt-8">
-        <TrialTrainingPageContent lang={lang} />
+        <TrialTrainingPageContent />
       </div>
     </div>
   );
 }
 
-function TrialTrainingPageContent({ lang }: { lang: string }) {
+function TrialTrainingPageContent() {
   const t = useTranslations('common');
 
   return (
     <>
       <h1 className="text-3xl font-bold mb-6 text-center">{t('pages.trialTraining')}</h1>
-      <TrialTrainingFormClient lang={lang} />
+      <TrialTrainingFormClient />
     </>
   );
 }

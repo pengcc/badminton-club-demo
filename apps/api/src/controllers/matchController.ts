@@ -1,9 +1,8 @@
-import { Request, Response, NextFunction } from 'express';
-import { AuthenticatedRequest } from '../middleware/auth';
+import type { Request, Response, NextFunction } from 'express';
+import type { AuthenticatedRequest } from '../middleware/auth';
 import { MatchService } from '../services/matchService';
-import { Api } from '@club/shared-types/api/match';
-import { Domain } from '@club/shared-types/domain/match';
-import { UserRole } from '@club/shared-types/core/enums';
+import type { Api } from '@club/shared-types/api/match';
+import type { Domain } from '@club/shared-types/domain/match';
 import { MatchApiTransformer } from '../transformers/match';
 
 /**

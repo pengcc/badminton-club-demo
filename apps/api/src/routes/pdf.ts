@@ -1,6 +1,7 @@
-import express, { Router } from 'express';
+import type { Router } from 'express';
+import express from 'express';
 import { PDFController } from '../controllers/pdfController';
-import { protect, authorize, AuthenticatedRequest } from '../middleware/auth';
+import { protect, authorize } from '../middleware/auth';
 import { ADMIN_ROLES } from '../utils/roles';
 import { asyncHandler } from '../utils/controllerHelpers';
 
