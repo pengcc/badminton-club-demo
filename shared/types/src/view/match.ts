@@ -1,6 +1,7 @@
-import { Api } from '../api/match';
+import type { Api } from '../api/match';
 import { z } from 'zod';
-import { LineupPosition, MatchStatus } from '../core/enums';
+import type { MatchStatus } from '../core/enums';
+import { LineupPosition } from '../core/enums';
 
 /**
  * View layer types for Match components

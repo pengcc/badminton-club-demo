@@ -1,5 +1,6 @@
 // apps/api/src/models/Match.ts
-import { Schema, model, Document } from 'mongoose';
+import type { Document } from 'mongoose';
+import { Schema, model } from 'mongoose';
 import { LineupPosition, MatchStatus } from '@club/shared-types/core/enums';
 import { validationPlugin } from '../plugins/mongooseValidation';
 

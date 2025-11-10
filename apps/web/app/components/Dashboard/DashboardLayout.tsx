@@ -1,12 +1,10 @@
 'use client';
 
 import React, { useEffect } from 'react';
-import { useRouter, usePathname, useParams } from 'next/navigation';
+import { useRouter, usePathname } from 'next/navigation';
 import { useTranslations } from 'next-intl';
-import { useAuth } from '@app/hooks/useAuth';
 import { AuthService } from '@app/services/authService';
 import { Badge } from '@app/components/ui/badge';
-import { Button } from '@app/components/ui/button';
 import {
   Users,
   Trophy,
@@ -36,7 +34,6 @@ interface DashboardLayoutProps {
 
 export default function DashboardLayout({ children, lang, initialUser }: DashboardLayoutProps) {
   const t = useTranslations('dashboard');
-  const tCommon = useTranslations('common');
 
   // Use session hook directly with initial server data
   const { data: user, isLoading } = AuthService.useSession(initialUser);

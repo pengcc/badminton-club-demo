@@ -1,6 +1,5 @@
 import { z } from 'zod';
-import { Domain, UserSchema } from '../domain/user';
-import { UserRole, MembershipStatus } from '../core/enums';
+import type { UserRole, MembershipStatus } from '../core/enums';
 
 /**
  * API layer types for User

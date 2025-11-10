@@ -1,6 +1,6 @@
 import apiClient from './client';
-import { ApiResponse } from './types';
-import { Api } from '@club/shared-types/api/team';
+import type { ApiResponse } from './types';
+import type { Api } from '@club/shared-types/api/team';
 
 /**
  * Team API module

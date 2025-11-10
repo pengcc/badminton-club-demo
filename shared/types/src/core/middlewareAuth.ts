@@ -1,6 +1,6 @@
 // shared/types/core/middlewareAuth.ts
 // Express middleware and infrastructure auth types
-import { UserRole } from './enums';
+import type { UserRole } from './enums';
 
 /**
  * JWT payload interface

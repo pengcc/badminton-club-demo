@@ -1,4 +1,5 @@
-import { Schema, model, Document } from 'mongoose';
+import type { Document } from 'mongoose';
+import { Schema, model } from 'mongoose';
 import bcrypt from 'bcryptjs';
 import {
   Gender,
@@ -244,24 +245,6 @@ userSchema.methods.toView = async function(this: IUser): Promise<UserView> {
   // Extract timestamps using type assertion
   const timestamps = this as unknown as { createdAt: Date; updatedAt: Date };
   const id = (this as unknown as { _id: { toString(): string } })._id.toString();
-
-  // Load teams if user is a player
-  let teams;
-  if (isPlayer) {
-    type TeamRef = {
-      _id: { toString(): string };
-      name: string;
-    };
-
-    const playerDoc = await this.model('Player')
-      .findOne({ userId: _id })
-      .populate<{ teamIds: TeamRef[] }>('teamIds', 'name');
-
-    teams = playerDoc?.teamIds?.map(team => ({
-      id: team._id.toString(),
-      name: team.name
-    }));
-  }
 
   return {
     id,

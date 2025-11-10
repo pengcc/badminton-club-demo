@@ -1,7 +1,8 @@
 import { Types } from 'mongoose';
-import { Domain } from '@club/shared-types/domain/team';
-import { Persistence } from '../types/persistence/team';
-import { Api } from '@club/shared-types/api/team';
+import type { Domain } from '@club/shared-types/domain/team';
+import type { Persistence } from '../types/persistence/team';
+import type { Api } from '@club/shared-types/api/team';
+import type { BaseDocument } from '../types/persistence/base';
 
 /**
  * Team Persistence ↔ Domain Transformers
@@ -37,7 +38,7 @@ export class TeamPersistenceTransformer {
    */
   static toPersistence(
     team: Omit<Domain.Team, 'id' | 'createdAt' | 'updatedAt'>
-  ): Omit<Persistence.TeamDocument, keyof import('../types/persistence/base').BaseDocument> {
+  ): Omit<Persistence.TeamDocument, keyof BaseDocument> {
     return {
       name: team.name,
       matchLevel: team.matchLevel,

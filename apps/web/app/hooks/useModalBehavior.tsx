@@ -25,7 +25,6 @@ export function useModalBehavior({
   enableBackdropClose = true,
 }: UseModalBehaviorOptions) {
   const handleCloseAttempt = useCallback(() => {
-    console.log({hasUnsavedChanges})
     if (hasUnsavedChanges) {
       const confirmed = window.confirm('You have unsaved changes. Are you sure you want to close?');
       if (!confirmed) return;

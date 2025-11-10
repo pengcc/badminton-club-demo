@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { Domain } from '../../domain/pdf';
+import type { Domain } from '../../domain/pdf';
 import { BaseTransformer } from './base';
 
 // View layer interfaces

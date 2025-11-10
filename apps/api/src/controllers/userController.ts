@@ -1,13 +1,11 @@
-import { Request, Response, NextFunction } from 'express';
-import { User, IUser } from '../models/User';
-import { Player } from '../models/Player';
-import { AuthenticatedRequest } from '../middleware/auth';
+import type { Response, NextFunction } from 'express';
+import { User } from '../models/User';
+import type { AuthenticatedRequest } from '../middleware/auth';
 import { UserRole } from '@club/shared-types/core/enums';
 import { AppError } from '../utils/errors';
 import { ResponseHelper } from '../utils/controllerHelpers';
-import { PlayerService } from '../services/playerService';
 import { UserService } from '../services/userService';
-import { Api } from '@club/shared-types/api/user';
+import type { Api } from '@club/shared-types/api/user';
 import { UserPersistenceTransformer, UserApiTransformer } from '../transformers/user';
 
 export class UserController {
@@ -79,7 +77,7 @@ export class UserController {
   /**
    * Get all users with filtering and pagination
    */
-  static async getAllUsers(req: AuthenticatedRequest, res: Response, next: NextFunction): Promise<void> {
+  static async getAllUsers(req: AuthenticatedRequest, res: Response, _next: NextFunction): Promise<void> {
     const {
       page = 1,
       limit = 10,

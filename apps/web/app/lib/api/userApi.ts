@@ -1,6 +1,6 @@
 import apiClient from './client';
-import { ApiResponse, PaginatedResponse, PaginationParams } from './types';
-import { Api } from '@club/shared-types/api/user';
+import type { ApiResponse, PaginatedResponse, PaginationParams } from './types';
+import type { Api } from '@club/shared-types/api/user';
 
 /**
  * User API module
@@ -77,12 +77,10 @@ export const batchUpdateUsers = async (
   userIds: string[],
   updateData: Partial<Api.UpdateUserRequest>
 ): Promise<BatchUpdateResponse> => {
-  console.log('API call - batchUpdateUsers:', { userIds, updateData });
   const response = await apiClient.patch<BatchUpdateResponse>('/users/batch', {
     userIds,
     updateData,
   });
-  console.log('API response - batchUpdateUsers:', response.data);
   return response.data;
 };
 

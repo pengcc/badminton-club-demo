@@ -1,8 +1,10 @@
-import { User, IUser } from '../models/User';
-import { Player, IPlayer } from '../models/Player';
-import { Team } from '../models/Team';
+import type { IUser } from '../models/User';
+import { User } from '../models/User';
+import type { IPlayer } from '../models/Player';
+import { Player } from '../models/Player';
 import { Match } from '../models/Match';
-import mongoose, { Schema, Types } from 'mongoose';
+import type { Schema} from 'mongoose';
+import mongoose from 'mongoose';
 import { UserRole } from '@club/shared-types/core/enums';
 
 /**
@@ -15,7 +17,7 @@ async function supportsTransactions(): Promise<boolean> {
 
     const result = await admin.command({ isMaster: 1 });
     return !!(result.setName || result.msg === 'isdbgrid');
-  } catch (error) {
+  } catch (_error) {
     return false;
   }
 }
@@ -140,7 +142,7 @@ export class UserService {
         console.error(`Error deleting Player entity for user ${userId}:`, error);
         throw error;
       } finally {
-        session.endSession();
+        await session.endSession();
       }
     } else {
       // Fallback: Sequential operations (local dev with standalone MongoDB)

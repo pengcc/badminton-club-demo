@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useState, useEffect, useMemo, useCallback } from 'react';
-import { useTranslations } from 'next-intl';
 import { Card, CardContent, CardHeader, CardTitle } from '@app/components/ui/card';
 import { Button } from '@app/components/ui/button';
 import { Badge } from '@app/components/ui/badge';
@@ -20,17 +19,15 @@ import { getMembershipStatusBadgeProps, getUserRoleBadgeProps } from '@app/lib/u
 import AddMemberModal from './modals/AddMemberModal';
 import EditMemberModal from './modals/EditMemberModal';
 import BatchUpdateMembersModal from './modals/BatchUpdateMembersModal';
-import { User } from '@app/lib/types';
+import type { User } from '@app/lib/types';
 import { UserRole } from '@club/shared-types/core/enums';
 
 export default function MemberCenter() {
-  const t = useTranslations('dashboard');
-  const tCommon = useTranslations('common');
   const [searchTerm, setSearchTerm] = useState('');
   const [filterType, setFilterType] = useState('all'); // all, active, inactive, players, admins
 
   // Use service hook - returns UserCard[] with computed display fields
-  const { data: members, isLoading, error, refetch } = UserService.useUserList({ limit: 100 });
+  const { data: members, isLoading } = UserService.useUserList({ limit: 100 });
 
   // React Query mutations for proper cache invalidation
   const deleteUserMutation = UserService.useDeleteUser();
@@ -85,10 +82,9 @@ export default function MemberCenter() {
   }, [members, searchTerm, filterType]);
 
   // Memoize callback functions for performance
-  const handleSendEmail = useCallback(async (memberId: string) => {
+  const handleSendEmail = useCallback(async (_memberId: string) => {
     try {
       // In real app, call API to send invitation email
-      console.log('Sending email to member:', memberId);
       alert('Invitation email sent successfully!');
     } catch (error) {
       console.error('Error sending email:', error);
@@ -122,7 +118,7 @@ export default function MemberCenter() {
     setAddModalOpen(true);
   }, []);
 
-  const handleMemberAdded = useCallback((newMember: User) => {
+  const handleMemberAdded = useCallback(() => {
     // Cache is automatically invalidated by the mutation in AddMemberModal
     // Show success message
     alert('Member added successfully!');
@@ -130,15 +126,11 @@ export default function MemberCenter() {
 
   const handleBatchUpdate = async (selectedMemberIds: string[], updateData: any) => {
     try {
-      console.log('Frontend batch update:', { selectedMemberIds, updateData }); // Debug log
-
       // Use React Query mutation for proper cache invalidation
       const response = await batchUpdateMutation.mutateAsync({
         userIds: selectedMemberIds,
         updateData
       });
-
-      console.log('Batch update response:', response); // Debug log
 
       alert(`Successfully updated ${response.modifiedCount || selectedMemberIds.length} members!`);
     } catch (error: any) {
@@ -147,7 +139,7 @@ export default function MemberCenter() {
     }
   };
 
-  const handleMemberUpdated = (updatedMember: User) => {
+  const handleMemberUpdated = () => {
     // Cache is automatically invalidated by the mutation in EditMemberModal
     // No need to manually refetch
   };
@@ -299,7 +291,7 @@ export default function MemberCenter() {
                     <td className="p-2">
                       {(() => {
                         const badgeProps = getMembershipStatusBadgeProps(member.membershipStatus);
-                        return <Badge variant={badgeProps.variant} className={`text-xs ${badgeProps?.className ?? ""}`}>{badgeProps.label}</Badge>;
+                        return <Badge variant={badgeProps.variant} className={`text-xs test-classname ${badgeProps?.className ?? ""}`}>{badgeProps.label}</Badge>;
                       })()}
                     </td>
                     <td className="p-2">
@@ -382,7 +374,7 @@ export default function MemberCenter() {
                     <td className="p-2">
                       {(() => {
                         const badgeProps = getMembershipStatusBadgeProps(member.membershipStatus);
-                        return <Badge variant={badgeProps.variant}>{badgeProps.label}</Badge>;
+                        return <Badge variant={badgeProps.variant} className={`text-xs test-classname ${badgeProps?.className ?? ""}`}>{badgeProps.label}</Badge>;
                       })()}
                     </td>
                     <td className="p-2">
@@ -466,7 +458,7 @@ export default function MemberCenter() {
                     <td className="p-2">
                       {(() => {
                         const badgeProps = getMembershipStatusBadgeProps(member.membershipStatus);
-                        return <Badge variant={badgeProps.variant}>{badgeProps.label}</Badge>;
+                        return <Badge variant={badgeProps.variant} className={`text-xs test-classname ${badgeProps?.className ?? ""}`}>{badgeProps.label}</Badge>;
                       })()}
                     </td>
                     <td className="p-2">

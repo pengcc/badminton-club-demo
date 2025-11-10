@@ -1,5 +1,5 @@
 import apiClient from './client';
-import { ApiResponse, PaginationParams } from './types';
+import type { ApiResponse, PaginationParams } from './types';
 import type {
   CreateMembershipApplicationRequest,
   MembershipApplicationResponse,

@@ -1,4 +1,4 @@
-import express, { Router } from 'express';
+import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import mongoose from 'mongoose';
@@ -23,27 +23,25 @@ const getDatabaseUri = () => {
   const env = process.env.NODE_ENV || 'development';
 
   switch (env) {
+    case 'test':
+      return process.env.MONGODB_URI_TEST || 'mongodb://localhost:27017/badminton-club-test';
     case 'development':
-      return process.env.MONGODB_URI_DEV || 'mongodb://localhost:27017/badminton-club-demo-dev';
+      return process.env.MONGODB_URI_DEV || 'mongodb://localhost:27017/badminton-club-dev';
     default:
-      return process.env.MONGODB_URI || 'mongodb://localhost:27017/badminton-club-demo';
+      return process.env.MONGODB_URI || 'mongodb://localhost:27017/badminton-club';
   }
 };
 
 const app = express();
-// Behind proxies (Railway, Vercel, etc.) to ensure correct client IP for rate limiting
-app.set('trust proxy', 1);
 const port = process.env.PORT || 3003;
 
 // Security middleware
 app.use(helmet());
 
-// Rate limiting (configurable via env)
-const windowMs = Number(process.env.RATE_LIMIT_WINDOW_MS || 15 * 60 * 1000);
-const max = Number(process.env.RATE_LIMIT_MAX || 100);
+// Rate limiting
 const limiter = rateLimit({
-  windowMs,
-  max,
+  windowMs: 15 * 60 * 1000, // 15 minutes
+  max: 100, // limit each IP to 100 requests per windowMs
 });
 app.use(limiter);
 
@@ -69,9 +67,10 @@ app.use(express.urlencoded({ extended: true }));
 
 // MongoDB connection
 const mongoUri = getDatabaseUri();
+console.log({mongoUri})
 mongoose.connect(mongoUri)
   .then(() => {
-    console.log('MongoDB connected successfully, mongoUri:', mongoUri);
+    console.log('MongoDB connected successfully');
     // Initialize cron jobs after DB connection is established
     initAutoCompleteMatchesCron();
   })

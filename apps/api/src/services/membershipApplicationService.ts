@@ -5,14 +5,13 @@ import {
   MembershipApplicationPersistenceTransformer,
   MembershipApplicationApiTransformer
 } from '../transformers/membershipApplication';
-import { Domain } from '@club/shared-types/domain/membershipApplication';
-import {
+import type { Domain } from '@club/shared-types/domain/membershipApplication';
+import type {
   CreateMembershipApplicationRequest,
-  UpdateMembershipApplicationRequest,
-  MembershipApplicationResponse
-} from '@club/shared-types/api/membershipApplication';
+  UpdateMembershipApplicationRequest} from '@club/shared-types/api/membershipApplication';
+
 import { MemberApplicationStatus } from '@club/shared-types/core/enums';
-import { MembershipApplicationPersistence } from '../types/persistence/membershipApplication';
+import type { MembershipApplicationPersistence } from '../types/persistence/membershipApplication';
 
 /**
  * Service for MembershipApplication entity operations

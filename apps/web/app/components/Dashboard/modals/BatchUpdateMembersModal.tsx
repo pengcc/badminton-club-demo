@@ -5,7 +5,6 @@ import { useTranslations } from 'next-intl';
 import { Button } from '@app/components/ui/button';
 import { Input } from '@app/components/ui/input';
 import { Label } from '@app/components/ui/label';
-import { Card, CardContent, CardHeader, CardTitle } from '@app/components/ui/card';
 import { RadioGroup, RadioGroupItem } from '@app/components/ui/radio-group';
 import { Checkbox } from '@app/components/ui/checkbox';
 import { Badge } from '@app/components/ui/badge';
@@ -21,11 +20,9 @@ import {
   Save,
   Users,
   Filter,
-  CheckCircle,
-  AlertTriangle,
   Info
 } from 'lucide-react';
-import { User } from '@app/lib/types';
+import type { User } from '@app/lib/types';
 import { UserRole, MembershipStatus } from '@club/shared-types/core/enums';
 import { getMembershipStatusBadgeProps } from '@app/lib/utils/badge-utils';
 import { MEMBER_ROLES, MEMBERSHIP_STATUSES, GENDERS, PLAYER_FILTER_OPTIONS } from '@app/lib/constants/member-options';
@@ -50,7 +47,6 @@ export default function BatchUpdateMembersModal({
   onBatchUpdate
 }: BatchUpdateMembersModalProps) {
   const t = useTranslations('dashboard');
-  const tCommon = useTranslations('common');
 
   // Selection state
   const [selectedMembers, setSelectedMembers] = useState<Set<string>>(new Set());
@@ -353,7 +349,7 @@ export default function BatchUpdateMembersModal({
                         if (e.target.checked) {
                           setUpdateData(prev => ({ ...prev, membershipStatus: MembershipStatus.ACTIVE }));
                         } else {
-                          const { membershipStatus, ...rest } = updateData;
+                          const { membershipStatus: _membershipStatus, ...rest } = updateData;
                           setUpdateData(rest);
                         }
                       }}
@@ -393,7 +389,7 @@ export default function BatchUpdateMembersModal({
                         if (e.target.checked) {
                           setUpdateData(prev => ({ ...prev, isPlayer: true }));
                         } else {
-                          const { isPlayer, ...rest } = updateData;
+                          const { isPlayer: _isPlayer, ...rest } = updateData;
                           setUpdateData(rest);
                         }
                       }}
@@ -435,7 +431,7 @@ export default function BatchUpdateMembersModal({
                         if (e.target.checked) {
                           setUpdateData(prev => ({ ...prev, role: UserRole.MEMBER }));
                         } else {
-                          const { role, ...rest } = updateData;
+                          const { role: _role, ...rest } = updateData;
                           setUpdateData(rest);
                         }
                       }}

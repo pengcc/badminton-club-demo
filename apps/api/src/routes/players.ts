@@ -1,4 +1,5 @@
-import express, { Router, Request, Response } from 'express';
+import type { Router } from 'express';
+import express from 'express';
 import { protect, authorize } from '../middleware/auth';
 import { PlayerController } from '../controllers/playerController';
 import { MEMBER_ROLES, ADMIN_ROLES } from '../utils/roles';

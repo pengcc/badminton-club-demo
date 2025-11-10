@@ -1,5 +1,4 @@
 import { z } from 'zod';
-import { Domain, PlayerSchema } from '../domain/player';
 import { PlayerPosition } from '../core/enums';
 
 /**

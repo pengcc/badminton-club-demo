@@ -1,7 +1,8 @@
-import { Request, Response } from 'express';
-import { PDFService, MembershipApplicationData, PersonalInfo, BankingInfo } from '../services/pdfService.js';
+import type { Request, Response } from 'express';
+import type { MembershipApplicationData, PersonalInfo, BankingInfo } from '../services/pdfService.js';
+import { PDFService } from '../services/pdfService.js';
 import { MembershipApplication } from '../models/MembershipApplication.js';
-import { AuthenticatedRequest } from '../middleware/auth.js';
+import type { AuthenticatedRequest } from '../middleware/auth.js';
 
 export class PDFController {
   /**
@@ -252,7 +253,7 @@ export class PDFController {
       }
 
       // Generate both PDFs
-      const [applicationPdfBuffer, sepaPdfBuffer] = await Promise.all([
+      const [applicationPdfBuffer, _sepaPdfBuffer] = await Promise.all([
         PDFService.createMembershipApplicationPDF(applicationData),
         PDFService.createSEPAMandatePDF(applicationData.personalInfo, applicationData.bankingInfo)
       ]);

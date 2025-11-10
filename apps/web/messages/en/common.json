@@ -1,5 +1,5 @@
 {
-  "club_name": "DEMO CLUB",
+  "club_name": "DCBEV",
 
   "club_introduction": "The club was established in 2009. Since then, we have been committed to providing a good environment for badminton fans, for both advanced players and beginners. Currently we have around 60 members. To help players improve their skills, regular training sessions take place every week.",
   "address": "Address",
@@ -56,11 +56,11 @@
     "locations": {
       "main": {
         "name": "Sports Hall: TU",
-        "address": "Muster Ufer 19, 10963 Berlin"
+        "address": "Tempelhofer Ufer 19, 10963 Berlin"
       },
       "secondary": {
         "name": "Sports Hall: PU",
-        "address": "Muster Str. 16, 10409 Berlin"
+        "address": "Gürtelstraße 16, 10409 Berlin"
       }
     }
   },

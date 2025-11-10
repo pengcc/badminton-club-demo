@@ -1,6 +1,8 @@
-import express, { Router } from 'express';
+import type { Router } from 'express';
+import express from 'express';
 import { Content } from '../models/Content';
-import { protect, authorize, AuthenticatedRequest } from '../middleware/auth';
+import type { AuthenticatedRequest } from '../middleware/auth';
+import { protect, authorize } from '../middleware/auth';
 import { asyncHandler } from '../utils/controllerHelpers';
 import { ADMIN_ROLES } from '../utils/roles';
 

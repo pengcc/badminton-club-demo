@@ -1,6 +1,6 @@
 import { describe, it, expect } from '@jest/globals';
 import { MembershipApplicationApiTransformer, MembershipApplicationPersistenceTransformer } from '../../transformers/membershipApplication';
-import { Domain } from '@club/shared-types/domain/membershipApplication';
+import type { Domain } from '@club/shared-types/domain/membershipApplication';
 import { MemberApplicationStatus } from '@club/shared-types/core/enums';
 import type { MembershipApplicationPersistenceType } from '../../types/persistence/membershipApplication';
 

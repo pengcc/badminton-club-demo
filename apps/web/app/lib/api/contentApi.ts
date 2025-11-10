@@ -1,5 +1,5 @@
 import apiClient from './client';
-import { ApiResponse } from './types';
+import type { ApiResponse } from './types';
 
 /**
  * Content Management API module

@@ -5,7 +5,7 @@
  */
 
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
-import { UserView } from '@club/shared-types/view/user';
+import type { UserView } from '@club/shared-types/view/user';
 import { UserViewTransformers } from '@club/shared-types/view/transformers/user';
 import * as userApi from '@app/lib/api/userApi';
 import { BaseService } from './baseService';
@@ -114,7 +114,6 @@ export class UserService {
       onSuccess: () => {
         queryClient.invalidateQueries({ queryKey: ['users', 'list'] });
         // Invalidate player queries since deleting user could affect Player entity
-        console.log('Invalidating players query due to user deletion');
         queryClient.invalidateQueries({ queryKey: ['players'] });
       },
     });

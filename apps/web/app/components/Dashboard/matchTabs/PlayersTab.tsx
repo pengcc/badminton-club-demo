@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useState } from 'react';
-import { useTranslations } from 'next-intl';
 import { useAuth } from '@app/hooks/useAuth';
 import { PlayerService } from '@app/services/playerService';
 import { TeamService } from '@app/services/teamService';
@@ -21,11 +20,10 @@ import {
   Search,
   Edit2,
   User,
-  UserCircle,
   Mars,
   Venus
 } from 'lucide-react';
-import { Player } from '@app/lib/types';
+import type { Player } from '@app/lib/types';
 import EditPlayerModal from '../modals/EditPlayerModal';
 
 /**
@@ -37,8 +35,6 @@ import EditPlayerModal from '../modals/EditPlayerModal';
  * - Manage edit player modal
  */
 export default function PlayersTab() {
-  const t = useTranslations('dashboard');
-  const tCommon = useTranslations('common');
   const { user } = useAuth();
 
   // Service hooks for mutations
@@ -69,7 +65,7 @@ export default function PlayersTab() {
     setEditModalOpen(true);
   };
 
-  const handlePlayerUpdated = (updatedPlayer: Player) => {
+  const handlePlayerUpdated = () => {
     // Data will be automatically refetched by React Query
     setEditModalOpen(false);
     setSelectedPlayer(null);
@@ -93,8 +89,6 @@ export default function PlayersTab() {
 
   // Check selected players status for smart button states
   const selectedPlayers = players.filter(p => selectedPlayerIds.includes(p.id));
-  const allSelectedActive = selectedPlayers.length > 0 && selectedPlayers.every(p => p.isActivePlayer);
-  const allSelectedInactive = selectedPlayers.length > 0 && selectedPlayers.every(p => !p.isActivePlayer);
   const hasActiveSelected = selectedPlayers.some(p => p.isActivePlayer);
   const hasInactiveSelected = selectedPlayers.some(p => !p.isActivePlayer);
 
@@ -140,12 +134,6 @@ export default function PlayersTab() {
     if (!selectedTeamForBatch) return;
 
     try {
-      console.log('Updating players team:', {
-        playerIds: selectedPlayerIds,
-        teamId: selectedTeamForBatch,
-        mode: teamUpdateMode
-      });
-
       // Smart filtering: only update players that need it
       const selectedPlayers = players.filter(p => selectedPlayerIds.includes(p.id));
 

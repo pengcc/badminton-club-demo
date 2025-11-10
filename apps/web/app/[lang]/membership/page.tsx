@@ -20,7 +20,7 @@ export default async function MembershipPage({ params }: { params: Promise<{ lan
             {t('pages.membership')}
           </h1>
         </div>
-        <MembershipFormClient lang={lang} />
+        <MembershipFormClient />
       </div>
     </div>
   );

@@ -1,6 +1,6 @@
 {
   "name": "@club/api",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Backend API for badminton club management",
   "type": "module",
   "main": "dist/server.js",
@@ -11,16 +11,17 @@
     "build:prod": "NODE_ENV=production rm -rf ./tsconfig.tsbuildinfo && tsc -p tsconfig.json && tsc-alias -p tsconfig.json",
     "start": "node dist/server.js",
     "lint": "eslint src --ext .ts",
+    "lint:fix": "eslint src --ext .ts --fix",
     "test": "NODE_ENV=test jest --config jest.config.ts",
-    "seed:dev": "NODE_ENV=development MONGODB_URI_DEV=mongodb://localhost:27017/badminton-club-demo-dev tsx src/scripts/seedData.ts",
+    "seed:dev": "NODE_ENV=development MONGODB_URI_DEV=mongodb://localhost:27017/badminton-club-dev tsx src/scripts/seedData.ts",
     "seed:test": "NODE_ENV=test MONGODB_URI_TEST=mongodb://localhost:27017/badminton-club-test tsx src/scripts/seedData.ts",
     "seed:prod": "NODE_ENV=production tsx src/scripts/seedData.ts",
     "db:reset": "tsx src/scripts/seedData.ts",
-    "db:reset:dev": "NODE_ENV=development MONGODB_URI_DEV=mongodb://localhost:27017/badminton-club-demo-dev tsx src/scripts/seedData.ts",
-    "db:reset:test": "NODE_ENV=test MONGODB_URI_TEST=mongodb://localhost:27017/badminton-club-demo-test tsx src/scripts/seedData.ts",
+    "db:reset:dev": "NODE_ENV=development MONGODB_URI_DEV=mongodb://localhost:27017/badminton-club-dev tsx src/scripts/seedData.ts",
+    "db:reset:test": "NODE_ENV=test MONGODB_URI_TEST=mongodb://localhost:27017/badminton-club-test tsx src/scripts/seedData.ts",
     "db:clear": "tsx src/scripts/clearDatabase.ts",
-    "db:clear:dev": "NODE_ENV=development MONGODB_URI_DEV=mongodb://localhost:27017/badminton-club-demo-dev tsx src/scripts/clearDatabase.ts",
-    "db:clear:test": "NODE_ENV=test MONGODB_URI_TEST=mongodb://localhost:27017/badminton-club-demo-test tsx src/scripts/clearDatabase.ts"
+    "db:clear:dev": "NODE_ENV=development MONGODB_URI_DEV=mongodb://localhost:27017/badminton-club-dev tsx src/scripts/clearDatabase.ts",
+    "db:clear:test": "NODE_ENV=test MONGODB_URI_TEST=mongodb://localhost:27017/badminton-club-test tsx src/scripts/clearDatabase.ts"
   },
   "dependencies": {
     "@club/shared-types": "workspace:*",

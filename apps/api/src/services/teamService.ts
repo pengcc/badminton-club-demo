@@ -1,10 +1,10 @@
-import { Team, ITeam } from '../models/Team';
+import { Team } from '../models/Team';
 import { Player } from '../models/Player';
-import { Types, Schema } from 'mongoose';
+import { Types } from 'mongoose';
 import { TeamPersistenceTransformer, TeamApiTransformer } from '../transformers/team';
-import { Domain } from '@club/shared-types/domain/team';
-import { Domain as PlayerDomain } from '@club/shared-types/domain/player';
-import { Api } from '@club/shared-types/api/team';
+import type { Domain } from '@club/shared-types/domain/team';
+import type { Domain as PlayerDomain } from '@club/shared-types/domain/player';
+import type { Api } from '@club/shared-types/api/team';
 
 /**
  * Service for Team entity operations
@@ -248,8 +248,6 @@ export class TeamService {
     male: number;
     female: number;
   }> {
-    const { User } = await import('../models/User');
-
     // Aggregate player stats with gender from User
     const stats = await Player.aggregate([
       // Match players in this team (both active and inactive)

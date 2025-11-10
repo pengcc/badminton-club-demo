@@ -1,8 +1,8 @@
 import apiClient from './client';
-import { ApiResponse } from './types';
-import { Api } from '@club/shared-types/api/match';
-import { BaseLineupPlayer } from '@club/shared-types/core/base';
-import { LineupPosition } from '@club/shared-types/core/enums';
+import type { ApiResponse } from './types';
+import type { Api } from '@club/shared-types/api/match';
+import type { BaseLineupPlayer } from '@club/shared-types/core/base';
+import type { LineupPosition } from '@club/shared-types/core/enums';
 
 /**
  * Match API module

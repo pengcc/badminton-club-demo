@@ -1,4 +1,4 @@
-import { Api } from '../api/team';
+import type { Api } from '../api/team';
 import { z } from 'zod';
 
 /**

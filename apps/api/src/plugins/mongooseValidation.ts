@@ -1,5 +1,6 @@
-import { Document, Schema, Error as MongooseError } from 'mongoose';
-import { ValidationResult, ValidationError } from '../types/persistence/base';
+import type { Document, Schema} from 'mongoose';
+import { Error as MongooseError } from 'mongoose';
+import type { ValidationResult, ValidationError } from '../types/persistence/base';
 
 type MongooseErrorType = {
   path: string;

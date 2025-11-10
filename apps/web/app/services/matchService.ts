@@ -6,8 +6,8 @@
  */
 
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
-import { Api as MatchApi } from '@club/shared-types/api/match';
-import { MatchView } from '@club/shared-types/view/match';
+import type { Api as MatchApi } from '@club/shared-types/api/match';
+import type { MatchView } from '@club/shared-types/view/match';
 import { MatchViewTransformers } from '@club/shared-types/view/transformers/match';
 import { TeamService } from './teamService';
 import * as matchApi from '@app/lib/api/matchApi';

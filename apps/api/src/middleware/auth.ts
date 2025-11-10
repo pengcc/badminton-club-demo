@@ -1,9 +1,9 @@
-import { Request, Response, NextFunction, RequestHandler } from 'express';
+import type { Request, Response, NextFunction, RequestHandler } from 'express';
 import jwt from 'jsonwebtoken';
 import { Types } from 'mongoose';
 import { User } from '../models/User';
 import { AppError } from '../utils/errors';
-import { AuthUser, JWTPayload } from '@club/shared-types/core/middlewareAuth';
+import type { AuthUser, JWTPayload } from '@club/shared-types/core/middlewareAuth';
 import { UserRole } from '@club/shared-types/core/enums';
 
 /**

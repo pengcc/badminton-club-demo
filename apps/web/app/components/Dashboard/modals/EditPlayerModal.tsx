@@ -14,7 +14,7 @@ import {
 } from '@app/components/ui/select';
 import { X, Plus, ToggleLeft, ToggleRight } from 'lucide-react';
 import { PlayerService } from '@app/services/playerService';
-import { Player, Team } from '@app/lib/types';
+import type { Player, Team } from '@app/lib/types';
 import { TeamRole } from '@club/shared-types/core/enums';
 
 interface EditPlayerModalProps {
@@ -33,7 +33,6 @@ export default function EditPlayerModal({
   onPlayerUpdated
 }: EditPlayerModalProps) {
   const t = useTranslations('dashboard');
-  const tCommon = useTranslations('common');
 
   // Service hooks for mutations
   const updatePlayerMutation = PlayerService.useUpdatePlayer();

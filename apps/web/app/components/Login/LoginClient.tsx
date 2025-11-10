@@ -9,11 +9,7 @@ import { Input } from '@app/components/ui/input';
 import { Label } from '@app/components/ui/label';
 import { cn } from '@app/lib/utils';
 
-interface LoginFormProps {
-  lang: string;
-}
-
-export default function LoginForm({ lang }: LoginFormProps) {
+export default function LoginForm() {
   const t = useTranslations('common');
   const tLogin = useTranslations('login');
   const { login, loginError } = useAuth();
@@ -72,7 +68,7 @@ export default function LoginForm({ lang }: LoginFormProps) {
         password: formData.password
       });
       // Navigation handled by useAuth hook
-    } catch (err: any) {
+    } catch (_err: any) {
       // Error displayed via loginError from useAuth
     } finally {
       setIsSubmitting(false);

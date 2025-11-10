@@ -15,30 +15,24 @@ async function getUser() {
 
   try {
     // Verify token with backend
-    const response = await fetch(
-      `${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3003'}/api/auth/verify`,
-      {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-        cache: 'no-store', // Always fetch fresh user data
-      }
-    );
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3003'}/api/auth/verify`, {
+      headers: {
+        'Authorization': `Bearer ${token}`,
+      },
+      cache: 'no-store', // Always fetch fresh user data
+    });
 
     if (!response.ok) return null;
 
     const data = await response.json();
     // Backend returns { success, user }, extract just the user
     return data.user || data;
-  } catch (error) {
+  } catch (_error) {
     return null;
   }
 }
 
-export default async function DashboardLayoutPage({
-  children,
-  params,
-}: DashboardLayoutPageProps) {
+export default async function DashboardLayoutPage({ children, params }: DashboardLayoutPageProps) {
   const { lang } = await params;
   const initialUser = await getUser();
 
@@ -50,6 +44,6 @@ export default async function DashboardLayoutPage({
 }
 
 export const metadata = {
-  title: 'Dashboard - DemoClub',
-  description: 'Member dashboard for Demo Badminton Club',
+  title: 'Dashboard - DCBEV',
+  description: 'Member dashboard for German-Chinese Badminton Club',
 };

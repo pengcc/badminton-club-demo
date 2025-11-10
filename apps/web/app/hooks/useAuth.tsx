@@ -1,6 +1,7 @@
 'use client';
 
-import { createContext, useContext, ReactNode } from 'react';
+import { createContext, useContext } from 'react';
+import type { ReactNode } from 'react';
 import { useRouter, useParams } from 'next/navigation';
 import { AuthService } from '@app/services/authService';
 import type { Api } from '@club/shared-types/api/auth';

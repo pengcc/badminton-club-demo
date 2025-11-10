@@ -1,7 +1,6 @@
 import { z } from 'zod';
-import { Domain, MatchSchema } from '../domain/match';
 import { MatchStatus, LineupPosition } from '../core/enums';
-import { BaseLineupPlayer } from '../core/base';
+import type { BaseLineupPlayer } from '../core/base';
 
 /**
  * API layer types for Match

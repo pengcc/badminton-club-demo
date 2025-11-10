@@ -1,11 +1,11 @@
 'use client';
 
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useMemo } from 'react';
 import { useTranslations } from 'next-intl';
 import { Card, CardContent, CardHeader, CardTitle } from '@app/components/ui/card';
 import { Button } from '@app/components/ui/button';
 import { Badge } from '@app/components/ui/badge';
-import { Match, Player, Team } from '@app/lib/types';
+import type { Player, Team } from '@app/lib/types';
 import { useModalBehavior } from '@app/hooks/useModalBehavior';
 import PlayerAvailability from '@app/components/Dashboard/PlayerAvailability';
 import { MatchService } from '@app/services/matchService';
@@ -44,18 +44,7 @@ export default function MatchDetailsModal({
   const tMatch = useTranslations('match');
 
   // Fetch match data directly - automatically updates when cache changes!
-  const { data: match, isLoading, isFetching } = MatchService.useMatchDetails(matchId || '');
-
-  // Debug logging
-  useEffect(() => {
-    console.log('🔍 Modal match data updated:', {
-      matchId,
-      hasMatch: !!match,
-      isLoading,
-      isFetching,
-      unavailablePlayers: match?.unavailablePlayers
-    });
-  }, [match, matchId, isLoading, isFetching]);
+  const { data: match } = MatchService.useMatchDetails(matchId || '');
 
   // ESC key handler and body scroll lock
   useModalBehavior({ isOpen, onClose });

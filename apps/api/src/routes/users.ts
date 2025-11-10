@@ -1,9 +1,10 @@
-import express, { Router } from 'express';
+import type { Router } from 'express';
+import express from 'express';
 import { UserController } from '../controllers/userController';
-import { protect, authorize, authorizeOwner, AuthenticatedRequest } from '../middleware/auth';
+import type { AuthenticatedRequest } from '../middleware/auth';
+import { protect, authorize, authorizeOwner } from '../middleware/auth';
 import { ADMIN_ROLES } from '../utils/roles';
 import { asyncHandler } from '../utils/controllerHelpers';
-import { UserRole } from '@club/shared-types/core/enums';
 
 const router: Router = express.Router();
 

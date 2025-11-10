@@ -1,13 +1,14 @@
 'use client';
 
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import { useTranslations } from 'next-intl';
 import { Card, CardContent, CardHeader, CardTitle } from '@app/components/ui/card';
 import { Button } from '@app/components/ui/button';
 import { Badge } from '@app/components/ui/badge';
 import GenderIcon from '@app/components/ui/GenderIcon';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@app/components/ui/select';
-import { Match, Player, Team, LINEUP_POSITION_CONFIG, LineupPosition } from '@app/lib/types';
+import type { Match, Player, Team} from '@app/lib/types';
+import { LINEUP_POSITION_CONFIG, LineupPosition } from '@app/lib/types';
 import { MatchService } from '@app/services/matchService';
 import { useModalBehavior } from '@/app/hooks/useModalBehavior';
 import {
@@ -17,8 +18,7 @@ import {
   Save,
   X
 } from 'lucide-react';
-import { tr } from 'date-fns/locale';
-import { BaseLineupPlayer } from '@club/shared-types/core/base';
+import type { BaseLineupPlayer } from '@club/shared-types/core/base';
 import { Gender } from '@club/shared-types/core/enums';
 
 interface MatchLineupModalProps {
@@ -36,7 +36,6 @@ export default function MatchLineupModal({
   match,
   teams,
   players,
-  onLineupSaved
 }: MatchLineupModalProps) {
   const tMatch = useTranslations('match');
   const updateLineupMutation = MatchService.useUpdateLineup();
@@ -162,12 +161,12 @@ export default function MatchLineupModal({
   };
 
   // Validate lineup: Max 2 positions per player
-  const validateLineup = (): { isValid: boolean; warnings: string[] } => {
+  const validateLineup = useCallback((): { isValid: boolean; warnings: string[] } => {
     const warnings: string[] = [];
 
     // Count how many positions each player is in
     const playerPositionCount = new Map<string, number>();
-    Object.entries(lineup).forEach(([position, playerIds]) => {
+    Object.entries(lineup).forEach(([_position, playerIds]) => {
       playerIds.forEach(playerId => {
         if (playerId) { // Skip empty slots
           playerPositionCount.set(playerId, (playerPositionCount.get(playerId) || 0) + 1);
@@ -187,9 +186,9 @@ export default function MatchLineupModal({
       isValid: warnings.length === 0,
       warnings
     };
-  };
+  }, [lineup, players, tMatch]);
 
-  const validation = useMemo(() => validateLineup(), [lineup, players]);
+  const validation = useMemo(() => validateLineup(), [validateLineup]);
 
   const colorGroups = {
     'bg-blue-100 text-blue-800': [1, 2, 3],
@@ -241,9 +240,6 @@ export default function MatchLineupModal({
     setIsSubmitting(true);
 
     try {
-      console.log('💾 Saving lineup for match:', match!.id);
-      console.log('Current lineup state:', lineup);
-
       // Convert lineup to API format: Record<LineupPosition, string[]> → Record<LineupPosition, BaseLineupPlayer[]>
       // Backend expects player IDs only - it will populate full player details
       const lineupRecord: Record<LineupPosition, BaseLineupPlayer[]> = {} as any;
@@ -261,15 +257,12 @@ export default function MatchLineupModal({
         }
       });
 
-      console.log('Lineup payload:', lineupRecord);
-
       // Save to database using mutation with cache invalidation
       await updateLineupMutation.mutateAsync({
         matchId: match!.id,
         lineup: lineupRecord
       });
 
-      console.log('✅ Lineup saved successfully');
       alert(tMatch('modals.matchLineup.success'));
 
       onClose();

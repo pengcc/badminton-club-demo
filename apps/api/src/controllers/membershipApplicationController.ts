@@ -1,11 +1,10 @@
-import { Request, Response, NextFunction } from 'express';
-import { AuthenticatedRequest } from '../middleware/auth';
+import type { Request, Response, NextFunction } from 'express';
+import type { AuthenticatedRequest } from '../middleware/auth';
 import { MembershipApplicationService } from '../services/membershipApplicationService';
-import {
+import type {
   CreateMembershipApplicationRequest,
-  UpdateMembershipApplicationRequest,
-  MembershipApplicationResponse
-} from '@club/shared-types/api/membershipApplication';
+  UpdateMembershipApplicationRequest} from '@club/shared-types/api/membershipApplication';
+
 import { MembershipApplicationApiTransformer } from '../transformers/membershipApplication';
 import { MemberApplicationStatus } from '@club/shared-types/core/enums';
 

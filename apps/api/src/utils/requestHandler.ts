@@ -1,5 +1,5 @@
-import { RequestHandler, Response, NextFunction } from 'express';
-import { AuthenticatedRequest } from '../middleware/auth';
+import type { RequestHandler, Response, NextFunction } from 'express';
+import type { AuthenticatedRequest } from '../middleware/auth';
 
 export type AuthRequestHandler = (
   req: AuthenticatedRequest,

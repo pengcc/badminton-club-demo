@@ -1,10 +1,11 @@
-import { Domain } from '../../domain/membershipApplication';
+import type { Domain } from '../../domain/membershipApplication';
 import { BaseTransformer } from './base';
-import {
+import type {
   AddressView,
   PersonalInfoView,
   BankingInfoView,
-  MembershipApplicationView,
+  MembershipApplicationView} from '../membershipApplication';
+import {
   membershipApplicationViewSchema
 } from '../membershipApplication';
 

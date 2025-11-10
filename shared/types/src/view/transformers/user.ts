@@ -1,6 +1,6 @@
 import type { Api } from '../../api/user';
 import type { UserView } from '../user';
-import { MembershipStatus, UserRole, Gender } from '../../core/enums';
+import type { UserRole, Gender } from '../../core/enums';
 import type { WithStringId, WithTimestamp } from '../../core/typeUtils';
 
 /**

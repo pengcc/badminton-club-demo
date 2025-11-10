@@ -1,6 +1,6 @@
 import { z } from 'zod';
 import type { Api } from '../api/player';
-import { PlayerPosition } from '../core/enums';
+import type { PlayerPosition } from '../core/enums';
 
 /**
  * View layer types for Player components

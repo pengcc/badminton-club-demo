@@ -29,7 +29,7 @@ export default async function LoginPage({ params }: { params: Promise<{ lang: st
     <div className="container mx-auto px-4 py-10">
       <Header lang={lang} />
       <DemoCredentialsBanner />
-      <LoginForm lang={lang} />
+      <LoginForm />
     </div>
   );
 }

@@ -1,5 +1,5 @@
-import { Response, Request, NextFunction } from 'express';
-import { AuthenticatedRequest } from '../middleware/auth.js';
+import type { Response, Request, NextFunction } from 'express';
+import type { AuthenticatedRequest } from '../middleware/auth.js';
 export interface ApiResponse<T = any> {
   success: boolean;
   message?: string;

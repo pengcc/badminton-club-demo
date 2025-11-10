@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { Domain } from '../../domain/auth';
+import type { Domain } from '../../domain/auth';
 import { BaseTransformer } from './base';
 import { UserRole } from '../../core/enums';
 

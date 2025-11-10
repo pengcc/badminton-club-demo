@@ -1,4 +1,4 @@
-import { Domain } from '../domain/auth';
+import type { Domain } from '../domain/auth';
 
 /**
  * API request/response types for authentication endpoints

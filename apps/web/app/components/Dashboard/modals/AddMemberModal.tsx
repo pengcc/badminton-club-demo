@@ -10,7 +10,8 @@ import { RadioGroup, RadioGroupItem } from '@app/components/ui/radio-group';
 import { Checkbox } from '@app/components/ui/checkbox';
 import { X, UserPlus, Mail, Calendar, User } from 'lucide-react';
 import { UserService } from '@app/services/userService';
-import { UserRole, Gender, MembershipStatus } from '@club/shared-types/core/enums';
+import type { Gender} from '@club/shared-types/core/enums';
+import { UserRole, MembershipStatus } from '@club/shared-types/core/enums';
 import { MEMBER_ROLES, GENDERS, MEMBERSHIP_STATUSES } from '@app/lib/constants/member-options';
 
 interface AddMemberModalProps {
@@ -32,7 +33,6 @@ interface MemberFormData {
 
 export default function AddMemberModal({ isOpen, onClose, onMemberAdded }: AddMemberModalProps) {
   const t = useTranslations('dashboard');
-  const tCommon = useTranslations('common');
   const createUserMutation = UserService.useCreateUser();
 
   const [formData, setFormData] = useState<MemberFormData>({

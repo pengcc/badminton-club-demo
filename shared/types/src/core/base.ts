@@ -1,5 +1,5 @@
 // shared/types/core/base.ts
-import { UserRole, Gender, MatchStatus, LineupPosition, MembershipStatus } from './enums';
+import type { UserRole, Gender, MatchStatus, LineupPosition, MembershipStatus } from './enums';
 
 export interface BaseEntity {
   id: string;

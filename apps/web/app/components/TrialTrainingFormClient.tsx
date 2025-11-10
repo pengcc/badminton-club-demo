@@ -5,7 +5,6 @@ import { useForm } from 'react-hook-form';
 import { useTranslations } from 'next-intl';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@app/components/ui/card';
 import { Button } from '@app/components/ui/button';
-import { FormField } from '@app/components/FormField';
 
 interface FormData {
   name: string;
@@ -14,11 +13,7 @@ interface FormData {
   playerLevel: string;
 }
 
-interface TrialTrainingFormClientProps {
-  lang: string;
-}
-
-export default function TrialTrainingFormClient({ lang }: TrialTrainingFormClientProps) {
+export default function TrialTrainingFormClient() {
   const t = useTranslations('common');
   const [submitted, setSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -32,11 +27,10 @@ export default function TrialTrainingFormClient({ lang }: TrialTrainingFormClien
 
   const playerLevel = watch('playerLevel');
 
-  const onSubmit = async (data: FormData) => {
+  const onSubmit = async (_data: FormData) => {
     setIsSubmitting(true);
     try {
       // In a real application, you would send this data to your server
-      console.log('Form data:', data);
       await new Promise((r) => setTimeout(r, 500));
       setSubmitted(true);
     } finally {

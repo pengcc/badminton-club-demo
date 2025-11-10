@@ -1,12 +1,12 @@
-import { Match, IMatch } from '../models/Match';
+import { Match } from '../models/Match';
 import { Team } from '../models/Team';
 import { Player } from '../models/Player';
 import { Types } from 'mongoose';
 import { MatchPersistenceTransformer, MatchApiTransformer } from '../transformers/match';
-import { Domain } from '@club/shared-types/domain/match';
-import { Api } from '@club/shared-types/api/match';
+import type { Domain } from '@club/shared-types/domain/match';
+import type { Api } from '@club/shared-types/api/match';
 import { MatchStatus, LineupPosition } from '@club/shared-types/core/enums';
-import { BaseLineupPlayer } from '@club/shared-types/core/base';
+import type { BaseLineupPlayer } from '@club/shared-types/core/base';
 
 /**
  * Service for Match entity operations

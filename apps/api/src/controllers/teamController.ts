@@ -1,9 +1,9 @@
-import { Request, Response, NextFunction } from 'express';
-import { AuthenticatedRequest } from '../middleware/auth';
+import type { Request, Response, NextFunction } from 'express';
+import type { AuthenticatedRequest } from '../middleware/auth';
 import { TeamService } from '../services/teamService';
 import { PlayerService } from '../services/playerService';
-import { Api } from '@club/shared-types/api/team';
-import { Domain } from '@club/shared-types/domain/team';
+import type { Api } from '@club/shared-types/api/team';
+import type { Domain } from '@club/shared-types/domain/team';
 import { TeamApiTransformer } from '../transformers/team';
 import { PlayerApiTransformer } from '../transformers/player';
 

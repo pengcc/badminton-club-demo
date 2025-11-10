@@ -1,6 +1,6 @@
 import apiClient from './client';
-import { ApiResponse, PaginatedResponse, PaginationParams } from './types';
-import { Api } from '@club/shared-types/api/player';
+import type { ApiResponse, PaginatedResponse, PaginationParams } from './types';
+import type { Api } from '@club/shared-types/api/player';
 
 /**
  * Player API module

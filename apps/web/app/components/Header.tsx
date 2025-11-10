@@ -1,10 +1,7 @@
-import Link from 'next/link';
-import { UserIcon } from 'lucide-react';
 import Logo from './Logo';
 import MainNav from './MainNav';
 import LanguageSwitcher from './LanguageSwitcher';
 import UserMenu from './UserMenu';
-import { Button } from '@app/components/ui/button';
 
 interface HeaderProps {
   withMainNav?: boolean; // Whether to show the main navigation
