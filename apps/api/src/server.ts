@@ -24,11 +24,11 @@ const getDatabaseUri = () => {
 
   switch (env) {
     case 'test':
-      return process.env.MONGODB_URI_TEST || 'mongodb://localhost:27017/badminton-club-test';
+      return process.env.MONGODB_URI_TEST || 'mongodb://localhost:27017/badminton-club-demo-test';
     case 'development':
-      return process.env.MONGODB_URI_DEV || 'mongodb://localhost:27017/badminton-club-dev';
+      return process.env.MONGODB_URI_DEV || 'mongodb://localhost:27017/badminton-club-demo-dev';
     default:
-      return process.env.MONGODB_URI || 'mongodb://localhost:27017/badminton-club';
+      return process.env.MONGODB_URI || 'mongodb://localhost:27017/badminton-club-demo';
   }
 };
 
