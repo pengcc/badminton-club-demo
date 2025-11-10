@@ -4,11 +4,18 @@ import React from 'react';
 
 // Optimized loading component
 export function DashboardLoading({ message = 'Loading...' }: { message?: string }) {
+  const isProduction = process.env.NODE_ENV === 'production';
+
   return (
     <div className="flex items-center justify-center p-8 min-h-[200px]">
-      <div className="text-center">
+      <div className="text-center max-w-md">
         <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary mx-auto mb-4"></div>
-        <p className="text-muted-foreground">{message}</p>
+        <p className="text-muted-foreground mb-2">{message}</p>
+        {isProduction && (
+          <p className="text-xs text-muted-foreground/70">
+            First load may take 30-60 seconds while the API wakes up (free tier hosting)
+          </p>
+        )}
       </div>
     </div>
   );
