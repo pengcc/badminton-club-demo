@@ -7,7 +7,8 @@
   "scripts": {
     "dev": "NODE_ENV=development tsx src/server.ts",
     "build": "tsc -p tsconfig.json && tsc-alias -p tsconfig.json",
-    "build:prod": "NODE_ENV=production tsc -p tsconfig.json && tsc-alias -p tsconfig.json",
+    "build:clean": "rm -rf ./tsconfig.tsbuildinfo && tsc -p tsconfig.json && tsc-alias -p tsconfig.json",
+    "build:prod": "NODE_ENV=production rm -rf ./tsconfig.tsbuildinfo && tsc -p tsconfig.json && tsc-alias -p tsconfig.json",
     "start": "node dist/server.js",
     "lint": "eslint src --ext .ts",
     "test": "NODE_ENV=test jest --config jest.config.ts",
