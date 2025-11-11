@@ -12,7 +12,6 @@ export class DashboardPerformance {
     const start = this.measurements.get(name);
     if (start) {
       const duration = performance.now() - start;
-      console.log(`Dashboard Performance [${name}]: ${duration.toFixed(2)}ms`);
       this.measurements.delete(name);
       return duration;
     }
