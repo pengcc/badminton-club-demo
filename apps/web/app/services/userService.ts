@@ -7,17 +7,17 @@
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import type { UserView } from '@club/shared-types/view/user';
 import { UserViewTransformers } from '@club/shared-types/view/transformers/user';
-import * as userApi from '@app/lib/api/userApi';
+import { useStorage } from '@app/lib/storage';
 import { BaseService } from './baseService';
 
 export class UserService {
   /**
    * Get all users as cards (for list views)
    */
-  static async getUserCards(filters?: any): Promise<UserView.UserCard[]> {
+  static async getUserCards(adapter: any, filters?: any): Promise<UserView.UserCard[]> {
     const response = filters
-      ? await userApi.getUsersWithFilters(filters)
-      : await userApi.getUsers();
+      ? await adapter.getUsersWithFilters(filters)
+      : await adapter.getUsers();
 
     // Handle both array and paginated response
     const users = Array.isArray(response) ? response : response.data;
@@ -27,8 +27,8 @@ export class UserService {
   /**
    * Get single user profile (for detail views)
    */
-  static async getUserProfile(id: string): Promise<UserView.UserProfile> {
-    const apiUser = await userApi.getUser(id);
+  static async getUserProfile(adapter: any, id: string): Promise<UserView.UserProfile> {
+    const apiUser = await adapter.getUser(id);
     return UserViewTransformers.toUserProfile(apiUser as any);
   }
 
@@ -36,9 +36,12 @@ export class UserService {
    * Hook: Get list of users
    */
   static useUserList(filters?: any) {
+    const { adapter } = useStorage();
+
     return useQuery({
       queryKey: BaseService.queryKey('users', 'list', filters),
-      queryFn: () => UserService.getUserCards(filters),
+      queryFn: () => UserService.getUserCards(adapter, filters),
+      enabled: !!adapter,
       staleTime: 5 * 60 * 1000, // 5 minutes
     });
   }
@@ -47,10 +50,12 @@ export class UserService {
    * Hook: Get single user profile
    */
   static useUserProfile(id: string) {
+    const { adapter } = useStorage();
+
     return useQuery({
       queryKey: BaseService.queryKey('users', 'profile', { id }),
-      queryFn: () => UserService.getUserProfile(id),
-      enabled: !!id,
+      queryFn: () => UserService.getUserProfile(adapter, id),
+      enabled: !!id && !!adapter,
       staleTime: 5 * 60 * 1000,
     });
   }
@@ -59,12 +64,14 @@ export class UserService {
    * Hook: Create user mutation
    */
   static useCreateUser() {
+    const { adapter } = useStorage();
     const queryClient = useQueryClient();
 
     return useMutation({
       mutationFn: async (formData: UserView.UserFormData) => {
+        if (!adapter) throw new Error('Storage adapter not available');
         const request = UserViewTransformers.toCreateRequest(formData);
-        const response = await userApi.createUser(request);
+        const response = await adapter.createUser(request);
         return UserViewTransformers.toUserCard(response as any);
       },
       onSuccess: () => {
@@ -79,11 +86,14 @@ export class UserService {
    * Hook: Update user mutation
    */
   static useUpdateUser() {
+    const { adapter } = useStorage();
     const queryClient = useQueryClient();
+
     return useMutation({
       mutationFn: async ({ id, formData }: { id: string; formData: Partial<UserView.UserFormData> }) => {
+        if (!adapter) throw new Error('Storage adapter not available');
         const request = UserViewTransformers.toUpdateRequest(formData);
-        const response = await userApi.updateUser(id, request);
+        const response = await adapter.updateUser(id, request);
         return UserViewTransformers.toUserCard(response as any);
       },
       onSuccess: (data, variables) => {
@@ -105,11 +115,13 @@ export class UserService {
    * Hook: Delete user mutation
    */
   static useDeleteUser() {
+    const { adapter } = useStorage();
     const queryClient = useQueryClient();
 
     return useMutation({
       mutationFn: async (id: string) => {
-        await userApi.deleteUser(id);
+        if (!adapter) throw new Error('Storage adapter not available');
+        await adapter.deleteUser(id);
       },
       onSuccess: () => {
         queryClient.invalidateQueries({ queryKey: ['users', 'list'] });
@@ -123,11 +135,13 @@ export class UserService {
    * Hook: Batch update users mutation
    */
   static useBatchUpdate() {
+    const { adapter } = useStorage();
     const queryClient = useQueryClient();
 
     return useMutation({
       mutationFn: async ({ userIds, updateData }: { userIds: string[]; updateData: any }) => {
-        const response = await userApi.batchUpdateUsers(userIds, updateData);
+        if (!adapter) throw new Error('Storage adapter not available');
+        const response = await adapter.batchUpdateUsers(userIds, updateData);
         return response;
       },
       onSuccess: (_, variables) => {

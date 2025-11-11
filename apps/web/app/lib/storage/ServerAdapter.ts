@@ -187,6 +187,25 @@ export class ServerAdapter implements StorageAdapter {
   }
 
   // ============================================================================
+  // AUTHENTICATION OPERATIONS - Direct delegation to AuthAPI
+  // ============================================================================
+
+  async login(credentials: { email: string; password: string }): Promise<{ user: any; token: string; refreshToken?: string }> {
+    const AuthAPI = await import('../api/authApi');
+    return AuthAPI.login(credentials);
+  }
+
+  async verifyToken(): Promise<any> {
+    const AuthAPI = await import('../api/authApi');
+    return AuthAPI.verifyToken();
+  }
+
+  async logout(): Promise<void> {
+    const AuthAPI = await import('../api/authApi');
+    return AuthAPI.logout();
+  }
+
+  // ============================================================================
   // DATA MANAGEMENT - Not supported in server mode
   // ============================================================================
 

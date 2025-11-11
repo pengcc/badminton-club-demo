@@ -4,6 +4,7 @@ import React, { useEffect } from 'react';
 import { useRouter, usePathname } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 import { AuthService } from '@app/services/authService';
+import { useStorage } from '@app/lib/storage';
 import { Badge } from '@app/components/ui/badge';
 import {
   Users,
@@ -54,17 +55,27 @@ export default function DashboardLayout({ children, lang, initialUser }: Dashboa
     }
   };
 
+  // Get storage mode to determine base path
+  const { mode } = useStorage();
+  const basePath = mode === 'local' ? '/local-dashboard' : '/dashboard';
+
   // Handle authentication and redirects
   useEffect(() => {
-    // Redirect to login if not authenticated
-    if (!isLoading && !user) {
+    // Check if there's a token in storage before redirecting
+    const hasToken = typeof window !== 'undefined' &&
+      (localStorage.getItem('token') || document.cookie.includes('token='));
+
+    // Redirect to login if not authenticated AND no token exists
+    // (if token exists, query is still loading)
+    if (!isLoading && !user && !hasToken) {
       router.push(`/${lang}/login`);
       return;
     }
 
     // Redirect to appropriate default page based on role
-    if (!isLoading && user && pathname === `/${lang}/dashboard`) {
-      const defaultPath = isAdmin ? `/${lang}/dashboard/members` : `/${lang}/dashboard/matches`;
+    const currentBase = pathname.includes('/local-dashboard') ? '/local-dashboard' : '/dashboard';
+    if (!isLoading && user && pathname === `/${lang}${currentBase}`) {
+      const defaultPath = isAdmin ? `/${lang}${currentBase}/members` : `/${lang}${currentBase}/matches`;
       router.replace(defaultPath);
     }
   }, [user, isLoading, pathname, router, lang, isAdmin]);
@@ -91,21 +102,21 @@ export default function DashboardLayout({ children, lang, initialUser }: Dashboa
       id: 'members',
       label: t('members'),
       icon: Users,
-      path: `/${lang}/dashboard/members`,
+      path: `/${lang}${basePath}/members`,
       access: 'admin'
     },
     {
       id: 'matches',
       label: t('matches'),
       icon: Trophy,
-      path: `/${lang}/dashboard/matches`,
+      path: `/${lang}${basePath}/matches`,
       access: 'player'
     },
     {
       id: 'applications',
       label: 'Applications',
       icon: FileText,
-      path: `/${lang}/dashboard/applications`,
+      path: `/${lang}${basePath}/applications`,
       access: 'admin',
       badge: 'Soon'
     },
@@ -113,7 +124,7 @@ export default function DashboardLayout({ children, lang, initialUser }: Dashboa
       id: 'training',
       label: 'Trial Training',
       icon: Calendar,
-      path: `/${lang}/dashboard/training`,
+      path: `/${lang}${basePath}/training`,
       access: 'admin',
       badge: 'Soon'
     },
@@ -121,7 +132,7 @@ export default function DashboardLayout({ children, lang, initialUser }: Dashboa
       id: 'guests',
       label: 'Guest Play',
       icon: UserPlus,
-      path: `/${lang}/dashboard/guests`,
+      path: `/${lang}${basePath}/guests`,
       access: 'admin',
       badge: 'Soon'
     }

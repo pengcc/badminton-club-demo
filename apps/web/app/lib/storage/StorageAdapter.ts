@@ -206,6 +206,31 @@ export interface StorageAdapter {
   removePlayerFromTeam(playerId: string, teamId: string): Promise<PlayerApi.PlayerResponse>;
 
   // ============================================================================
+  // AUTHENTICATION OPERATIONS
+  // ============================================================================
+
+  /**
+   * Login with credentials
+   * Server mode: calls API
+   * Local mode: validates against local users, returns mock token
+   */
+  login(credentials: { email: string; password: string }): Promise<{ user: any; token: string; refreshToken?: string }>;
+
+  /**
+   * Verify token
+   * Server mode: calls API
+   * Local mode: validates mock token, returns user
+   */
+  verifyToken(): Promise<any>;
+
+  /**
+   * Logout
+   * Server mode: calls API
+   * Local mode: clears mock token
+   */
+  logout(): Promise<void>;
+
+  // ============================================================================
   // DATA MANAGEMENT (Local Mode Only)
   // ============================================================================
 

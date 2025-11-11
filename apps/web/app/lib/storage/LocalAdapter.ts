@@ -9,6 +9,7 @@ import type { Api as UserApi } from '@club/shared-types/api/user';
 import type { Api as MatchApi } from '@club/shared-types/api/match';
 import type { Api as TeamApi } from '@club/shared-types/api/team';
 import type { Api as PlayerApi } from '@club/shared-types/api/player';
+import type { Api as AuthApi } from '@club/shared-types/api/auth';
 import type { LineupPosition } from '@club/shared-types/core/enums';
 import type { BaseLineupPlayer } from '@club/shared-types/core/base';
 import { MembershipStatus } from '@club/shared-types/core/enums';
@@ -64,8 +65,6 @@ export class LocalAdapter implements StorageAdapter {
         await this.db.teams.bulkAdd(seedData.teams);
         await this.db.players.bulkAdd(seedData.players);
         await this.db.matches.bulkAdd(seedData.matches);
-
-        console.log('[LocalAdapter] Seed data loaded successfully');
       }
 
       this.initialized = true;
@@ -644,5 +643,109 @@ export class LocalAdapter implements StorageAdapter {
     if (imported.data.players) await this.db.players.bulkAdd(imported.data.players);
 
     this.initialized = true;
+  }
+
+  // ============================================================================
+  // AUTHENTICATION METHODS (Local Mode)
+  // ============================================================================
+
+  /**
+   * Local login - validates email/password against local users
+   * For demo purposes, accepts any password for existing users
+   */
+  async login(credentials: { email: string; password: string }): Promise<AuthApi.LoginResponse> {
+    await this.initialize();
+
+    // Find user by email
+    const user = await this.db.users
+      .filter((u: UserApi.UserResponse) => u.email === credentials.email)
+      .first();
+
+    if (!user) {
+      throw new Error('Invalid credentials');
+    }
+
+    // In local mode, we skip password verification for demo purposes
+    // In production, you'd verify the hashed password
+
+    // Generate a mock token
+    const token = `local-token-${user.id}-${Date.now()}`;
+
+    // Store token in localStorage for verifyToken to use
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('token', token);
+      localStorage.setItem('local-user-id', user.id);
+    }
+
+    return {
+      user: {
+        id: user.id,
+        email: user.email,
+        firstName: user.firstName,
+        lastName: user.lastName,
+        fullName: user.fullName,
+        role: user.role,
+        membershipStatus: user.membershipStatus
+      },
+      token,
+      refreshToken: `refresh-${token}`
+    };
+  }  /**
+   * Verify local token
+   * Extracts user ID from mock token and returns user
+   */
+  async verifyToken(): Promise<any> {
+    await this.initialize();
+
+    // In local mode, check localStorage for the mock token
+    if (typeof window === 'undefined') return null;
+
+    const token = localStorage.getItem('auth-token');
+    if (!token || !token.startsWith('local-token-')) {
+      console.error('[LocalAdapter] verifyToken: No valid token found', { token });
+      return null;
+    }
+
+    // Extract user ID from token format: local-token-{userId}-{timestamp}
+    const parts = token.split('-');
+    if (parts.length < 3) {
+      console.error('[LocalAdapter] verifyToken: Invalid token format', { parts });
+      return null;
+    }
+
+    const userId = parts[2];
+
+    try {
+      const user = await this.db.users.get(userId);
+      if (!user) {
+        console.error('[LocalAdapter] verifyToken: User not found', { userId });
+        return null;
+      }
+
+      // Convert to Auth User format
+      const authUser = {
+        id: user.id,
+        email: user.email,
+        firstName: user.firstName,
+        lastName: user.lastName,
+        fullName: user.fullName,
+        role: user.role,
+        membershipStatus: user.membershipStatus
+      };
+
+      console.error('[LocalAdapter] verifyToken: Success', authUser);
+      return authUser;
+    } catch (error) {
+      console.error('[LocalAdapter] verifyToken: Error', error);
+      return null;
+    }
+  }
+
+  /**
+   * Local logout - just a no-op, token is cleared by TokenManager
+   */
+  async logout(): Promise<void> {
+    // No-op for local mode, token is managed by TokenManager
+    return Promise.resolve();
   }
 }

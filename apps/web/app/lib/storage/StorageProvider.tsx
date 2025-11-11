@@ -27,6 +27,7 @@ interface StorageContextValue {
   mode: StorageMode;
   setMode: (mode: StorageMode) => void;
   isLocalModeEnabled: boolean;
+  isLoading: boolean;
 }
 
 // Create context
@@ -87,19 +88,23 @@ export const StorageProvider: React.FC<StorageProviderProps> = ({
   });
 
   const [localAdapter, setLocalAdapter] = useState<StorageAdapter | null>(null);
+  const [isLoading, setIsLoading] = useState(false);
 
   // Load LocalAdapter dynamically when needed
   useEffect(() => {
     if (mode === 'local' && !localAdapter) {
+      setIsLoading(true);
       // Dynamic import to avoid loading LocalAdapter code in server mode
       import('./LocalAdapter').then(module => {
         const adapter = new module.LocalAdapter();
         setLocalAdapter(adapter);
+        setIsLoading(false);
       }).catch(error => {
         console.error('Failed to load LocalAdapter:', error);
         // Fallback to server mode if LocalAdapter fails to load
         setModeState('server');
         saveMode('server');
+        setIsLoading(false);
       });
     }
   }, [mode, localAdapter]);
@@ -134,7 +139,8 @@ export const StorageProvider: React.FC<StorageProviderProps> = ({
     adapter,
     mode,
     setMode,
-    isLocalModeEnabled: isLocalModeEnabled()
+    isLocalModeEnabled: isLocalModeEnabled(),
+    isLoading
   };
 
   return (
