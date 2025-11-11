@@ -4,6 +4,7 @@ import { createContext, useContext } from 'react';
 import type { ReactNode } from 'react';
 import { useRouter, useParams } from 'next/navigation';
 import { AuthService } from '@app/services/authService';
+import { useStorage } from '@app/lib/storage';
 import type { Api } from '@club/shared-types/api/auth';
 import { SkeletonAuthForm } from '@app/components/ui/SkeletonAuthForm';
 
@@ -23,18 +24,29 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const router = useRouter();
   const params = useParams();
   const lang = (params?.lang as string) || 'en';
+  const { mode } = useStorage();
 
   // Use AuthService hooks
   const { data: user, isLoading } = AuthService.useSession();
   const loginMutation = AuthService.useLogin();
   const logoutMutation = AuthService.useLogout();
 
-  const login = async (credentials: Api.LoginRequest) => {
-    await loginMutation.mutateAsync(credentials);
-    router.push(`/${lang}/dashboard`);
-  };
+  const login = async (credentials: { email: string; password: string }) => {
+    try {
+      await loginMutation.mutateAsync(credentials);
 
-  const logout = async () => {
+      // Wait a bit for cache to update, then navigate
+      await new Promise(resolve => setTimeout(resolve, 100));
+
+      // Navigate to local-dashboard for local mode, regular dashboard for server mode
+      const dashboardPath = mode === 'local' ? '/local-dashboard' : '/dashboard';
+      const targetUrl = `/${lang}${dashboardPath}`;
+      router.push(targetUrl);
+    } catch (error) {
+      console.error('[useAuth] Login failed:', error);
+      throw error;
+    }
+  };  const logout = async () => {
     await logoutMutation.mutateAsync();
     router.push(`/${lang}/login`);
   };

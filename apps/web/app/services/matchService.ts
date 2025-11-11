@@ -10,7 +10,7 @@ import type { Api as MatchApi } from '@club/shared-types/api/match';
 import type { MatchView } from '@club/shared-types/view/match';
 import { MatchViewTransformers } from '@club/shared-types/view/transformers/match';
 import { TeamService } from './teamService';
-import * as matchApi from '@app/lib/api/matchApi';
+import { useStorage } from '@app/lib/storage';
 import { BaseService } from './baseService';
 import type { BaseLineupPlayer } from '@club/shared-types/core/base';
 import type { LineupPosition } from '@club/shared-types/core/enums';
@@ -19,8 +19,8 @@ export class MatchService {
   /**
    * Get all matches (returns API response format)
    */
-  static async getMatches(): Promise<MatchApi.MatchResponse[]> {
-    const apiMatches = await matchApi.getMatches();
+  static async getMatches(adapter: any): Promise<MatchApi.MatchResponse[]> {
+    const apiMatches = await adapter.getMatches();
     return apiMatches;
   }
 
@@ -28,9 +28,12 @@ export class MatchService {
    * Hook: Get list of matches (API format)
    */
   static useMatchListRaw() {
+    const { adapter } = useStorage();
+
     return useQuery({
       queryKey: BaseService.queryKey('matches', 'list-raw'),
-      queryFn: () => MatchService.getMatches(),
+      queryFn: () => MatchService.getMatches(adapter),
+      enabled: !!adapter,
       staleTime: 2 * 60 * 1000,
     });
   }
@@ -39,14 +42,14 @@ export class MatchService {
    * Get all matches as cards (for list views)
    * Populates homeTeamName by fetching teams data
    */
-  static async getMatchCards(): Promise<MatchView.MatchCard[]> {
+  static async getMatchCards(adapter: any): Promise<MatchView.MatchCard[]> {
     const [apiMatches, teams] = await Promise.all([
-      matchApi.getMatches(),
-      TeamService.getTeamCards()
+      adapter.getMatches(),
+      TeamService.getTeamCards(adapter)
     ]);
 
-    return apiMatches.map((match) => {
-      const homeTeam = teams.find(t => t.id === match.homeTeamId);
+    return apiMatches.map((match: any) => {
+      const homeTeam = teams.find((t: any) => t.id === match.homeTeamId);
       const homeTeamName = homeTeam?.name || 'Unknown Team';
       return MatchViewTransformers.toMatchCard(match, homeTeamName);
     });
@@ -55,8 +58,8 @@ export class MatchService {
   /**
    * Get single match detail (for detail views)
    */
-  static async getMatchDetails(id: string): Promise<MatchView.MatchDetails> {
-    const apiMatch = await matchApi.getMatch(id);
+  static async getMatchDetails(adapter: any, id: string): Promise<MatchView.MatchDetails> {
+    const apiMatch = await adapter.getMatch(id);
     return MatchViewTransformers.toMatchDetails(apiMatch as any);
   }
 
@@ -64,9 +67,12 @@ export class MatchService {
    * Hook: Get list of matches
    */
   static useMatchList() {
+    const { adapter } = useStorage();
+
     return useQuery({
       queryKey: BaseService.queryKey('matches', 'list'),
-      queryFn: () => MatchService.getMatchCards(),
+      queryFn: () => MatchService.getMatchCards(adapter),
+      enabled: !!adapter,
       staleTime: 2 * 60 * 1000, // 2 minutes - matches change frequently
     });
   }
@@ -76,10 +82,12 @@ export class MatchService {
    * Filters on frontend but uses ISO string comparison for timezone safety
    */
   static useUpcomingMatches() {
+    const { adapter } = useStorage();
+
     return useQuery({
       queryKey: BaseService.queryKey('matches', 'upcoming'),
       queryFn: async () => {
-        const matches = await MatchService.getMatchCards();
+        const matches = await MatchService.getMatchCards(adapter);
         const now = new Date().toISOString();
 
         return matches.filter(match => {
@@ -87,6 +95,7 @@ export class MatchService {
           return match.status === 'scheduled' && match.date > now;
         });
       },
+      enabled: !!adapter,
       staleTime: 2 * 60 * 1000,
     });
   }
@@ -97,10 +106,12 @@ export class MatchService {
    * Optionally filter by year
    */
   static useHistoryMatches(yearFilter: string = 'all') {
+    const { adapter } = useStorage();
+
     return useQuery({
       queryKey: BaseService.queryKey('matches', 'history', { year: yearFilter }),
       queryFn: async () => {
-        const matches = await MatchService.getMatchCards();
+        const matches = await MatchService.getMatchCards(adapter);
         const now = new Date().toISOString();
 
         return matches.filter(match => {
@@ -120,6 +131,7 @@ export class MatchService {
           }
         });
       },
+      enabled: !!adapter,
       staleTime: 5 * 60 * 1000, // 5 minutes - history changes less frequently
     });
   }
@@ -128,10 +140,12 @@ export class MatchService {
    * Hook: Get single match details
    */
   static useMatchDetails(id: string) {
+    const { adapter } = useStorage();
+
     return useQuery({
       queryKey: BaseService.queryKey('matches', 'details', { id }),
-      queryFn: () => MatchService.getMatchDetails(id),
-      enabled: !!id,
+      queryFn: () => MatchService.getMatchDetails(adapter, id),
+      enabled: !!id && !!adapter,
       staleTime: 0, // Always consider stale so invalidation triggers refetch
       refetchOnMount: 'always', // Always refetch when component mounts
     });
@@ -141,12 +155,14 @@ export class MatchService {
    * Hook: Create match mutation
    */
   static useCreateMatch() {
+    const { adapter } = useStorage();
     const queryClient = useQueryClient();
 
     return useMutation({
       mutationFn: async (formData: MatchView.MatchFormData) => {
+        if (!adapter) throw new Error('Storage adapter not available');
         const request = MatchViewTransformers.toCreateRequest(formData);
-        const response = await matchApi.createMatch(request);
+        const response = await adapter.createMatch(request);
         return MatchViewTransformers.toMatchCard(response as any);
       },
       onSuccess: () => {
@@ -160,15 +176,17 @@ export class MatchService {
    * Hook: Update match mutation
    */
   static useUpdateMatch() {
+    const { adapter } = useStorage();
     const queryClient = useQueryClient();
 
     return useMutation({
       mutationFn: async ({ id, formData }: { id: string; formData: Partial<MatchView.MatchFormData> }) => {
+        if (!adapter) throw new Error('Storage adapter not available');
         const request = MatchViewTransformers.toUpdateRequest(formData);
-        const response = await matchApi.updateMatch(id, request);
+        const response = await adapter.updateMatch(id, request);
         return MatchViewTransformers.toMatchCard(response as any);
       },
-      onSuccess: (_, variables) => {
+      onSuccess: (_data: any, variables: any) => {
         // Invalidate match list and the specific match detail
         queryClient.invalidateQueries({ queryKey: ['matches', 'list'] });
         queryClient.invalidateQueries({ queryKey: ['matches', 'details', { id: variables.id }] });
@@ -180,11 +198,13 @@ export class MatchService {
    * Hook: Delete match mutation
    */
   static useDeleteMatch() {
+    const { adapter } = useStorage();
     const queryClient = useQueryClient();
 
     return useMutation({
       mutationFn: async (id: string) => {
-        await matchApi.deleteMatch(id);
+        if (!adapter) throw new Error('Storage adapter not available');
+        await adapter.deleteMatch(id);
       },
       onSuccess: () => {
         queryClient.invalidateQueries({ queryKey: ['matches', 'list'] });
@@ -196,14 +216,16 @@ export class MatchService {
    * Hook: Update match lineup mutation
    */
   static useUpdateLineup() {
+    const { adapter } = useStorage();
     const queryClient = useQueryClient();
 
     return useMutation({
       mutationFn: async ({ matchId, lineup }: { matchId: string; lineup: Record<LineupPosition, BaseLineupPlayer[]> }) => {
-        const response = await matchApi.updateMatchLineup(matchId, lineup);
+        if (!adapter) throw new Error('Storage adapter not available');
+        const response = await adapter.updateMatchLineup(matchId, lineup);
         return response;
       },
-      onSuccess: (_, variables) => {
+      onSuccess: (_data: any, variables: any) => {
         queryClient.invalidateQueries({ queryKey: ['matches', 'details', { id: variables.matchId }] });
         queryClient.invalidateQueries({ queryKey: ['matches', 'list'] });
       },
@@ -215,6 +237,7 @@ export class MatchService {
    * Simplified: Modal queries its own data, so just invalidate specific match
    */
   static useTogglePlayerAvailability() {
+    const { adapter } = useStorage();
     const queryClient = useQueryClient();
 
     return useMutation({
@@ -227,10 +250,11 @@ export class MatchService {
         playerId: string;
         isAvailable: boolean;
       }) => {
-        const response = await matchApi.toggleMatchPlayerAvailability(matchId, playerId, isAvailable);
+        if (!adapter) throw new Error('Storage adapter not available');
+        const response = await adapter.toggleMatchPlayerAvailability(matchId, playerId, isAvailable);
         return response;
       },
-      onSuccess: async (_, variables) => {
+      onSuccess: async (_data: any, variables: any) => {
         // Use the same queryKey format as the query itself (note: 'details' not 'detail')
         const queryKey = BaseService.queryKey('matches', 'details', { id: variables.matchId });
 

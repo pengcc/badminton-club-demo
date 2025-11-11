@@ -15,7 +15,7 @@ import {
   type UseQueryResult,
   type UseMutationResult,
 } from '@tanstack/react-query';
-import * as authApi from '@app/lib/api/authApi';
+import { useStorage } from '@app/lib/storage';
 import { TokenManager } from '@app/lib/auth/tokenManager';
 import type { Api } from '@club/shared-types/api/auth';
 
@@ -29,17 +29,24 @@ export class AuthService {
    * @param initialData - Optional initial user data from server-side fetch
    */
   static useSession(initialData?: Api.User | null): UseQueryResult<Api.User | null, Error> {
+    const { adapter } = useStorage();
     const queryClient = useQueryClient();
 
-    // If we have server-provided initial data, set it in cache immediately
-    // With single QueryProvider across all routes, cache persists correctly
+    // If we have server-provided initial data AND there's NO token in storage,
+    // set it in cache. This prevents overwriting valid local/server auth.
     useEffect(() => {
-      if (initialData !== undefined) {
+      const token = TokenManager.getToken();
+      // Only seed cache with initialData if there's no token and we have actual user data
+      if (initialData !== undefined && !token && initialData !== null) {
         queryClient.setQueryData(SESSION_KEY, initialData);
       }
-    }, [initialData, queryClient]);    return useQuery({
+    }, [initialData, queryClient]);
+
+    return useQuery({
       queryKey: SESSION_KEY,
       queryFn: async () => {
+        if (!adapter) return null;
+
         const token = TokenManager.getToken();
         if (!token) return null;
 
@@ -51,7 +58,7 @@ export class AuthService {
 
         // Verify token with backend
         try {
-          const user = await authApi.verifyToken();
+          const user = await adapter.verifyToken();
           return user;
         } catch (_error) {
           // Token invalid, clear it
@@ -59,6 +66,7 @@ export class AuthService {
           return null;
         }
       },
+      enabled: !!adapter,
       staleTime: 5 * 60 * 1000, // 5 minutes
       retry: false,
     });
@@ -74,22 +82,24 @@ export class AuthService {
     Error,
     Api.LoginRequest
   > {
+    const { adapter } = useStorage();
     const queryClient = useQueryClient();
 
     return useMutation({
       mutationKey: ['auth', 'login'],
       mutationFn: async (credentials: Api.LoginRequest) => {
-        return await authApi.login(credentials);
+        if (!adapter) {
+          throw new Error('Storage adapter not available');
+        }
+        return await adapter.login(credentials);
       },
       onSuccess: async (data) => {
         // Store token in both cookies and localStorage
         TokenManager.setToken(data.token, (data as any).refreshToken);
 
         // Update cache with user data immediately
-        await queryClient.setQueryData(SESSION_KEY, data.user);
-
-        // Invalidate to trigger refetch with new token (validates token is working)
-        await queryClient.invalidateQueries({ queryKey: SESSION_KEY });
+        // DO NOT invalidate - cache should persist during navigation
+        queryClient.setQueryData(SESSION_KEY, data.user);
       },
       onError: () => {
         // Clear any stale tokens on login error
@@ -104,13 +114,15 @@ export class AuthService {
    * Clears tokens and all cached data
    */
   static useLogout(): UseMutationResult<void, Error, void> {
+    const { adapter } = useStorage();
     const queryClient = useQueryClient();
 
     return useMutation({
       mutationKey: ['auth', 'logout'],
       mutationFn: async () => {
+        if (!adapter) throw new Error('Storage adapter not available');
         // Call backend logout endpoint
-        await authApi.logout();
+        await adapter.logout();
       },
       onSuccess: async () => {
         // Clear tokens first
@@ -135,7 +147,7 @@ export class AuthService {
   }
 
   /**
-   * Change password mutation
+   * Change password mutation (Server mode only)
    */
   static useChangePassword(): UseMutationResult<
     void,
@@ -145,13 +157,14 @@ export class AuthService {
     return useMutation({
       mutationKey: ['auth', 'changePassword'],
       mutationFn: async (data: Api.ChangePasswordRequest) => {
+        const authApi = await import('@app/lib/api/authApi');
         return await authApi.changePassword(data);
       },
     });
   }
 
   /**
-   * Refresh token mutation
+   * Refresh token mutation (Server mode only)
    *
    * Updates access token using refresh token
    */
@@ -167,6 +180,7 @@ export class AuthService {
         if (!refreshToken) {
           throw new Error('No refresh token available');
         }
+        const authApi = await import('@app/lib/api/authApi');
         return await authApi.refreshToken(refreshToken);
       },
       onSuccess: (data) => {

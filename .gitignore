@@ -143,3 +143,8 @@ docs/
 
 # DB dumps
 dump
+
+# openspec
+openspec/changes/*
+!openspec/changes/optimize-match-center
+!openspec/changes/add-offline-demo-mode

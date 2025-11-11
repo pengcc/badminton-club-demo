@@ -11,10 +11,19 @@ async function getUser() {
   const cookieStore = await cookies();
   const token = cookieStore.get('token')?.value;
 
-  if (!token) return null;
+  if (!token) {
+    // No server-side token - client will handle auth (could be local mode)
+    return null;
+  }
+
+  // Check if it's a local mode token (starts with 'local-token-')
+  if (token.startsWith('local-token-')) {
+    // Local mode token - skip server verification, let client handle it
+    return null;
+  }
 
   try {
-    // Verify token with backend
+    // Server mode: Verify token with backend
     // Add timeout to prevent blocking on cold starts (Render free tier)
     const controller = new AbortController();
     const timeoutId = setTimeout(() => controller.abort(), 5000); // 5 second timeout

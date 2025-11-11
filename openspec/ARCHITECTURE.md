@@ -1,10 +1,19 @@
 # Badminton Club App - Architecture Overview
 
 **Status:** Living Document
-**Last Updated:** 2025-11-06
+**Last Updated:** 2025-11-11
 **Maintainers:** Development Team
 
 ## Recent Updates
+
+### 2025-11-11: Dual Storage Mode Architecture
+- **NEW FEATURE**: Added Local Storage Mode using IndexedDB (via Dexie.js)
+- Implemented Adapter Pattern for unified data access (StorageAdapter interface)
+- Created separate route trees: `/dashboard` (server) and `/local-dashboard` (local)
+- LocalAdapter provides instant access without server dependencies (solves cold start problem)
+- ServerAdapter maintains existing API behavior with pure delegation (zero business logic)
+- Default mode: Local (instant access) with option to switch to Server (full-stack demo)
+- See [docs/LOCAL_STORAGE_MODE.md](../docs/LOCAL_STORAGE_MODE.md) for comprehensive documentation
 
 ### 2025-11-06: Phase 3 - Unidirectional Relationship Model
 - **BREAKING CHANGE**: Removed `Team.playerIds` field from database and schema
@@ -36,14 +45,15 @@
 
 ## Table of Contents
 1. [System Overview](#system-overview)
-2. [Type System Architecture](#type-system-architecture)
-3. [Frontend Architecture](#frontend-architecture)
-4. [Backend Architecture](#backend-architecture)
-5. [Data Flow Patterns](#data-flow-patterns)
-6. [Computed Properties Pattern](#computed-properties-pattern)
-7. [Key Design Principles](#key-design-principles)
-8. [Feature Modules](#feature-modules)
-9. [Development Guidelines](#development-guidelines)
+2. [Dual Storage Architecture](#dual-storage-architecture)
+3. [Type System Architecture](#type-system-architecture)
+4. [Frontend Architecture](#frontend-architecture)
+5. [Backend Architecture](#backend-architecture)
+6. [Data Flow Patterns](#data-flow-patterns)
+7. [Computed Properties Pattern](#computed-properties-pattern)
+8. [Key Design Principles](#key-design-principles)
+9. [Feature Modules](#feature-modules)
+10. [Development Guidelines](#development-guidelines)
 
 ---
 
@@ -77,6 +87,298 @@ Full-stack web application for badminton club operations management:
 - `apps/api/` - Backend service
 - `apps/web/` - Frontend Next.js app
 - `shared/types/` - Shared TypeScript types
+
+**Storage:**
+- **Dual Mode**: Server (MongoDB) or Local (IndexedDB)
+- Dexie.js (IndexedDB wrapper)
+- Adapter Pattern for unified data access
+
+---
+
+## Dual Storage Architecture
+
+### Overview
+
+The application supports **two operational modes** to provide instant access while maintaining full-stack demonstration capabilities:
+
+1. **Local Mode (Default)**: Browser-based storage using IndexedDB
+2. **Server Mode**: Traditional full-stack with backend API and MongoDB
+
+**Rationale:** Free-tier hosting (Render) has 10-20 minute cold starts. Local mode provides instant portfolio access while preserving the option to explore full backend implementation.
+
+### Architecture Diagram
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                    Application Services                          │
+│  (authService, userService, matchService, teamService, etc.)     │
+└───────────────────────────┬─────────────────────────────────────┘
+                            │ useStorage()
+                            │
+┌───────────────────────────▼─────────────────────────────────────┐
+│                     StorageProvider                              │
+│              (React Context - Mode Management)                   │
+│  • Loads mode from localStorage ('server' | 'local')             │
+│  • Instantiates appropriate adapter                              │
+│  • Provides: adapter, mode, setMode, isLocalModeEnabled         │
+└───────────┬─────────────────────────────────┬───────────────────┘
+            │                                 │
+            │ mode: 'server'                  │ mode: 'local'
+            │                                 │
+┌───────────▼──────────────┐    ┌─────────────▼──────────────────┐
+│    ServerAdapter         │    │      LocalAdapter              │
+│  (Pure Delegation)       │    │  (IndexedDB via Dexie.js)      │
+│                          │    │                                │
+│ • getUsers()             │    │ • getUsers()                   │
+│   → apiClient.users.list │    │   → db.users.toArray()         │
+│                          │    │                                │
+│ • Zero business logic    │    │ • Password validation          │
+│ • Direct API pass-through│   │ • JWT token generation         │
+│ • Easy rollback          │    │ • Seed data auto-init          │
+└──────────┬───────────────┘    └─────────────┬──────────────────┘
+           │                                  │
+           │                                  │
+┌──────────▼───────────────┐    ┌─────────────▼──────────────────┐
+│   Backend API            │    │   Browser IndexedDB            │
+│   • Express + MongoDB    │    │   • BadmintonClubDB            │
+│   • JWT Auth             │    │   • 4 tables (users, matches,  │
+│   • RESTful endpoints    │    │     teams, players)            │
+│   • 10-20 min cold start │    │   • Instant access             │
+└──────────────────────────┘    └────────────────────────────────┘
+```
+
+### StorageAdapter Interface
+
+Unified interface for all data operations (28 methods):
+
+```typescript
+// apps/web/app/lib/storage/StorageAdapter.ts
+export interface StorageAdapter {
+  // Auth
+  login(credentials: LoginCredentials): Promise<LoginResponse>;
+  verifyToken(token: string): Promise<User>;
+  
+  // Users (CRUD)
+  getUsers(): Promise<User[]>;
+  createUser(data: CreateUserInput): Promise<User>;
+  updateUser(id: string, data: UpdateUserInput): Promise<User>;
+  deleteUser(id: string): Promise<void>;
+  
+  // Matches (CRUD + availability)
+  getMatches(): Promise<Match[]>;
+  getMatchById(id: string): Promise<Match>;
+  createMatch(data: CreateMatchInput): Promise<Match>;
+  updateMatch(id: string, data: UpdateMatchInput): Promise<Match>;
+  deleteMatch(id: string): Promise<void>;
+  toggleMatchPlayerAvailability(matchId: string, playerId: string): Promise<Match>;
+  
+  // Teams (CRUD)
+  getTeams(): Promise<Team[]>;
+  getTeamById(id: string): Promise<Team>;
+  createTeam(data: CreateTeamInput): Promise<Team>;
+  updateTeam(id: string, data: UpdateTeamInput): Promise<Team>;
+  deleteTeam(id: string): Promise<void>;
+  
+  // Players (CRUD)
+  getPlayers(): Promise<Player[]>;
+  getPlayerById(id: string): Promise<Player>;
+  createPlayer(data: CreatePlayerInput): Promise<Player>;
+  updatePlayer(id: string, data: UpdatePlayerInput): Promise<Player>;
+  deletePlayer(id: string): Promise<void>;
+  
+  // Local-specific (optional)
+  clearAllData?(): Promise<void>;
+  exportData?(): Promise<string>;
+  importData?(data: string): Promise<void>;
+}
+```
+
+### Route Architecture
+
+Due to SSR/localStorage incompatibilities, the app uses **separate route trees**:
+
+```
+/[lang]/
+├── dashboard/              ← Server Mode (SSR + cookies)
+│   ├── layout.tsx          (SSR auth, getUser from cookies)
+│   ├── page.tsx
+│   ├── members/
+│   ├── matches/
+│   ├── teams/
+│   └── account/
+│
+└── local-dashboard/        ← Local Mode (client-only + localStorage)
+    ├── layout.tsx          (LocalDashboardWrapper, client auth)
+    ├── page.tsx
+    ├── members/
+    ├── matches/
+    ├── teams/
+    └── account/
+```
+
+**Key Difference:**
+- **Server Mode**: Uses SSR with `getUser()` from cookies → Works with API
+- **Local Mode**: Client-only with token from localStorage → Works with IndexedDB
+
+**Unified Navigation**: Both use `DashboardLayout` with mode-aware `basePath`:
+```typescript
+const basePath = mode === 'local' ? '/local-dashboard' : '/dashboard';
+```
+
+### LocalAdapter Implementation
+
+**Database:** IndexedDB via Dexie.js
+
+```typescript
+// Database Schema
+class BadmintonClubDB extends Dexie {
+  constructor() {
+    super('BadmintonClubDB');
+    this.version(1).stores({
+      users: 'id, email, role, ranking, *skills',
+      matches: 'id, date, status, createdById',
+      teams: 'id, matchId, type',
+      players: 'id, matchId, teamId, userId'
+    });
+  }
+}
+```
+
+**Features:**
+- Auto-initialization with seed data (30 users, 3 matches, 2 teams, 4 players)
+- Password hashing (bcrypt-compatible)
+- JWT token generation (client-side, HS256)
+- Computed fields (fullName, rankingDisplay) matching backend behavior
+- Data management (clear, export, import)
+
+**Performance:**
+- Initial load: <100ms
+- CRUD operations: <20ms
+- No network latency
+- No cold start
+
+### ServerAdapter Implementation
+
+**Pure delegation** with zero business logic:
+
+```typescript
+export class ServerAdapter implements StorageAdapter {
+  async getUsers(): Promise<User[]> {
+    return apiClient.users.list(); // Direct pass-through
+  }
+  
+  async createUser(data: CreateUserInput): Promise<User> {
+    return apiClient.users.create(data); // No transformation
+  }
+  
+  // ... all methods delegate directly
+}
+```
+
+**Benefits:**
+- Preserves exact existing API behavior
+- Easy rollback (remove adapter, restore direct calls)
+- No risk of logic duplication
+- Minimal code changes to existing services
+
+### Service Layer Integration
+
+All services use adapter via `useStorage()` hook:
+
+```typescript
+// apps/web/app/services/userService.ts
+export const userService = {
+  useUsers: () => {
+    const { adapter } = useStorage();
+    
+    return useQuery({
+      queryKey: ['users'],
+      queryFn: () => adapter!.getUsers(),
+      enabled: !!adapter
+    });
+  }
+  
+  // ... other methods
+};
+```
+
+**Pattern:**
+1. Get adapter from context: `const { adapter } = useStorage();`
+2. Call unified interface method: `adapter.getUsers()`
+3. Works identically in both modes (ServerAdapter vs LocalAdapter)
+
+### UI Components
+
+**StorageModeBanner**: Displays current mode with "Change Mode" button
+- Shown on homepage and login page
+- Color-coded: Purple (local), Blue (server)
+- Mobile responsive
+
+**StorageModeModal**: Modal dialog for mode selection
+- Two option cards: Local (default) and Server
+- Informative descriptions and warnings
+- Saves choice to localStorage
+- Redirects to appropriate dashboard
+
+**DemoCredentialsBanner**: Compact credentials display
+- Shown below storage banner on login page
+- Code-styled credentials for easy copying
+
+### Feature Flag
+
+Control via environment variable:
+
+```bash
+NEXT_PUBLIC_ENABLE_LOCAL_MODE=true   # Dual-mode (production)
+NEXT_PUBLIC_ENABLE_LOCAL_MODE=false  # Server-only (disable feature)
+```
+
+### Data Consistency
+
+Both modes use identical type structures:
+
+```typescript
+// API Response (from both adapters)
+interface User {
+  id: string;              // UUID (local) or MongoDB ObjectId (server)
+  email: string;
+  firstName: string;
+  lastName: string;
+  fullName: string;        // Computed field (both modes)
+  role: UserRole;
+  ranking: RankingLevel;
+  rankingDisplay: string;  // Computed field (both modes)
+  createdAt: string;       // ISO string
+  updatedAt: string;       // ISO string
+}
+```
+
+**Computed Fields** (calculated in both places):
+- LocalAdapter: Computes client-side during CRUD
+- ServerAdapter: Backend computes, returns via API
+
+### Maintenance Pattern
+
+When adding new entities (e.g., `Notification`):
+
+1. Update `StorageAdapter` interface
+2. Implement in `LocalAdapter` (add table, CRUD methods)
+3. Implement in `ServerAdapter` (delegate to API)
+4. Create service layer with React Query hooks
+5. Update seed data (for local mode)
+
+**See:** [docs/LOCAL_STORAGE_MODE.md](../docs/LOCAL_STORAGE_MODE.md) for detailed maintenance guide.
+
+### Migration/Rollback
+
+**Rollback to Server-Only:**
+1. Set `NEXT_PUBLIC_ENABLE_LOCAL_MODE=false`
+2. Remove storage banners from layouts
+3. (Optional) Revert services to direct API calls
+4. Delete `/local-dashboard` routes
+
+**Migration Time:** ~15 minutes  
+**Risk:** Low (ServerAdapter is pure delegation)
 
 ---
 

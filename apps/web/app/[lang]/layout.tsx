@@ -1,5 +1,6 @@
 import AuthWrapper from '@app/components/AuthWrapper';
 import QueryProvider from '@app/providers/QueryProvider';
+import { StorageProvider } from '@app/lib/storage';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { setRequestLocale } from 'next-intl/server';
@@ -35,11 +36,13 @@ export default async function RootLayout({ children, params }: RootLayoutProps) 
     <html lang={lang}>
       <body>
         <QueryProvider>
-          <NextIntlClientProvider messages={messages}>
-            <AuthWrapper>
-              {children}
-            </AuthWrapper>
-          </NextIntlClientProvider>
+          <StorageProvider>
+            <NextIntlClientProvider messages={messages}>
+              <AuthWrapper>
+                {children}
+              </AuthWrapper>
+            </NextIntlClientProvider>
+          </StorageProvider>
         </QueryProvider>
       </body>
     </html>
