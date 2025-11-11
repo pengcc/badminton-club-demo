@@ -41,19 +41,20 @@ const isLocalModeEnabled = (): boolean => {
 // Get saved mode from localStorage
 const getSavedMode = (): StorageMode => {
   if (typeof window === 'undefined') {
-    return 'server'; // Default to server on SSR
+    return  'server';
   }
 
   try {
     const saved = localStorage.getItem('storage-mode');
-    if (saved === 'local' && isLocalModeEnabled()) {
-      return 'local';
+    if (saved === 'server' || (saved === 'local' && isLocalModeEnabled())) {
+      return saved;
     }
   } catch (error) {
     console.warn('Failed to read storage mode from localStorage:', error);
   }
 
-  return 'server'; // Default to server
+  // Default: 'local' if enabled, otherwise 'server'
+  return isLocalModeEnabled() ? 'local' : 'server';
 };
 
 // Save mode to localStorage
