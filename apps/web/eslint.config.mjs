@@ -84,7 +84,7 @@ export default [
   },
   {
     // Server Components - allow console
-    files: ['app/**/layout.tsx', 'app/**/page.tsx', 'app/actions/**/*.ts'],
+    files: ['app/**/layout.tsx', 'app/**/page.tsx', 'app/actions/**/*.ts', 'app/lib/storage/*.ts'],
     rules: {
       'no-console': 'off',
     },
