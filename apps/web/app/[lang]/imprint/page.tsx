@@ -23,12 +23,12 @@ export default async function ImprintPage({ params }: { params: Promise<{ lang: 
           <section className="bg-card border rounded-xl p-6 shadow-sm">
             <h2 className="text-lg font-semibold text-foreground border-b pb-2 mb-4">Angaben gemäß § 5 TMG</h2>
             <p className="leading-relaxed">
-              Deutsch-Chinesischer Badminton Verein e. V.<br />
-              Berliner Str. 161<br />
-              10715 Berlin
+              Badminton Club Demo e. V.<br />
+              Muster Str. 161<br />
+              11515 Berlin
             </p>
             <p className="mt-4 leading-relaxed">
-              Vereinsregister: VR 29453<br />
+              Vereinsregister: VR 201020<br />
               Registergericht: Charlottenburg
             </p>
           </section>
@@ -36,17 +36,17 @@ export default async function ImprintPage({ params }: { params: Promise<{ lang: 
           <section className="bg-card border rounded-xl p-6 shadow-sm">
             <h2 className="text-lg font-semibold text-foreground border-b pb-2 mb-4">Vertreten durch</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm">
-              <p><span className="font-medium">Vorsitzende:</span> Zhang, Xi</p>
-              <p><span className="font-medium">Stellvertreter:</span> Cui, Pengcheng</p>
-              <p><span className="font-medium">Schatzmeisterin:</span> Yang, Yao</p>
-              <p><span className="font-medium">Sportwart:</span> Yu, Jingyang</p>
-              <p><span className="font-medium">Schriftführerin:</span> Zheng, Huishu</p>
+              <p><span className="font-medium">Vorsitzende: </span>Schmidt, Maria</p>
+              <p><span className="font-medium">Stellvertreter: </span>Weber, Thomas</p>
+              <p><span className="font-medium">Schatzmeisterin: </span>Müller, Laura</p>
+              <p><span className="font-medium">Sportwart: </span>Schulz, Matthias</p>
+              <p><span className="font-medium">Schriftführerin: </span>Schmidt, Daniel</p>
             </div>
           </section>
 
           <section className="bg-card border rounded-xl p-6 shadow-sm">
             <h2 className="text-lg font-semibold text-foreground border-b pb-2 mb-4">Kontakt</h2>
-            <p className="leading-relaxed">E-Mail: <a href="mailto:info@dcbev.de" className="text-primary hover:underline">info@dcbev.de</a></p>
+            <p className="leading-relaxed">E-Mail: <a href="mailto:info@club.dev" className="text-primary hover:underline">info@club.dev</a></p>
           </section>
 
 

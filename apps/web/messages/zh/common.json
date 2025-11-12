@@ -1,5 +1,5 @@
 {
-  "club_name": "DCBEV",
+  "club_name": "CLUB DEMO",
   "club_introduction": "我们是一个友好的羽毛球俱乐部，欢迎所有水平的球员加入我们。参加我们定期的训练课程和竞技比赛。",
   "address": "地址",
   "club_address_placeholder": "123 体育大道, 城市, 省份, 12345",
@@ -53,11 +53,11 @@
     "locations": {
       "main": {
         "name": "TU球馆",
-        "address": "Tempelhofer Ufer 19, 10963 Berlin"
+        "address": "Demo Ufer 19, 11763 Berlin"
       },
       "secondary": {
         "name": "PU球馆",
-        "address": "Gürtelstraße 16, 10409 Berlin"
+        "address": "Musterstraße 26, 13419 Berlin"
       }
     }
   },

@@ -28,10 +28,10 @@ export default function ContactSection() {
                 <h3 className="font-semibold text-foreground mb-2 text-lg">{t('contact.general.title')}</h3>
                 <p className="text-muted-foreground mb-3 text-sm">{t('contact.general.description')}</p>
                 <a
-                  href={`mailto:info@dcbev.de`}
+                  href={`mailto:info@club.dev`}
                   className="text-primary hover:text-primary/80 font-medium transition-colors block mb-4"
                 >
-                  info@dcbev.de
+                  info@club.dev
                 </a>
               </div>
             </div>
@@ -47,10 +47,10 @@ export default function ContactSection() {
                 <h3 className="font-semibold text-foreground mb-2 text-lg">{t('contact.membership.title')}</h3>
                 <p className="text-muted-foreground mb-3 text-sm">{t('contact.membership.description')}</p>
                 <a
-                  href={`mailto:mitgliedschaft@dcbev.de`}
+                  href={`mailto:mitgliedschaft@club.dev`}
                   className="text-blue-500 hover:text-blue-600 font-medium transition-colors block mb-4"
                 >
-                  mitgliedschaft@dcbev.de
+                  mitgliedschaft@club.dev
                 </a>
 
                 {/* Action Buttons */}
