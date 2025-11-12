@@ -1,6 +1,6 @@
 {
-  "club_name": "DCBEV",
-  "club_introduction": "Der Deutsch-Chinesische Badminton Verein wurde in 2009 gegründet. Derzeit haben wir ca. 60 Mitglieder. Wir haben uns stets dafür eingesetzt, die Badminton-Fans ein gutes Spielumfeld zu bieten. Hier findest du, egal ob du Anfänger oder fortgeschrittene Spieler bist, deine eigenen Spielpartner. Der Club hat jede Woche Trainingszeiten, um allen dabei zu helfen, mehr über Badminton zu lernen und ihre Techniken zu verbessern.",
+  "club_name": "CLUB DEMO",
+  "club_introduction": "Der Badminton Club Demo wurde in 2009 gegründet. Derzeit haben wir ca. 60 Mitglieder. Wir haben uns stets dafür eingesetzt, die Badminton-Fans ein gutes Spielumfeld zu bieten. Hier findest du, egal ob du Anfänger oder fortgeschrittene Spieler bist, deine eigenen Spielpartner. Der Club hat jede Woche Trainingszeiten, um allen dabei zu helfen, mehr über Badminton zu lernen und ihre Techniken zu verbessern.",
   "address": "Adresse",
   "club_address_placeholder": "123 Sportallee, Stadt, Bundesland, 12345",
   "contact_info_placeholder": "E-Mail: info@badmintonclub.com\nTelefon: (123) 456-7890",
@@ -14,7 +14,7 @@
   "trial_training": "Probetraining",
   "documents": "Unterlagen",
   "about_p1": "Willkommen beim Deutsch-Chinesischen Badminton Verein. Hier erfahren Sie über die Informationen des Vereins und unsere neuesten Entwicklungen.",
-  "about_p2": "Der Deutsch-Chinesische Badminton Verein wurde in 2009 gegründet. Derzeit haben wir ca. 60 Mitglieder. Wir haben uns stets dafür eingesetzt, die Badminton-Fans ein gutes Spielumfeld zu bieten. Hier findest du, egal ob du Anfänger oder fortgeschrittene Spieler bist, deine eigenen Spielpartner. Der Club hat jede Woche Trainingszeiten, um allen dabei zu helfen, mehr über Badminton zu lernen und ihre Techniken zu verbessern.",
+  "about_p2": "Der Badminton Club Demo wurde in 2009 gegründet. Derzeit haben wir ca. 60 Mitglieder. Wir haben uns stets dafür eingesetzt, die Badminton-Fans ein gutes Spielumfeld zu bieten. Hier findest du, egal ob du Anfänger oder fortgeschrittene Spieler bist, deine eigenen Spielpartner. Der Club hat jede Woche Trainingszeiten, um allen dabei zu helfen, mehr über Badminton zu lernen und ihre Techniken zu verbessern.",
   "about_p3": "Wenn du wie wir die Leidenschaft für Badminton hast, wende dich einfach an uns und schließe dich uns an.",
   "about_p4": "📣 Für die kommende Saison, suchen wir derzeit nach starken Spieler:innen für unsere Mannschaften.",
   "contact_p1": "Bitte melde dich bei uns, falls du Fragen hast.",
@@ -53,11 +53,11 @@
     "locations": {
       "main": {
         "name": "Sporthalle: TU",
-        "address": "Tempelhofer Ufer 19, 10963 Berlin"
+        "address": "Demo Ufer 19, 11763 Berlin"
       },
       "secondary": {
         "name": "Sporthalle: PU",
-        "address": "Gürtelstraße 16, 10409 Berlin"
+        "address": "Musterstraße 26, 13419 Berlin"
       }
     }
   },
@@ -81,7 +81,7 @@
   },
   "about": {
     "title": "Über unseren Club",
-    "content": "Der Deutsch-Chinesischer Badminton Verein wurde in 2009 gegründet. Derzeit haben wir ca. 60 Mitglieder. Wir haben uns stets dafür eingesetzt, die Badminton-Fans ein gutes Spielumfeld zu bieten. Hier findest du, egal ob du Anfänger oder fortgeschrittene Spieler bist, deine eigenen Spielpartner. Der Club hat jede Woche Trainingszeiten, um allen dabei zu helfen, mehr über Badminton zu lernen und ihre Techniken zu verbessern."
+    "content": "Der Badminton Club Demo wurde in 2009 gegründet. Derzeit haben wir ca. 60 Mitglieder. Wir haben uns stets dafür eingesetzt, die Badminton-Fans ein gutes Spielumfeld zu bieten. Hier findest du, egal ob du Anfänger oder fortgeschrittene Spieler bist, deine eigenen Spielpartner. Der Club hat jede Woche Trainingszeiten, um allen dabei zu helfen, mehr über Badminton zu lernen und ihre Techniken zu verbessern."
   },
   "contact": {
     "title": "Kontakt",

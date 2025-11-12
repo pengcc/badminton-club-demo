@@ -34,7 +34,7 @@ export default function Logo({ isInHeader=true }: LogoProps) {
           priority
         />
       </div>
-      <span>{t('club_name')}</span>
+      <span className='whitespace-nowrap'>{t('club_name')}</span>
     </div>
   </Link>
   );
