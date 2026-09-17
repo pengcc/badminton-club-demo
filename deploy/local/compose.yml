@@ -1,0 +1,89 @@
+services:
+  mongo:
+    image: mongo:8.0.14
+    command: ["mongod", "--replSet", "rs0", "--bind_ip_all"]
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          "mongosh --quiet --eval 'try { rs.status().ok } catch (_) { rs.initiate({_id:\"rs0\",members:[{_id:0,host:\"mongo:27017\"}]}) }' | grep -q 1",
+        ]
+      interval: 2s
+      timeout: 5s
+      retries: 30
+    ports:
+      - "127.0.0.1:${BADMINTON_LOCAL_MONGO_PORT:-43130}:27017"
+    volumes:
+      - mongo-data:/data/db
+
+  api:
+    image: ${BADMINTON_LOCAL_IMAGE:?BADMINTON_LOCAL_IMAGE is required}
+    command: ["node", "apps/api/dist/server.js"]
+    depends_on:
+      mongo:
+        condition: service_healthy
+    environment: &api-environment
+      NODE_ENV: production
+      PORT: "3003"
+      MONGODB_URI: mongodb://mongo:27017/badminton_local?replicaSet=rs0
+      FRONTEND_URL: http://localhost:${BADMINTON_LOCAL_WEB_PORT:-43110}
+      BANKING_ENCRYPTION_ACTIVE_KEY_VERSION: local-v1
+      BANKING_ENCRYPTION_KEYS: '{"local-v1":"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="}'
+      MEMBERSHIP_AUDIT_SALT: local-production-synthetic-audit-salt
+      MEMBERSHIP_APPLICATION_PRIVATE_UPLOAD_ROOT: /app/private-uploads
+      SMTP_HOST: smtp.invalid
+      SMTP_PORT: "2525"
+      SMTP_SECURE: "false"
+      SMTP_USER: local-production
+      SMTP_PASS: local-production-synthetic
+      SMTP_FROM: local-production@example.invalid
+    ports:
+      - "127.0.0.1:${BADMINTON_LOCAL_API_PORT:-43120}:3003"
+    volumes: &api-volumes
+      - public-uploads:/app/uploads
+      - private-uploads:/app/private-uploads
+
+  web:
+    image: ${BADMINTON_LOCAL_IMAGE:?BADMINTON_LOCAL_IMAGE is required}
+    command: ["node", "apps/web/server.js"]
+    depends_on:
+      api:
+        condition: service_started
+    environment:
+      NODE_ENV: production
+      PORT: "3000"
+      HOSTNAME: 0.0.0.0
+      FRONTEND_URL: http://localhost:${BADMINTON_LOCAL_WEB_PORT:-43110}
+      API_URL: http://api:3003
+    ports:
+      - "127.0.0.1:${BADMINTON_LOCAL_WEB_PORT:-43110}:3000"
+
+  preflight:
+    profiles: [operator]
+    image: ${BADMINTON_LOCAL_IMAGE:?BADMINTON_LOCAL_IMAGE is required}
+    command: ["node", "apps/api/dist/scripts/checkRuntimeReadiness.js"]
+    depends_on:
+      mongo:
+        condition: service_healthy
+    environment: *api-environment
+    volumes: *api-volumes
+
+  setup:
+    profiles: [operator]
+    image: ${BADMINTON_LOCAL_IMAGE:?BADMINTON_LOCAL_IMAGE is required}
+    command:
+      [
+        "sh",
+        "-c",
+        "node apps/api/dist/scripts/seedEmailTemplates.js && node apps/api/dist/scripts/checkTasterSessionReadiness.js --ensure-index",
+      ]
+    depends_on:
+      mongo:
+        condition: service_healthy
+    environment: *api-environment
+    volumes: *api-volumes
+
+volumes:
+  mongo-data:
+  public-uploads:
+  private-uploads:

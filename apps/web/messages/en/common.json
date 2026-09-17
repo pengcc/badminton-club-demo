@@ -1,0 +1,833 @@
+{
+  "showcase": {
+    "disclosure": "Portfolio demo with synthetic example data. No live club services, contact or registration for real activities.",
+    "identity": "This non-production portfolio demo is not the official DCBV website.",
+    "legalPending": "Final operator and privacy information will be completed from verified facts before public release. This preliminary information is not a complete legal notice or privacy policy."
+  },
+  "club_name": "Badminton Club Demo",
+  "address": "Address",
+  "club_address_placeholder": "Fictional demonstration venue – not a visitor address",
+  "contact_info_placeholder": "demo@example.invalid",
+  "login": "Login",
+  "email": "Email",
+  "register": "Register",
+  "logout": "Logout",
+  "genderLabels": { "male": "Male", "female": "Female", "unknown": "Unknown" },
+  "pagination": {
+    "range": "Showing {start} to {end} of {total} items",
+    "rangeCompact": "{start}–{end} / {total}",
+    "perPage": "Items per page:",
+    "perPageCompact": "Per page",
+    "perPageLabel": "Items per page",
+    "page": "Page {current} of {total}",
+    "pageCompact": "{current} / {total}",
+    "previous": "Previous page",
+    "next": "Next page"
+  },
+  "birthdayPicker": {
+    "label": "Date of birth",
+    "year": "Year",
+    "month": "Month",
+    "day": "Day",
+    "olderYears": "Show earlier years",
+    "newerYears": "Show later years"
+  },
+  "home": "Home",
+  "dashboard": "Dashboard",
+  "about_us": "About Us",
+  "training_time": "Training Times",
+  "trial_training": "Taster Session",
+  "documents": "Documents",
+  "documents_none": "No public documents are currently available.",
+  "documents_unavailable": "Public documents cannot be loaded right now.",
+  "document_version_date": "Version date: {date}",
+  "about_p1": "Badminton Club Demo",
+  "about_p2": "Portfolio demo with synthetic example data. No live club services, contact or registration for real activities.",
+  "about_p3": "Portfolio demo with synthetic example data. No live club services, contact or registration for real activities.",
+  "about_p4": "Portfolio demo with synthetic example data. No live club services, contact or registration for real activities.",
+  "contact_p1": "Portfolio demo with synthetic example data. No live club services, contact or registration for real activities.",
+  "contact_club": "For club questions",
+  "contact_membership": "For Taster Session and membership applications",
+  "trial_p1": "Portfolio demo with synthetic example data. No live club services, contact or registration for real activities.",
+  "trial_p2": "A selected time is a non-binding preference and is not a booking.",
+  "membership_application": "Membership Application",
+  "sepa_mandate": "SEPA Direct Debit Mandate",
+  "fee_regulation": "Fee Regulation",
+  "statutes": "Statutes",
+  "imprint": "Imprint",
+  "monday": "Monday",
+  "tuesday": "Tuesday",
+  "wednesday": "Wednesday",
+  "thursday": "Thursday",
+  "friday": "Friday",
+  "saturday": "Saturday",
+  "sunday": "Sunday",
+  "privacy_policy": "Privacy Policy",
+  "accessibility": {
+    "skipToContent": "Skip to main content"
+  },
+  "navigation": {
+    "home": "Home",
+    "about": "About us",
+    "training": "Training time",
+    "trial": "Taster Session",
+    "contact": "Contact",
+    "documents": "Documents",
+    "teams": "Teams",
+    "activities": "Activities",
+    "join": "Join us",
+    "language": "Language",
+    "openMenu": "Open navigation menu",
+    "closeMenu": "Close navigation menu",
+    "menuTitle": "Navigation",
+    "discoveryLabel": "Club discovery navigation",
+    "discoveryMenuLabel": "Club discovery menu",
+    "languageSelector": "Choose language",
+    "tryDemo": "Admin demo"
+  },
+  "userMenu": {
+    "title": "Account menu",
+    "close": "Close account menu",
+    "account": "My account",
+    "role": "Role: {role}"
+  },
+  "uiError": {
+    "title": "Something went wrong",
+    "description": "This content could not be displayed. Please try again.",
+    "retry": "Try again"
+  },
+  "homepage": {
+    "mainMessageUnavailable": "The club welcome message cannot be loaded right now."
+  },
+  "seo": {
+    "home": {
+      "title": "Badminton Club Demo",
+      "description": "Badminton Club Demo: Portfolio demo with synthetic example data. No live club services, contact or registration for real activities."
+    },
+    "teams": {
+      "title": "Teams | Badminton Club Demo",
+      "description": "Badminton Club Demo: Portfolio demo with synthetic example data. No live club services, contact or registration for real activities."
+    },
+    "activities": {
+      "title": "Activities | Badminton Club Demo",
+      "description": "Badminton Club Demo: Portfolio demo with synthetic example data. No live club services, contact or registration for real activities."
+    },
+    "membership": {
+      "title": "Membership | Badminton Club Demo",
+      "description": "Badminton Club Demo: Portfolio demo with synthetic example data. No live club services, contact or registration for real activities."
+    },
+    "tasterSession": {
+      "title": "Taster Session | Badminton Club Demo",
+      "description": "Badminton Club Demo: Portfolio demo with synthetic example data. No live club services, contact or registration for real activities."
+    },
+    "recruitment": {
+      "title": "Team Recruitment | Badminton Club Demo",
+      "description": "Badminton Club Demo: Portfolio demo with synthetic example data. No live club services, contact or registration for real activities."
+    }
+  },
+  "visitUs": {
+    "title": "Visit Us",
+    "openingHours": "Opening Hours",
+    "none": "No public training locations are currently listed.",
+    "unavailable": "Training locations cannot be loaded right now.",
+    "introductionUnavailable": "The visit information cannot be loaded right now.",
+    "locations": {
+      "main": {
+        "name": "Demo 1",
+        "address": "Fictional demonstration venue – not a visitor address"
+      },
+      "secondary": {
+        "name": "Demo 2",
+        "address": "Fictional demonstration venue – not a visitor address"
+      }
+    }
+  },
+  "updates": {
+    "title": "Announcements",
+    "unavailable": "Announcements cannot be loaded right now.",
+    "empty": {
+      "title": "No Announcements",
+      "description": "There are currently no announcements."
+    },
+    "type": {
+      "info": "Info",
+      "important": "Important",
+      "warning": "Warning"
+    },
+    "externalLink": "Read more",
+    "1": {
+      "title": "New season starts in September",
+      "content": "For the upcoming season, we are currently looking for strong players for our teams.",
+      "date": "2025.08.01"
+    },
+    "2": {
+      "title": "Request a Taster Session before visiting",
+      "content": "Please submit a Taster Session request before visiting. A selected time is a preference only; an administrator will contact you to make arrangements.",
+      "date": "2025.09.01"
+    }
+  },
+  "about": {
+    "title": "About Our Club",
+    "founded": "Founded in {year}",
+    "unavailable": "Club information cannot be loaded right now."
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "We'd love to hear from you",
+    "none": "No public contact routes are currently available.",
+    "unavailable": "Public contact routes cannot be loaded right now.",
+    "introductionUnavailable": "The contact introduction cannot be loaded right now.",
+    "general": {
+      "title": "General Inquiries",
+      "description": "For questions about club information"
+    },
+    "membership": {
+      "title": "Membership & Taster Sessions",
+      "description": "For Taster Session and membership applications"
+    },
+    "buttons": {
+      "trial_training": "Request a Taster Session",
+      "membership": "Become a Member"
+    }
+  },
+  "participation": {
+    "title": "Join Us",
+    "unavailable": "Further information is not available right now.",
+    "informationUnavailable": "Public information cannot be loaded right now.",
+    "taster": {
+      "title": "Taster Session",
+      "action": "Request a Taster Session",
+      "preparation": "Preparation",
+      "guidance": "Participation guidance",
+      "followUp": "What happens next",
+      "demoUnavailable": "Visitor requests are unavailable in this public portfolio demo.",
+      "requestUnavailable": "Requests are temporarily unavailable. Please try again later."
+    },
+    "membership": {
+      "title": "Become a Member",
+      "action": "Membership Information"
+    },
+    "recruitment": {
+      "title": "Join a Competitive Team",
+      "summary": "Experienced player? Learn about our current teams and how to arrange a team tryout.",
+      "action": "Team Recruitment"
+    }
+  },
+  "recruitment": {
+    "eyebrow": "Competitive badminton in Berlin",
+    "title": "Play for one of our teams",
+    "unavailable": "Recruitment information cannot be loaded right now. The page remains available; please try again later.",
+    "sectionUnavailable": "This information cannot be loaded right now.",
+    "status": {
+      "paused": "Recruitment is currently paused",
+      "pausedDescription": "This page remains available for information, but we are not arranging team tryouts right now."
+    },
+    "requirements": { "title": "Who we are looking for" },
+    "teams": {
+      "title": "Our teams",
+      "empty": "No current public team information is available.",
+      "unavailable": "Team information cannot be loaded right now.",
+      "detailLink": "View team details"
+    },
+    "training": {
+      "title": "Training days and locations",
+      "empty": "No current public training locations are listed.",
+      "unavailable": "Training locations cannot be loaded right now.",
+      "contextNotice": "These are regular club training days, not confirmed team-tryout appointments. Tryout details are arranged individually.",
+      "detailLink": "Training locations and times"
+    },
+    "contact": {
+      "channel": "Contact channel",
+      "wechatLabel": "WeChat / responsible person",
+      "wechatUnavailable": "No QR code is currently available for this contact. Please use the email channel.",
+      "emailLabel": "Email",
+      "emailAction": "Send email",
+      "unavailable": "The selected recruitment contact is currently unavailable. We do not substitute another contact route automatically."
+    },
+    "process": {
+      "title": "Tryout process",
+      "responsible": {
+        "title": "Contact the responsible person",
+        "description": "Contact the responsible person by WeChat or email, briefly introduce yourself and express your interest in a tryout."
+      },
+      "tryout": {
+        "title": "Arrange a tryout",
+        "description": "After learning about your background, the responsible person arranges a suitable tryout and participation in team training."
+      },
+      "evaluation": {
+        "title": "Assessment and joining",
+        "description": "Following the tryout and conversation, the coaching team assesses the fit. If it works for both sides, you can join the team."
+      }
+    },
+    "closing": {
+      "title": "We look forward to meeting you on court",
+      "description": "Play together. Improve together!"
+    }
+  },
+  "membershipInformation": {
+    "open": "The club is currently accepting new membership applications.",
+    "closed": "The club is currently not accepting new membership applications.",
+    "statusUnavailable": "The current membership-intake status cannot be loaded right now.",
+    "types": "Membership types",
+    "path": "Path to membership",
+    "preparation": "Application preparation",
+    "studentProof": "Student proof",
+    "controlledApplication": "The formal membership application remains controlled and is not available as public registration.",
+    "recoveryLink": "View an existing membership application",
+    "tasterLink": "Visit the Taster Session page",
+    "contactLink": "Contact the club"
+  },
+  "emailChangeVerification": {
+    "loadingTitle": "Verifying email change",
+    "loadingDescription": "Please wait while we verify your email change.",
+    "successTitle": "Email verified",
+    "successDescription": "Your email address was updated successfully.",
+    "newEmail": "Your new email address",
+    "loginGuidance": "You can now sign in with your new email address.",
+    "redirecting": "Redirecting to your account page shortly.",
+    "accountAction": "Go to account",
+    "errorTitle": "Verification failed",
+    "errorDescription": "We could not verify this email change.",
+    "invalidGuidance": "The verification link may be invalid or expired.",
+    "retryGuidance": "Request a new email change from your account page.",
+    "homeAction": "Go home"
+  },
+  "footer": {
+    "imprint": "Imprint",
+    "privacy": "Data Privacy",
+    "copyright": "All rights reserved.",
+    "navigationLabel": "Legal information"
+  },
+  "applicationForm": {
+    "contactInfo": "Contact Information",
+    "personalInfo": "Personal Information",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "email": "Email Address",
+    "address": "Street Address",
+    "postalCode": "Postal Code",
+    "city": "City",
+    "country": "Country",
+    "nationality": "Nationality",
+    "phone": "Phone Number",
+    "birthday": "Date of Birth",
+    "gender": "Gender",
+    "genderOptions": {
+      "female": "Female",
+      "male": "Male",
+      "other": "Other"
+    },
+    "membershipType": "Membership Type",
+    "membershipTypeSelection": "Select Membership Type",
+    "membershipTypes": {
+      "regular": "Regular Membership",
+      "student": "Student Membership"
+    },
+    "sepaTitle": "SEPA Direct Debit Information",
+    "addSEPADebit": "Add SEPA Direct Debit Information",
+    "debitFrequency": "Payment Frequency",
+    "debitOptions": {
+      "quarterly": "Quarterly",
+      "annually": "Annually"
+    },
+    "accountHolderNote": "Account holder information (if different from applicant):",
+    "accountHolderSelection": "Account Holder Information",
+    "accountHolderDetails": "Account Holder Details",
+    "accountHolderOptions": {
+      "same": "Applicant",
+      "different": "Another account holder"
+    },
+    "accountHolderPreview": "Account holder information (based on applicant details):",
+    "accountHolderName": "Name",
+    "accountHolderFirstName": "Account Holder First Name",
+    "accountHolderLastName": "Account Holder Last Name",
+    "accountHolderAddress": "Account Holder Address",
+    "bankName": "Bank Name",
+    "bic": "BIC/Swift Code",
+    "iban": "IBAN"
+  },
+  "validation": {
+    "required": "This field is required",
+    "email": "Please enter a valid email address",
+    "phone": "Please enter a valid phone number",
+    "birthday": "Please enter a valid date (minimum age 14)",
+    "invalidIBAN": "Please enter a valid German IBAN",
+    "invalidName": "Please enter a valid name",
+    "minLength": "Name must have at least 2 characters"
+  },
+  "pages": {
+    "membership": "Membership Application",
+    "membershipInformation": "Membership",
+    "tasterSession": "Taster Session",
+    "recruitment": "Team Recruitment",
+    "imprint": "Imprint"
+  },
+  "registrationAccess": {
+    "checking": "Checking registration access…",
+    "unavailableTitle": "Registration link unavailable",
+    "unavailableDescription": "This registration link is missing, expired, or no longer active. Please ask the club for a current link."
+  },
+  "registrationAccessAdmin": {
+    "title": "Controlled registration access",
+    "description": "One shared link grants access to the application form. Every application still requires administrator approval.",
+    "loading": "Loading registration link",
+    "loadFailed": "The registration link status could not be loaded.",
+    "refreshFailed": "The current link could not be refreshed. The last loaded state remains visible.",
+    "retry": "Retry",
+    "status": "Current status",
+    "noLink": "No link has been generated.",
+    "activeGeneration": "Current version {generation}",
+    "expired": "No active link. The previous link is expired.",
+    "expires": "Expires: {date}",
+    "doesNotExpire": "No automatic expiry",
+    "expiryLabel": "Expiry",
+    "expiry30Days": "30 days",
+    "expiry90Days": "90 days",
+    "expiry180Days": "180 days",
+    "expiryNone": "No automatic expiry",
+    "languageLabel": "Link language",
+    "generate": "Generate registration link",
+    "rotate": "Invalidate and generate new link",
+    "generated": "Registration link generated",
+    "replaced": "Registration link replaced",
+    "updateFailed": "Registration link could not be updated",
+    "currentLink": "Current registration link",
+    "linkUnavailable": "Current link cannot be displayed",
+    "linkUnavailableDescription": "This existing version remains valid, but its complete link was not retained. Replace it only if you need a new retrievable link.",
+    "copyLabel": "Copy registration link",
+    "copied": "Link copied",
+    "copyFailed": "Link could not be copied"
+  },
+  "tasterSession": {
+    "title": "Request a Taster Session",
+    "subtitle": "Tell us about yourself and choose a preferred time when one is available. An administrator will follow up.",
+    "playerLevel": "Which description fits you best?",
+    "levels": {
+      "beginner": {
+        "label": "Beginner",
+        "description": "I am new to badminton or have limited experience."
+      },
+      "experienced": {
+        "label": "Experienced",
+        "description": "I have played badminton regularly before."
+      }
+    },
+    "preference": {
+      "title": "Preferred time",
+      "nonBinding": "This is a non-binding preference, not a booking or confirmed place.",
+      "loading": "Loading current preference options…",
+      "loadFailed": "Preference options could not be loaded.",
+      "retry": "Retry",
+      "none": "There is no matching active option right now. You can still submit the request and an administrator will contact you to arrange a suitable time."
+    },
+    "form": {
+      "name": "Full name",
+      "email": "Email Address",
+      "message": "Additional message (optional)",
+      "submit": "Submit Request",
+      "submitting": "Submitting..."
+    },
+    "validation": {
+      "required": "This field is required.",
+      "name": "Please enter at least two characters.",
+      "email": "Please enter a valid email address."
+    },
+    "errors": {
+      "pendingExists": "A pending request already exists for this email. An administrator will follow up.",
+      "rateLimited": "Too many technical requests were sent. Please try again later.",
+      "preferenceChanged": "The preference options changed. Review the current choices and submit again.",
+      "generic": "The request could not be submitted. Please try again."
+    },
+    "success": {
+      "title": "Request submitted",
+      "message": "Your request was saved. Any selected time is only a preference; an administrator will contact you.",
+      "submitAnother": "Submit Another Request"
+    },
+    "admin": {
+      "title": "Taster Session requests",
+      "description": "Follow up with visitors, record a terminal outcome, and manage the queue.",
+      "loading": "Loading requests…",
+      "loadFailed": "Requests could not be loaded.",
+      "retry": "Retry",
+      "close": "Close",
+      "empty": "No matching requests.",
+      "actionConflict": "This request changed. The list has been refreshed; review the latest state before trying again.",
+      "actionFailed": "The action did not complete. Refresh the queue and try again.",
+      "retryFailed": "Email retry did not complete. Refresh the queue and review the latest delivery state.",
+      "stats": {
+        "total": "Total",
+        "pending": "Pending",
+        "invited": "Invited",
+        "declined": "Declined",
+        "archived": "Archived"
+      },
+      "filters": {
+        "status": "Status",
+        "level": "Visitor category",
+        "archive": "Archive filter",
+        "all": "All",
+        "activeOnly": "Hide archived",
+        "includeArchived": "Include archived",
+        "archivedOnly": "Archived only"
+      },
+      "levels": { "beginner": "Beginner", "experienced": "Experienced" },
+      "status": {
+        "pending": "Pending",
+        "invited": "Invited",
+        "declined": "Declined"
+      },
+      "delivery": {
+        "not_requested": "Not requested",
+        "in_progress": "Sending",
+        "sent": "Sent",
+        "failed": "Failed",
+        "uncertain": "Uncertain"
+      },
+      "columns": {
+        "visitor": "Visitor",
+        "preference": "Preference",
+        "status": "Status",
+        "delivery": "Email delivery",
+        "actions": "Actions"
+      },
+      "nonBinding": "Non-binding preference",
+      "noPreference": "No preference; follow up to arrange",
+      "messageLabel": "Visitor message",
+      "notesLabel": "Administrator notes",
+      "archived": "Archived",
+      "retryEmail": "Retry email",
+      "uncertainRetryWarning": "The provider result is uncertain. Retrying may send a duplicate email.",
+      "disposition": "Set outcome",
+      "archive": "Archive",
+      "unarchive": "Unarchive",
+      "dispositionTitle": "Record visitor outcome",
+      "outcome": "Outcome",
+      "declineReason": "Decline reason",
+      "declineReasons": {
+        "noCapacity": "No capacity",
+        "other": "Another reason"
+      },
+      "declineReasonDetails": "Reason details",
+      "recipientLanguageGuidance": "Write this visitor-visible detail in {language}. If an outcome email is sent, it will be included unchanged.",
+      "adminNotes": "Administrator notes",
+      "adminNotesGuidance": "Internal only. These notes are not included in the visitor's email.",
+      "sendEmail": "Send the visitor an outcome email",
+      "terminalWarning": "Invited and declined are terminal outcomes in this increment. Email failure will not undo the outcome.",
+      "saving": "Saving…",
+      "confirm": "Confirm outcome"
+    }
+  },
+  "guestPlay": {
+    "title": "Guest Play Request",
+    "subtitle": "Ask for permission to bring friends or family to a club play time.",
+    "guestCount": "Number of Guests",
+    "selectSession": "Club play opportunity",
+    "permissionNotice": "This is a permission request, not a booking or guarantee of court time.",
+    "form": {
+      "messageLabel": "Additional Message (Optional)",
+      "messagePlaceholder": "Anything the club team should know?",
+      "selectPlaceholder": "Select a date, time, and location",
+      "selectRequired": "Select a club play opportunity.",
+      "guestOption": "{count, plural, one {# guest} other {# guests}}",
+      "submit": "Submit Request",
+      "submitting": "Submitting..."
+    },
+    "success": {
+      "description": "Your permission request was saved. Email delivery is handled separately.",
+      "cancelled": "Your pending request was cancelled.",
+      "command": "The request was updated.",
+      "retry": "The delivery retry was processed."
+    },
+    "status": {
+      "pending": "Pending",
+      "approved": "Approved",
+      "declined": "Declined",
+      "cancelled": "Cancelled"
+    },
+    "myRequests": {
+      "title": "My Requests",
+      "subtitle": "Permission requests you have submitted",
+      "noRequests": "You haven't submitted any guest play requests yet.",
+      "newRequest": "New Request"
+    },
+    "states": {
+      "loadingOpportunities": "Loading club play opportunities...",
+      "noOpportunities": "No Guest Play opportunities are currently available in the next 21 days.",
+      "loadingRequests": "Loading Guest Play requests...",
+      "staleRequests": "The last saved results are shown; refresh failed."
+    },
+    "errors": {
+      "opportunities": "Club play opportunities could not be loaded.",
+      "requests": "Guest Play requests could not be loaded.",
+      "submit": "The request could not be submitted.",
+      "cancel": "The request could not be cancelled. Refresh and try again.",
+      "command": "The action could not be completed. Refresh and try again.",
+      "conflict": "The request changed while you were working. The latest state has been loaded; review it before trying again."
+    },
+    "actions": {
+      "retry": "Try again",
+      "close": "Close",
+      "details": "Details",
+      "cancelRequest": "Cancel request",
+      "approve": "Approve",
+      "decline": "Decline",
+      "correctToApproved": "Correct to approved",
+      "correctToDeclined": "Correct to declined",
+      "archive": "Archive",
+      "restore": "Restore",
+      "retryDelivery": "Retry email"
+    },
+    "admin": {
+      "title": "Guest Requests",
+      "subtitle": "Review permission requests and delivery state.",
+      "all": "All outcomes",
+      "active": "Active records",
+      "archived": "Archived",
+      "empty": "No requests match these filters.",
+      "search": "Search by member name or email",
+      "statusFilter": "Outcome filter",
+      "archiveFilter": "Archive filter",
+      "detailsTitle": "Guest Play request details",
+      "requestDetails": "Request details",
+      "member": "Member",
+      "status": "Outcome",
+      "actions": "Administrator actions",
+      "internalNotes": "Internal administrator notes",
+      "correctionReason": "Required correction reason",
+      "pastApprovalBlocked": "Approval is unavailable because the requested time has passed.",
+      "notifications": "Email delivery",
+      "attempts": "{count, plural, one {# attempt} other {# attempts}}",
+      "deliveryWarning": "Delivery failed or is uncertain; the business action remains successful.",
+      "stats": {
+        "total": "Total",
+        "pending": "Pending",
+        "approved": "Approved",
+        "declined": "Declined",
+        "cancelled": "Cancelled",
+        "archived": "Archived"
+      },
+      "notificationKinds": {
+        "memberReceipt": "Member receipt",
+        "administratorAlert": "Administrator alert",
+        "decisionEmail": "Decision email"
+      },
+      "notificationStatus": {
+        "not_attempted": "Not attempted",
+        "not_configured": "Not configured",
+        "sending": "Sending",
+        "sent": "Sent",
+        "failed": "Failed",
+        "uncertain": "Uncertain"
+      }
+    }
+  },
+  "errors": {
+    "404": "Page not found",
+    "500": "Internal server error",
+    "network": "Network error",
+    "unauthorized": "Unauthorized access",
+    "forbidden": "Access forbidden"
+  },
+  "player": {
+    "skillLevel": "Skill Level",
+    "skillLevels": {
+      "beginner": "Beginner",
+      "intermediate": "Intermediate",
+      "advanced": "Advanced",
+      "professional": "Professional"
+    },
+    "positions": {
+      "singles": "Singles",
+      "doubles": "Doubles",
+      "mixed-doubles": "Mixed Doubles"
+    },
+    "roles": {
+      "player": "Player",
+      "captain": "Captain",
+      "vice-captain": "Vice Captain"
+    },
+    "ranking": "Ranking",
+    "availability": "Availability",
+    "isActive": "Active Player",
+    "teamAffiliations": "Team Memberships"
+  },
+  "team": {
+    "teamType": "Team Type",
+    "teamTypes": {
+      "competitive": "Competitive",
+      "recreational": "Recreational",
+      "youth": "Youth",
+      "mixed": "Mixed"
+    },
+    "maxMembers": "Maximum Members",
+    "captain": "Captain",
+    "viceCaptain": "Vice Captain",
+    "members": "Members",
+    "description": "Description"
+  },
+  "teams": {
+    "pageTitle": "Our Teams",
+    "matchLevel": "Match Level",
+    "noTeams": "No teams available.",
+    "unavailable": "Teams cannot be loaded right now.",
+    "introductionUnavailable": "The Team introduction cannot be loaded right now.",
+    "recruitment": {
+      "title": "Interested in competitive team badminton?",
+      "description": "See our club-wide recruitment information and learn how team tryouts are coordinated.",
+      "action": "View Team Recruitment"
+    }
+  },
+  "activities": {
+    "pageTitle": "Activities",
+    "noActivities": "No activities available.",
+    "unavailable": "Activities cannot be loaded right now.",
+    "watchVideo": "Watch Video",
+    "openImage": "Open image {number} for {name}",
+    "lightboxTitle": "Image gallery for {name}",
+    "lightboxImage": "{name}, image {number} of {total}",
+    "closeGallery": "Close image gallery",
+    "previousImage": "Previous image",
+    "nextImage": "Next image",
+    "pagination": "Activities pages",
+    "page": "Page {page}",
+    "pageStatus": "Page {page} of {total}",
+    "pageOutOfRange": "Page {page} is not available.",
+    "returnToAvailable": "View available activities",
+    "previous": "Previous",
+    "next": "Next"
+  },
+  "membershipApplicant": {
+    "verifyTitle": "Verify your email",
+    "accessTitle": "View membership application",
+    "emailPrivacy": "We use a single-use email link to keep your saved application private.",
+    "email": "Email address",
+    "send": "Send secure link",
+    "sending": "Sending…",
+    "requestFailed": "The secure link could not be requested. Please try again.",
+    "retry": "Try again",
+    "sent": "If the request is eligible, a single-use link will arrive shortly. It expires after 30 minutes.",
+    "title": "Membership application",
+    "status": "Status: {status}",
+    "statusLabels": {
+      "draft": "Draft",
+      "pending": "Pending review",
+      "approved": "Approved",
+      "rejected": "Rejected",
+      "withdrawn": "Withdrawn"
+    },
+    "loading": "Loading application…",
+    "sessionInvalid": "This access session is invalid or expired. Request a new link.",
+    "accessOpening": "Opening your application…",
+    "accessInvalid": "This single-use link is invalid or expired. Request a new link from the Membership page.",
+    "retentionNotice": "Privacy: inactive drafts are deleted after 30 days. Submitted applications remain available during review; approved, rejected, or withdrawn applications and their private proof files are deleted after 90 days. Approved Member account, banking, and onboarding records remain separate.",
+    "personal": "Personal details",
+    "verifiedEmail": "Verified email",
+    "select": "Select…",
+    "germany": "Germany",
+    "motivation": "Motivation",
+    "banking": "Bank details",
+    "addBank": "Add bank details now",
+    "removeBank": "Remove saved bank details",
+    "frequency": "Debit frequency",
+    "quarterly": "Quarterly",
+    "annually": "Annually",
+    "bankLater": "You can submit without bank details and add them later while the application is pending. Complete bank details are required before approval.",
+    "requiredToSubmit": "Required to submit",
+    "optional": "Optional",
+    "missingRequiredCount": "{count, plural, one {# required field remaining} other {# required fields remaining}}",
+    "fieldNeedsCorrection": "Check this entry.",
+    "decision": "Decision",
+    "save": "Save",
+    "saveSuccess": "Saved on the server. You can safely continue later.",
+    "saveFailed": "Save failed. Your changes are still unsaved.",
+    "submit": "Submit application",
+    "submitSuccess": "Application submitted for review. You may still correct it while pending.",
+    "submitFailed": "Submission failed. Complete every required personal field and membership type.",
+    "submitNeedsCorrection": "Submission needs correction. Review the highlighted fields.",
+    "proofTitle": "Student proof",
+    "proofGuidance": "Proof is optional for submission, but please provide it promptly. Missing proof may delay review. Upload at most two PDF, JPEG, or PNG files of 10 MB each. HEIC is not supported; convert it first.",
+    "proofRemove": "Remove",
+    "proofSize": "{size} KB",
+    "proofSave": "Save proof files",
+    "proofSaveSuccess": "Student proof files were saved privately.",
+    "proofSaveFailed": "Student proof upload failed. Use at most two PDF, JPEG, or PNG files of 10 MB each.",
+    "documentsTitle": "Current documents",
+    "documentsGuidance": "Documents are generated from the latest saved data and are not stored by the club.",
+    "receiptReset": "Saved changes invalidated a previously received signed document. Generate, sign, and deliver the affected document again.",
+    "downloadApplication": "Download application PDF",
+    "downloadSepa": "Download SEPA PDF",
+    "documentGenerateFailed": "The current document could not be generated. Save complete data and try again.",
+    "emailCurrentDocuments": "Email current PDFs to {email}",
+    "applicationDocument": "Membership Application",
+    "sepaDocument": "SEPA mandate",
+    "emailSelectedDocuments": "Email selected PDFs",
+    "emailDocumentsSuccess": "Current documents were sent to the verified email.",
+    "emailDocumentsFailed": "The documents could not be emailed.",
+    "changeEmail": "Change verified email",
+    "verifyNewEmail": "Verify new email",
+    "emailChangeSuccess": "If eligible, a verification link will arrive at the new address.",
+    "emailChangeFailed": "The email change request could not be started.",
+    "communicationLanguage": "Language for application messages",
+    "localeChangeFailed": "The message language could not be updated. Please try again.",
+    "localeLabels": {
+      "de": "German",
+      "en": "English",
+      "zh": "Chinese"
+    },
+    "withdraw": "Withdraw application",
+    "confirmWithdraw": "Confirm withdrawal",
+    "withdrawDescription": "This immediately ends applicant access. A new application is subject to the cooldown and creation limits.",
+    "cancel": "Cancel",
+    "confirmWithdrawAction": "Yes, withdraw",
+    "withdrawSuccess": "Application withdrawn. This applicant session is now closed.",
+    "withdrawFailed": "The application could not be withdrawn. Please try again.",
+    "leaveTitle": "Leave with unsaved changes?",
+    "leaveDescription": "Your latest edits have not been saved on the server.",
+    "saveAndLeave": "Save draft and leave",
+    "leaveWithoutSaving": "Leave without saving",
+    "continueEditing": "Continue editing",
+    "saveLeaveFailed": "Could not save all changes. You are still on this page and your changes remain unsaved.",
+    "saveLeavePartialFailed": "Application details were saved, but proof changes are still unsaved. You are still on this page.",
+    "saveLeaveProofPartialFailed": "Proof changes were saved, but application details are still unsaved. You are still on this page."
+  },
+  "setupDelivery": {
+    "sent": "Password setup email sent.",
+    "failed": "Approval succeeded, but email delivery failed. An administrator can reissue it.",
+    "uncertain": "Approval succeeded, but email delivery could not be confirmed. Reissue only when appropriate.",
+    "notRequired": "Approval succeeded. The existing account password remains active.",
+    "reissue": "Reissue setup email",
+    "reissuing": "Reissuing…",
+    "reissued": "A new setup email was sent and the previous link was invalidated.",
+    "reissueFailed": "The setup email could not be reissued."
+  },
+  "accountEstablishment": {
+    "deferred": "Member established. No password setup email was sent now.",
+    "sent": "Member established and password setup email sent.",
+    "failed": "Member established, but email delivery failed.",
+    "uncertain": "Member established, but email delivery could not be confirmed.",
+    "notRequired": "Member established. The existing account credentials remain active."
+  },
+  "setupReissue": {
+    "sent": "A new password setup email was sent.",
+    "failed": "The new password setup email could not be delivered.",
+    "uncertain": "Delivery of the new password setup email could not be confirmed.",
+    "requestFailed": "The password setup email could not be reissued."
+  },
+  "accountSetup": {
+    "header": "Account setup",
+    "state": {
+      "ready": "Setup complete",
+      "required": "Setup required",
+      "expired": "Setup link expired"
+    },
+    "delivery": {
+      "sent": "Current setup email sent",
+      "failed": "Current delivery failed",
+      "uncertain": "Current delivery unconfirmed",
+      "not_attempted": "No current delivery result"
+    },
+    "reissue": "Reissue setup email",
+    "reissuing": "Reissuing…",
+    "reissueFor": "Reissue password setup for {name}"
+  }
+}

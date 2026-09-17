@@ -1,0 +1,46 @@
+name: mongo-docker-rs
+
+services:
+  mongo-rs:
+    image: mongo:8.0.14
+    command:
+      - mongod
+      - --replSet
+      - rs0
+      - --bind_ip_all
+      - --port
+      - "27018"
+    ports:
+      - "127.0.0.1:27019:27018"
+    volumes:
+      - mongo-rs-data:/data/db
+    healthcheck:
+      test:
+        - CMD-SHELL
+        - >-
+          mongosh --quiet --host localhost --port 27018 --eval '
+          try {
+            const hello = db.adminCommand({ hello: 1 });
+            if (!hello.setName) {
+              try {
+                rs.initiate({ _id: "rs0", members: [{ _id: 0, host: "localhost:27018" }] });
+              } catch (_) {}
+              quit(1);
+            }
+            quit(hello.setName === "rs0" && hello.isWritablePrimary === true ? 0 : 1);
+          } catch (error) {
+            if (error.codeName === "NotYetInitialized") {
+              try {
+                rs.initiate({ _id: "rs0", members: [{ _id: 0, host: "localhost:27018" }] });
+              } catch (_) {}
+            }
+            quit(1);
+          }'
+      interval: 3s
+      timeout: 5s
+      retries: 20
+      start_period: 5s
+
+volumes:
+  mongo-rs-data:
+    name: mongo-docker-rs_mongo-rs-data

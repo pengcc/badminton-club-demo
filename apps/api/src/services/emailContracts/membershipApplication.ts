@@ -1,0 +1,113 @@
+import type { CapabilityEmailTemplateContract } from './types';
+import { EMAIL_TEMPLATE_LOCALES } from './types';
+
+export const MEMBERSHIP_APPLICATION_EMAIL_TEMPLATES = {
+  RECEIVED: 'application_received',
+  ADMIN_ALERT: 'application_admin_alert',
+  APPROVED: 'application_approved',
+  REJECTED: 'application_rejected',
+  CONTACT: 'application_contact',
+  VERIFY_EMAIL: 'application_verify_email',
+  ACCESS: 'application_access',
+  VERIFY_EMAIL_CHANGE: 'application_verify_email_change',
+  ACCESS_GUIDANCE: 'application_access_guidance',
+  DOCUMENTS: 'application_documents',
+} as const;
+
+export const MEMBERSHIP_APPLICATION_EMAIL_CONTRACTS = [
+  {
+    name: MEMBERSHIP_APPLICATION_EMAIL_TEMPLATES.VERIFY_EMAIL,
+    owner: 'Membership Application',
+    supportedLocales: EMAIL_TEMPLATE_LOCALES,
+    availableVariables: ['accessUrl'],
+    requiredVariables: ['accessUrl'],
+    senderStatus: 'current',
+  },
+  {
+    name: MEMBERSHIP_APPLICATION_EMAIL_TEMPLATES.ACCESS,
+    owner: 'Membership Application',
+    supportedLocales: EMAIL_TEMPLATE_LOCALES,
+    availableVariables: ['accessUrl'],
+    requiredVariables: ['accessUrl'],
+    senderStatus: 'current',
+  },
+  {
+    name: MEMBERSHIP_APPLICATION_EMAIL_TEMPLATES.VERIFY_EMAIL_CHANGE,
+    owner: 'Membership Application',
+    supportedLocales: EMAIL_TEMPLATE_LOCALES,
+    availableVariables: ['accessUrl'],
+    requiredVariables: ['accessUrl'],
+    senderStatus: 'current',
+  },
+  {
+    name: MEMBERSHIP_APPLICATION_EMAIL_TEMPLATES.ACCESS_GUIDANCE,
+    owner: 'Membership Application',
+    supportedLocales: EMAIL_TEMPLATE_LOCALES,
+    availableVariables: ['message'],
+    requiredVariables: ['message'],
+    senderStatus: 'current',
+  },
+  {
+    name: MEMBERSHIP_APPLICATION_EMAIL_TEMPLATES.DOCUMENTS,
+    owner: 'Membership Application',
+    supportedLocales: EMAIL_TEMPLATE_LOCALES,
+    availableVariables: ['firstName', 'documents'],
+    requiredVariables: ['documents'],
+    senderStatus: 'current',
+  },
+  {
+    name: MEMBERSHIP_APPLICATION_EMAIL_TEMPLATES.RECEIVED,
+    owner: 'Membership Application',
+    supportedLocales: EMAIL_TEMPLATE_LOCALES,
+    availableVariables: ['firstName', 'lastName'],
+    requiredVariables: [],
+    senderStatus: 'current',
+  },
+  {
+    name: MEMBERSHIP_APPLICATION_EMAIL_TEMPLATES.ADMIN_ALERT,
+    owner: 'Membership Application',
+    supportedLocales: EMAIL_TEMPLATE_LOCALES,
+    availableVariables: [
+      'applicantName',
+      'email',
+      'membershipType',
+      'applicationUrl',
+    ],
+    requiredVariables: [
+      'applicantName',
+      'email',
+      'membershipType',
+      'applicationUrl',
+    ],
+    senderStatus: 'current',
+  },
+  {
+    name: MEMBERSHIP_APPLICATION_EMAIL_TEMPLATES.APPROVED,
+    owner: 'Membership Application',
+    supportedLocales: EMAIL_TEMPLATE_LOCALES,
+    availableVariables: [
+      'firstName',
+      'lastName',
+      'approvalMessage',
+      'setupGuidance',
+    ],
+    requiredVariables: ['setupGuidance'],
+    senderStatus: 'current',
+  },
+  {
+    name: MEMBERSHIP_APPLICATION_EMAIL_TEMPLATES.REJECTED,
+    owner: 'Membership Application',
+    supportedLocales: EMAIL_TEMPLATE_LOCALES,
+    availableVariables: ['firstName', 'lastName', 'reason'],
+    requiredVariables: ['reason'],
+    senderStatus: 'current',
+  },
+  {
+    name: MEMBERSHIP_APPLICATION_EMAIL_TEMPLATES.CONTACT,
+    owner: 'Membership Application',
+    supportedLocales: EMAIL_TEMPLATE_LOCALES,
+    availableVariables: ['firstName', 'lastName', 'message', 'senderName'],
+    requiredVariables: ['message', 'senderName'],
+    senderStatus: 'current',
+  },
+] as const satisfies readonly CapabilityEmailTemplateContract[];

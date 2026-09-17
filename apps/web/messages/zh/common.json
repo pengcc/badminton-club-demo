@@ -1,0 +1,830 @@
+{
+  "showcase": {
+    "disclosure": "本作品集演示使用虚构示例数据，不提供真实俱乐部服务、联系渠道或活动报名。",
+    "identity": "本网站为非生产环境的作品集演示，并非 DCBV 官方网站。",
+    "legalPending": "公开发布前将根据已核实的事实补充运营者及隐私信息。此处的临时说明并非完整的法律声明或隐私政策。"
+  },
+  "club_name": "Badminton Club Demo",
+  "address": "地址",
+  "club_address_placeholder": "虚构演示场地，不是真实到访地址",
+  "contact_info_placeholder": "demo@example.invalid",
+  "login": "登录",
+  "register": "注册",
+  "logout": "退出",
+  "genderLabels": { "male": "男性", "female": "女性", "unknown": "未填写" },
+  "pagination": {
+    "range": "显示第 {start} 至 {end} 项，共 {total} 项",
+    "rangeCompact": "{start}–{end} / {total}",
+    "perPage": "每页项目数：",
+    "perPageCompact": "每页",
+    "perPageLabel": "每页项目数",
+    "page": "第 {current} 页，共 {total} 页",
+    "pageCompact": "{current} / {total}",
+    "previous": "上一页",
+    "next": "下一页"
+  },
+  "birthdayPicker": {
+    "label": "出生日期",
+    "year": "年份",
+    "month": "月份",
+    "day": "日期",
+    "olderYears": "显示更早年份",
+    "newerYears": "显示较晚年份"
+  },
+  "email": "电子邮件",
+  "home": "首页",
+  "dashboard": "仪表板",
+  "about_us": "关于我们",
+  "training_time": "训练时间",
+  "trial_training": "新人体验活动",
+  "documents": "文件",
+  "documents_none": "目前没有公开文件。",
+  "documents_unavailable": "目前无法加载公开文件。",
+  "document_version_date": "版本日期：{date}",
+  "about_p1": "Badminton Club Demo",
+  "about_p2": "本作品集演示使用虚构示例数据，不提供真实俱乐部服务、联系渠道或活动报名。",
+  "about_p3": "本作品集演示使用虚构示例数据，不提供真实俱乐部服务、联系渠道或活动报名。",
+  "about_p4": "本作品集演示使用虚构示例数据，不提供真实俱乐部服务、联系渠道或活动报名。",
+  "contact_p1": "本作品集演示使用虚构示例数据，不提供真实俱乐部服务、联系渠道或活动报名。",
+  "contact_club": "有关俱乐部的问题",
+  "contact_membership": "新人体验活动和会员申请",
+  "trial_p1": "本作品集演示使用虚构示例数据，不提供真实俱乐部服务、联系渠道或活动报名。",
+  "trial_p2": "所选时间仅为非约束性偏好，并非预订。",
+  "membership_application": "会员申请",
+  "sepa_mandate": "SEPA直接借记授权书",
+  "fee_regulation": "费用规定",
+  "statutes": "章程",
+  "imprint": "印记",
+  "privacy_policy": "隐私政策",
+  "accessibility": {
+    "skipToContent": "跳到主要内容"
+  },
+  "monday": "周一",
+  "tuesday": "周二",
+  "wednesday": "周三",
+  "thursday": "周四",
+  "friday": "周五",
+  "saturday": "周六",
+  "sunday": "周日",
+  "navigation": {
+    "home": "首页",
+    "about": "关于我们",
+    "training": "训练时间",
+    "trial": "新人体验活动",
+    "contact": "联系方式",
+    "documents": "文件",
+    "teams": "球队",
+    "activities": "活动",
+    "join": "加入我们",
+    "language": "语言",
+    "openMenu": "打开导航菜单",
+    "closeMenu": "关闭导航菜单",
+    "menuTitle": "导航",
+    "discoveryLabel": "俱乐部信息导航",
+    "discoveryMenuLabel": "俱乐部信息菜单",
+    "languageSelector": "选择语言",
+    "tryDemo": "管理演示"
+  },
+  "userMenu": {
+    "title": "账户菜单",
+    "close": "关闭账户菜单",
+    "account": "我的账户",
+    "role": "角色：{role}"
+  },
+  "uiError": {
+    "title": "出现错误",
+    "description": "无法显示此内容，请重试。",
+    "retry": "重试"
+  },
+  "homepage": {
+    "mainMessageUnavailable": "目前无法加载俱乐部欢迎信息。"
+  },
+  "seo": {
+    "home": {
+      "title": "Badminton Club Demo",
+      "description": "Badminton Club Demo: 本作品集演示使用虚构示例数据，不提供真实俱乐部服务、联系渠道或活动报名。"
+    },
+    "teams": {
+      "title": "球队 | Badminton Club Demo",
+      "description": "Badminton Club Demo: 本作品集演示使用虚构示例数据，不提供真实俱乐部服务、联系渠道或活动报名。"
+    },
+    "activities": {
+      "title": "活动 | Badminton Club Demo",
+      "description": "Badminton Club Demo: 本作品集演示使用虚构示例数据，不提供真实俱乐部服务、联系渠道或活动报名。"
+    },
+    "membership": {
+      "title": "会员信息 | Badminton Club Demo",
+      "description": "Badminton Club Demo: 本作品集演示使用虚构示例数据，不提供真实俱乐部服务、联系渠道或活动报名。"
+    },
+    "tasterSession": {
+      "title": "新人体验活动 | Badminton Club Demo",
+      "description": "Badminton Club Demo: 本作品集演示使用虚构示例数据，不提供真实俱乐部服务、联系渠道或活动报名。"
+    },
+    "recruitment": {
+      "title": "球队招募 | Badminton Club Demo",
+      "description": "Badminton Club Demo: 本作品集演示使用虚构示例数据，不提供真实俱乐部服务、联系渠道或活动报名。"
+    }
+  },
+  "visitUs": {
+    "title": "欢迎光临！",
+    "openingHours": "开放时间",
+    "none": "目前没有公开的训练地点。",
+    "unavailable": "目前无法加载训练地点。",
+    "introductionUnavailable": "目前无法加载到访信息。",
+    "locations": {
+      "main": {
+        "name": "Demo 1",
+        "address": "虚构演示场地，不是真实到访地址"
+      },
+      "secondary": {
+        "name": "Demo 2",
+        "address": "虚构演示场地，不是真实到访地址"
+      }
+    }
+  },
+  "updates": {
+    "title": "公告",
+    "unavailable": "目前无法加载公告。",
+    "empty": {
+      "title": "暂无公告",
+      "description": "目前没有公告。"
+    },
+    "type": {
+      "info": "信息",
+      "important": "重要",
+      "warning": "警告"
+    },
+    "externalLink": "了解更多",
+    "1": {
+      "title": "新赛季将于九月开始",
+      "content": "对于即将到来的赛季，我们目前正在为我们的团队寻找强大的球员。",
+      "date": "2025-08-01"
+    },
+    "2": {
+      "title": "来访前请申请新人体验活动",
+      "content": "请在来访前提交新人体验活动申请。所选时间仅为偏好，管理员会联系您进一步安排。",
+      "date": "2025-09-01"
+    }
+  },
+  "about": {
+    "title": "关于我们的俱乐部",
+    "founded": "成立于{year}年",
+    "unavailable": "目前无法加载俱乐部信息。"
+  },
+  "contact": {
+    "title": "联系方式",
+    "subtitle": "我们很乐意听到您的声音",
+    "none": "目前没有公开的联系渠道。",
+    "unavailable": "目前无法加载公开联系渠道。",
+    "introductionUnavailable": "目前无法加载联系说明。",
+    "general": {
+      "title": "一般咨询",
+      "description": "有关俱乐部信息的问题"
+    },
+    "membership": {
+      "title": "会员资格和新人体验活动",
+      "description": "新人体验活动和会员申请"
+    },
+    "buttons": {
+      "trial_training": "申请新人体验活动",
+      "membership": "成为会员"
+    }
+  },
+  "participation": {
+    "title": "加入我们",
+    "unavailable": "目前无法提供更多信息。",
+    "informationUnavailable": "目前无法加载公开信息。",
+    "taster": {
+      "title": "新人体验活动",
+      "action": "申请新人体验活动",
+      "preparation": "准备事项",
+      "guidance": "参与说明",
+      "followUp": "后续安排",
+      "demoUnavailable": "此公开作品演示不提供访客申请功能。",
+      "requestUnavailable": "申请功能暂时不可用，请稍后重试。"
+    },
+    "membership": {
+      "title": "成为会员",
+      "action": "了解会员信息"
+    },
+    "recruitment": {
+      "title": "加入竞技球队",
+      "summary": "有打球经验？了解我们的球队以及如何协调球队试训。",
+      "action": "查看球队招募"
+    }
+  },
+  "recruitment": {
+    "eyebrow": "柏林竞技羽毛球",
+    "title": "代表我们的球队参赛",
+    "unavailable": "目前无法加载招募信息。页面仍然可用，请稍后重试。",
+    "sectionUnavailable": "目前无法加载此信息。",
+    "status": {
+      "paused": "招募目前暂停",
+      "pausedDescription": "此页面仍提供信息，但目前暂不安排球队试训。"
+    },
+    "requirements": { "title": "我们在寻找这样的你" },
+    "teams": {
+      "title": "我们的球队",
+      "empty": "目前没有公开的球队信息。",
+      "unavailable": "目前无法加载球队信息。",
+      "detailLink": "查看球队详情"
+    },
+    "training": {
+      "title": "训练时间与地点",
+      "empty": "目前没有公开的训练地点。",
+      "unavailable": "目前无法加载训练地点。",
+      "contextNotice": "这些是俱乐部常规训练日，并非已确认的球队试训预约。试训细节需单独协调。",
+      "detailLink": "训练地点与时间"
+    },
+    "contact": {
+      "channel": "联系渠道",
+      "wechatLabel": "微信 / 负责人",
+      "wechatUnavailable": "当前联系人尚未提供二维码，请使用邮件渠道联系。",
+      "emailLabel": "Email",
+      "emailAction": "发送邮件",
+      "unavailable": "所选招募联系渠道目前不可用。系统不会自动替换为其他联系渠道。"
+    },
+    "process": {
+      "title": "试打流程",
+      "responsible": {
+        "title": "联系负责人",
+        "description": "通过微信或邮件与负责人取得联系，简单介绍自己，表达试打意向。"
+      },
+      "tryout": {
+        "title": "安排试打",
+        "description": "负责人了解情况后，为你安排合适的试打时间与训练参与。"
+      },
+      "evaluation": {
+        "title": "评估与加入",
+        "description": "通过试打与交流，教练组综合评估，双方合适即可正式加入球队。"
+      }
+    },
+    "closing": {
+      "title": "期待与你在球场相遇",
+      "description": "一起挥拍、一同进步！"
+    }
+  },
+  "membershipInformation": {
+    "open": "俱乐部目前接受新的会员申请。",
+    "closed": "俱乐部目前暂不接受新的会员申请。",
+    "statusUnavailable": "目前无法加载会员招募状态。",
+    "types": "会员类型",
+    "path": "入会流程",
+    "preparation": "申请准备",
+    "studentProof": "学生证明",
+    "controlledApplication": "正式会员申请仍采用受控方式，不作为公开注册入口提供。",
+    "recoveryLink": "查看现有会员申请",
+    "tasterLink": "前往新人体验活动页面",
+    "contactLink": "联系俱乐部"
+  },
+  "emailChangeVerification": {
+    "loadingTitle": "正在验证邮箱更改",
+    "loadingDescription": "请稍候，我们正在验证您的邮箱更改。",
+    "successTitle": "邮箱已验证",
+    "successDescription": "您的邮箱地址已成功更新。",
+    "newEmail": "您的新邮箱地址",
+    "loginGuidance": "您现在可以使用新邮箱地址登录。",
+    "redirecting": "即将跳转到您的账户页面。",
+    "accountAction": "前往账户",
+    "errorTitle": "验证失败",
+    "errorDescription": "我们无法验证此次邮箱更改。",
+    "invalidGuidance": "验证链接可能无效或已过期。",
+    "retryGuidance": "请从您的账户页面重新申请更改邮箱。",
+    "homeAction": "返回首页"
+  },
+  "footer": {
+    "imprint": "印记",
+    "privacy": "数据隐私",
+    "copyright": "版权所有。",
+    "navigationLabel": "法律信息"
+  },
+  "applicationForm": {
+    "contactInfo": "联系信息",
+    "personalInfo": "个人信息",
+    "firstName": "名字",
+    "lastName": "姓氏",
+    "email": "电子邮箱",
+    "address": "街道地址",
+    "postalCode": "邮政编码",
+    "city": "城市",
+    "country": "国家",
+    "nationality": "国籍",
+    "phone": "电话号码",
+    "birthday": "出生日期",
+    "gender": "性别",
+    "genderOptions": {
+      "female": "女",
+      "male": "男",
+      "other": "其他"
+    },
+    "membershipType": "会员类型",
+    "membershipTypeSelection": "选择会员类型",
+    "membershipTypes": {
+      "regular": "常规会员",
+      "student": "学生会员"
+    },
+    "sepaTitle": "SEPA直接借记信息",
+    "addSEPADebit": "添加SEPA直接借记信息",
+    "debitFrequency": "付款频率",
+    "debitOptions": {
+      "quarterly": "季度",
+      "annually": "年度"
+    },
+    "accountHolderNote": "账户持有人信息（如与申请人不同）：",
+    "accountHolderSelection": "账户持有人信息",
+    "accountHolderDetails": "账户持有人详情",
+    "accountHolderOptions": {
+      "same": "申请人",
+      "different": "其他账户持有人"
+    },
+    "accountHolderPreview": "账户持有人信息（基于申请人详情）：",
+    "accountHolderName": "姓名",
+    "accountHolderFirstName": "账户持有人名字",
+    "accountHolderLastName": "账户持有人姓氏",
+    "accountHolderAddress": "账户持有人地址",
+    "bankName": "银行名称",
+    "bic": "BIC/Swift代码",
+    "iban": "IBAN"
+  },
+  "validation": {
+    "required": "此字段为必填项",
+    "email": "请输入有效的电子邮箱地址",
+    "phone": "请输入有效的电话号码",
+    "birthday": "请输入有效日期（最低年龄14岁）",
+    "invalidIBAN": "请输入有效的德国IBAN",
+    "invalidName": "请输入有效姓名",
+    "minLength": "姓名至少需要2个字符"
+  },
+  "pages": {
+    "membership": "会员申请",
+    "membershipInformation": "会员信息",
+    "tasterSession": "新人体验活动",
+    "recruitment": "球队招募",
+    "imprint": "印记"
+  },
+  "registrationAccess": {
+    "checking": "正在验证申请链接…",
+    "unavailableTitle": "申请链接不可用",
+    "unavailableDescription": "此申请链接不存在、已过期或已失效。请向俱乐部索取当前有效链接。"
+  },
+  "registrationAccessAdmin": {
+    "title": "受控注册链接",
+    "description": "一个共享链接可访问申请表，但每份申请仍须管理员批准。",
+    "loading": "正在加载注册链接",
+    "loadFailed": "无法加载注册链接状态。",
+    "refreshFailed": "无法刷新当前链接。系统将继续显示上次加载的状态。",
+    "retry": "重试",
+    "status": "当前状态",
+    "noLink": "尚未生成链接。",
+    "activeGeneration": "当前版本 {generation}",
+    "expired": "当前没有有效链接，之前的链接已过期。",
+    "expires": "到期时间：{date}",
+    "doesNotExpire": "不会自动到期",
+    "expiryLabel": "有效期",
+    "expiry30Days": "30 天",
+    "expiry90Days": "90 天",
+    "expiry180Days": "180 天",
+    "expiryNone": "永不过期",
+    "languageLabel": "链接语言",
+    "generate": "生成注册链接",
+    "rotate": "使当前链接失效并生成新链接",
+    "generated": "注册链接已生成",
+    "replaced": "注册链接已替换",
+    "updateFailed": "无法更新注册链接",
+    "currentLink": "当前注册链接",
+    "linkUnavailable": "无法显示当前链接",
+    "linkUnavailableDescription": "此现有版本仍然有效，但系统未保留其完整链接。仅在需要新的可再次获取链接时进行替换。",
+    "copyLabel": "复制注册链接",
+    "copied": "链接已复制",
+    "copyFailed": "无法复制链接"
+  },
+  "tasterSession": {
+    "title": "申请新人体验活动",
+    "subtitle": "请介绍您的情况；如有合适选项，可选择一个偏好时间。管理员会联系您跟进。",
+    "playerLevel": "以下哪种描述更符合您？",
+    "levels": {
+      "beginner": {
+        "label": "初学者",
+        "description": "我刚接触羽毛球或经验较少。"
+      },
+      "experienced": {
+        "label": "有经验",
+        "description": "我以前经常打羽毛球。"
+      }
+    },
+    "preference": {
+      "title": "偏好时间",
+      "nonBinding": "这只是非约束性偏好，并非预订、名额保留或确认参加。",
+      "loading": "正在加载当前偏好选项…",
+      "loadFailed": "无法加载偏好选项。",
+      "retry": "重试",
+      "none": "目前没有符合条件的有效选项。您仍可提交申请，管理员会联系您安排合适时间。"
+    },
+    "form": {
+      "name": "全名",
+      "email": "电子邮箱地址",
+      "message": "附加信息（可选）",
+      "submit": "提交申请",
+      "submitting": "正在提交..."
+    },
+    "validation": {
+      "required": "此字段为必填项。",
+      "name": "请输入至少两个字符。",
+      "email": "请输入有效的电子邮箱地址。"
+    },
+    "errors": {
+      "pendingExists": "此电子邮箱已有一份待处理申请，管理员会联系您。",
+      "rateLimited": "技术请求过于频繁，请稍后再试。",
+      "preferenceChanged": "偏好选项已发生变化。请查看当前选项后重新提交。",
+      "generic": "无法提交申请，请重试。"
+    },
+    "success": {
+      "title": "申请已提交",
+      "message": "申请已保存。所选时间仅为偏好，管理员会联系您。",
+      "submitAnother": "提交另一个申请"
+    },
+    "admin": {
+      "title": "新人体验活动申请",
+      "description": "跟进访客、记录终局业务结果并管理队列。",
+      "loading": "正在加载申请…",
+      "loadFailed": "无法加载申请。",
+      "retry": "重试",
+      "close": "关闭",
+      "empty": "没有符合条件的申请。",
+      "actionConflict": "该申请已发生变化。请查看最新状态后再操作。",
+      "actionFailed": "操作未完成。请刷新队列后重试。",
+      "retryFailed": "邮件重试未完成。请刷新队列并查看最新投递状态。",
+      "stats": {
+        "total": "总计",
+        "pending": "待处理",
+        "invited": "已邀请",
+        "declined": "已拒绝",
+        "archived": "已归档"
+      },
+      "filters": {
+        "status": "状态",
+        "level": "访客类别",
+        "archive": "归档筛选",
+        "all": "全部",
+        "activeOnly": "隐藏已归档",
+        "includeArchived": "包含已归档",
+        "archivedOnly": "仅已归档"
+      },
+      "levels": { "beginner": "初学者", "experienced": "有经验" },
+      "status": {
+        "pending": "待处理",
+        "invited": "已邀请",
+        "declined": "已拒绝"
+      },
+      "delivery": {
+        "not_requested": "未要求发送",
+        "in_progress": "发送中",
+        "sent": "已发送",
+        "failed": "失败",
+        "uncertain": "结果不确定"
+      },
+      "columns": {
+        "visitor": "访客",
+        "preference": "偏好",
+        "status": "状态",
+        "delivery": "邮件投递",
+        "actions": "操作"
+      },
+      "nonBinding": "非约束性偏好",
+      "noPreference": "无偏好；需联系安排",
+      "messageLabel": "访客留言",
+      "notesLabel": "管理员备注",
+      "archived": "已归档",
+      "retryEmail": "重试邮件",
+      "uncertainRetryWarning": "邮件服务商的结果不确定。重试可能会重复发送邮件。",
+      "disposition": "设置结果",
+      "archive": "归档",
+      "unarchive": "取消归档",
+      "dispositionTitle": "记录访客结果",
+      "outcome": "结果",
+      "declineReason": "拒绝原因",
+      "declineReasons": { "noCapacity": "无接待能力", "other": "其他原因" },
+      "declineReasonDetails": "原因详情",
+      "recipientLanguageGuidance": "请使用{language}填写这段访客可见的说明。如发送结果邮件，内容会原样加入邮件。",
+      "adminNotes": "管理员备注",
+      "adminNotesGuidance": "仅供内部使用。这些备注不会加入发给访客的邮件。",
+      "sendEmail": "向访客发送结果邮件",
+      "terminalWarning": "本增量中，已邀请和已拒绝是终局结果。邮件失败不会撤销业务结果。",
+      "saving": "正在保存…",
+      "confirm": "确认结果"
+    }
+  },
+  "guestPlay": {
+    "title": "访客申请",
+    "subtitle": "申请允许携带朋友或家人参加一次俱乐部打球时段。",
+    "guestCount": "客人数量",
+    "selectSession": "俱乐部打球时段",
+    "permissionNotice": "这是许可申请，不是预约，也不保证场地或打球时间。",
+    "form": {
+      "messageLabel": "附加信息（可选）",
+      "messagePlaceholder": "俱乐部团队还需要了解什么？",
+      "selectPlaceholder": "选择日期、时间和地点",
+      "selectRequired": "请选择一个俱乐部打球时段。",
+      "guestOption": "{count} 位客人",
+      "submit": "提交申请",
+      "submitting": "提交中..."
+    },
+    "success": {
+      "description": "您的许可申请已保存。电子邮件发送将单独处理。",
+      "cancelled": "您的待处理申请已取消。",
+      "command": "申请已更新。",
+      "retry": "已处理重新发送。"
+    },
+    "status": {
+      "pending": "待处理",
+      "approved": "已批准",
+      "declined": "已拒绝",
+      "cancelled": "已取消"
+    },
+    "myRequests": {
+      "title": "我的申请",
+      "subtitle": "您提交的访客许可申请",
+      "noRequests": "您还没有提交任何访客申请。",
+      "newRequest": "新申请"
+    },
+    "states": {
+      "loadingOpportunities": "正在加载俱乐部打球时段...",
+      "noOpportunities": "未来 21 天目前没有可用的访客打球时段。",
+      "loadingRequests": "正在加载访客申请...",
+      "staleRequests": "当前显示上次保存的结果；刷新失败。"
+    },
+    "errors": {
+      "opportunities": "无法加载俱乐部打球时段。",
+      "requests": "无法加载访客申请。",
+      "submit": "无法提交申请。",
+      "cancel": "无法取消申请，请刷新后重试。",
+      "command": "无法完成操作，请刷新后重试。",
+      "conflict": "申请状态已在操作期间发生变化，最新状态已重新加载。请确认后重试。"
+    },
+    "actions": {
+      "retry": "重试",
+      "close": "关闭",
+      "details": "详情",
+      "cancelRequest": "取消申请",
+      "approve": "批准",
+      "decline": "拒绝",
+      "correctToApproved": "更正为已批准",
+      "correctToDeclined": "更正为已拒绝",
+      "archive": "归档",
+      "restore": "恢复",
+      "retryDelivery": "重新发送邮件"
+    },
+    "admin": {
+      "title": "访客申请管理",
+      "subtitle": "审核许可申请和邮件发送状态。",
+      "all": "所有结果",
+      "active": "活动记录",
+      "archived": "已归档",
+      "empty": "没有符合筛选条件的申请。",
+      "search": "按会员姓名或邮箱搜索",
+      "statusFilter": "结果筛选",
+      "archiveFilter": "归档筛选",
+      "detailsTitle": "访客申请详情",
+      "requestDetails": "申请详情",
+      "member": "会员",
+      "status": "结果",
+      "actions": "管理员操作",
+      "internalNotes": "管理员内部备注",
+      "correctionReason": "必填的更正原因",
+      "pastApprovalBlocked": "申请时间已过，无法批准。",
+      "notifications": "电子邮件发送",
+      "attempts": "尝试 {count} 次",
+      "deliveryWarning": "发送失败或状态不确定；业务操作仍然成功。",
+      "stats": {
+        "total": "总计",
+        "pending": "待处理",
+        "approved": "已批准",
+        "declined": "已拒绝",
+        "cancelled": "已取消",
+        "archived": "已归档"
+      },
+      "notificationKinds": {
+        "memberReceipt": "会员收件确认",
+        "administratorAlert": "管理员提醒",
+        "decisionEmail": "决定邮件"
+      },
+      "notificationStatus": {
+        "not_attempted": "尚未尝试",
+        "not_configured": "未配置",
+        "sending": "发送中",
+        "sent": "已发送",
+        "failed": "失败",
+        "uncertain": "不确定"
+      }
+    }
+  },
+  "errors": {
+    "404": "页面未找到",
+    "500": "内部服务器错误",
+    "network": "网络错误",
+    "unauthorized": "未授权访问",
+    "forbidden": "禁止访问"
+  },
+  "player": {
+    "skillLevel": "技能水平",
+    "skillLevels": {
+      "beginner": "初学者",
+      "intermediate": "中级",
+      "advanced": "高级",
+      "professional": "专业"
+    },
+    "positions": {
+      "singles": "单打",
+      "doubles": "双打",
+      "mixed-doubles": "混合双打"
+    },
+    "roles": {
+      "player": "球员",
+      "captain": "队长",
+      "vice-captain": "副队长"
+    },
+    "ranking": "排名",
+    "availability": "可用性",
+    "isActive": "活跃球员",
+    "teamAffiliations": "团队隶属关系"
+  },
+  "team": {
+    "teamType": "团队类型",
+    "teamTypes": {
+      "competitive": "竞技",
+      "recreational": "休闲",
+      "youth": "青少年",
+      "mixed": "混合"
+    },
+    "maxMembers": "最大成员数",
+    "captain": "队长",
+    "viceCaptain": "副队长",
+    "members": "成员",
+    "description": "描述"
+  },
+  "teams": {
+    "pageTitle": "我们的球队",
+    "matchLevel": "比赛级别",
+    "noTeams": "暂无球队信息。",
+    "unavailable": "目前无法加载球队。",
+    "introductionUnavailable": "目前无法加载球队介绍。",
+    "recruitment": {
+      "title": "对竞技球队羽毛球感兴趣？",
+      "description": "查看俱乐部统一的招募信息并了解球队试训的协调方式。",
+      "action": "查看球队招募"
+    }
+  },
+  "activities": {
+    "pageTitle": "活动",
+    "noActivities": "暂无活动信息。",
+    "unavailable": "目前无法加载活动。",
+    "watchVideo": "观看视频",
+    "openImage": "打开{name}的第{number}张图片",
+    "lightboxTitle": "{name}图片库",
+    "lightboxImage": "{name}，第{number}张，共{total}张",
+    "closeGallery": "关闭图片库",
+    "previousImage": "上一张图片",
+    "nextImage": "下一张图片",
+    "pagination": "活动分页",
+    "page": "第{page}页",
+    "pageStatus": "第{page}页，共{total}页",
+    "pageOutOfRange": "第{page}页不可用。",
+    "returnToAvailable": "查看可用活动",
+    "previous": "上一页",
+    "next": "下一页"
+  },
+  "membershipApplicant": {
+    "verifyTitle": "验证邮箱",
+    "accessTitle": "查看会员申请",
+    "emailPrivacy": "我们通过一次性邮箱链接保护您保存的申请。",
+    "email": "邮箱地址",
+    "send": "发送安全链接",
+    "sending": "正在发送…",
+    "requestFailed": "无法请求安全链接，请重试。",
+    "retry": "重试",
+    "sent": "如果申请符合条件，您将很快收到一次性链接。链接将在30分钟后失效。",
+    "title": "会员申请",
+    "status": "状态：{status}",
+    "statusLabels": {
+      "draft": "草稿",
+      "pending": "审核中",
+      "approved": "已批准",
+      "rejected": "已拒绝",
+      "withdrawn": "已撤回"
+    },
+    "loading": "正在加载申请…",
+    "sessionInvalid": "此访问会话无效或已过期，请重新申请链接。",
+    "accessOpening": "正在打开您的申请…",
+    "accessInvalid": "此一次性链接无效或已过期，请从会员页面重新申请链接。",
+    "retentionNotice": "隐私说明：连续30天未修改的草稿将被删除。已提交的申请在审核期间保留；获批、被拒或已撤回的申请及其私密证明文件将在90天后删除。获批会员的账户、银行和账户设置记录将独立保留。",
+    "personal": "个人信息",
+    "verifiedEmail": "已验证邮箱",
+    "select": "请选择…",
+    "germany": "德国",
+    "motivation": "申请说明",
+    "banking": "银行信息",
+    "addBank": "现在添加银行信息",
+    "removeBank": "删除已保存的银行信息",
+    "frequency": "扣款频率",
+    "quarterly": "每季度",
+    "annually": "每年",
+    "bankLater": "您可以先提交申请，并在待审核期间补充银行信息。批准申请前必须填写完整的银行信息。",
+    "requiredToSubmit": "提交申请时必填",
+    "optional": "可选",
+    "missingRequiredCount": "还需填写 {count} 项必填信息",
+    "fieldNeedsCorrection": "请检查此项。",
+    "decision": "审核决定",
+    "save": "保存",
+    "saveSuccess": "已保存到服务器，您可以稍后安全地继续填写。",
+    "saveFailed": "保存失败，您的更改仍未保存。",
+    "submit": "提交申请",
+    "submitSuccess": "申请已提交审核。在审核期间，您仍可进行更正。",
+    "submitFailed": "提交失败，请填写所有必填个人信息并选择会员类型。",
+    "submitNeedsCorrection": "申请信息需要更正，请检查已标记的字段。",
+    "proofTitle": "学生证明",
+    "proofGuidance": "提交申请时可暂不提供证明，但请尽快补交。缺少证明可能延迟审核。最多上传两个 PDF、JPEG 或 PNG 文件，每个不超过 10 MB。不支持 HEIC，请先转换格式。",
+    "proofRemove": "移除",
+    "proofSize": "{size} KB",
+    "proofSave": "保存证明文件",
+    "proofSaveSuccess": "学生证明文件已安全保存。",
+    "proofSaveFailed": "学生证明上传失败。最多上传两个 PDF、JPEG 或 PNG 文件，每个不超过 10 MB。",
+    "documentsTitle": "当前文件",
+    "documentsGuidance": "文件根据最新保存的数据即时生成，俱乐部不会存储这些 PDF。",
+    "receiptReset": "已保存的更改使此前收到的签署文件失效。请重新生成、签署并提交相应文件。",
+    "downloadApplication": "下载申请 PDF",
+    "downloadSepa": "下载 SEPA PDF",
+    "documentGenerateFailed": "无法生成当前文件，请先保存完整信息后重试。",
+    "emailCurrentDocuments": "将当前 PDF 发送至 {email}",
+    "applicationDocument": "会员申请",
+    "sepaDocument": "SEPA 授权书",
+    "emailSelectedDocuments": "发送所选 PDF",
+    "emailDocumentsSuccess": "当前文件已发送至已验证邮箱。",
+    "emailDocumentsFailed": "无法通过邮件发送文件。",
+    "changeEmail": "更改已验证邮箱",
+    "verifyNewEmail": "验证新邮箱",
+    "emailChangeSuccess": "如果更改符合条件，验证链接将发送至新邮箱。",
+    "emailChangeFailed": "无法发起邮箱更改请求。",
+    "communicationLanguage": "申请消息语言",
+    "localeChangeFailed": "无法更新消息语言，请重试。",
+    "localeLabels": {
+      "de": "德语",
+      "en": "英语",
+      "zh": "中文"
+    },
+    "withdraw": "撤回申请",
+    "confirmWithdraw": "确认撤回",
+    "withdrawDescription": "撤回后将立即终止申请人访问。新申请受冷却期和创建次数限制。",
+    "cancel": "取消",
+    "confirmWithdrawAction": "确认撤回",
+    "withdrawSuccess": "申请已撤回，此申请会话现已关闭。",
+    "withdrawFailed": "无法撤回申请，请重试。",
+    "leaveTitle": "要放弃未保存的更改吗？",
+    "leaveDescription": "您最近的编辑尚未保存到服务器。",
+    "saveAndLeave": "保存草稿并离开",
+    "leaveWithoutSaving": "不保存并离开",
+    "continueEditing": "继续编辑",
+    "saveLeaveFailed": "无法保存全部更改。您仍停留在此页面，相关更改尚未保存。",
+    "saveLeavePartialFailed": "申请信息已保存，但证明文件更改仍未保存。您仍停留在此页面。",
+    "saveLeaveProofPartialFailed": "证明文件更改已保存，但申请信息仍未保存。您仍停留在此页面。"
+  },
+  "setupDelivery": {
+    "sent": "密码设置邮件已发送。",
+    "failed": "审批已成功，但邮件发送失败。管理员可以重新签发。",
+    "uncertain": "审批已成功，但无法确认邮件是否送达，请谨慎重新签发。",
+    "notRequired": "审批已成功，现有账户密码继续有效。",
+    "reissue": "重新签发设置邮件",
+    "reissuing": "正在重新签发…",
+    "reissued": "新的设置邮件已发送，旧链接已失效。",
+    "reissueFailed": "无法重新签发设置邮件。"
+  },
+  "accountEstablishment": {
+    "deferred": "会员已建立。本次未发送密码设置邮件。",
+    "sent": "会员已建立，密码设置邮件已发送。",
+    "failed": "会员已建立，但邮件发送失败。",
+    "uncertain": "会员已建立，但无法确认邮件是否送达。",
+    "notRequired": "会员已建立，现有账户凭据继续有效。"
+  },
+  "setupReissue": {
+    "sent": "新的密码设置邮件已发送。",
+    "failed": "新的密码设置邮件未能送达。",
+    "uncertain": "无法确认新的密码设置邮件是否送达。",
+    "requestFailed": "无法重新签发密码设置邮件。"
+  },
+  "accountSetup": {
+    "header": "账户设置",
+    "state": {
+      "ready": "设置已完成",
+      "required": "需要完成设置",
+      "expired": "设置链接已过期"
+    },
+    "delivery": {
+      "sent": "当前设置邮件已发送",
+      "failed": "当前邮件发送失败",
+      "uncertain": "无法确认当前邮件是否送达",
+      "not_attempted": "当前没有发送结果"
+    },
+    "reissue": "重新签发设置邮件",
+    "reissuing": "正在重新签发…",
+    "reissueFor": "为{name}重新签发密码设置"
+  }
+}

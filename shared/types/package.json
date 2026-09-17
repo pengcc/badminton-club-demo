@@ -1,0 +1,55 @@
+{
+  "name": "@club/shared-types",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./api/*": {
+      "types": "./dist/api/*.d.ts",
+      "import": "./dist/api/*.js"
+    },
+    "./core/*": {
+      "types": "./dist/core/*.d.ts",
+      "import": "./dist/core/*.js"
+    },
+    "./domain/*": {
+      "types": "./dist/domain/*.d.ts",
+      "import": "./dist/domain/*.js"
+    },
+    "./view/*": {
+      "types": "./dist/view/*.d.ts",
+      "import": "./dist/view/*.js"
+    },
+    "./schemas": {
+      "types": "./dist/schemas/index.d.ts",
+      "import": "./dist/schemas/index.js"
+    },
+    "./schemas/*": {
+      "types": "./dist/schemas/*.d.ts",
+      "import": "./dist/schemas/*.js"
+    }
+  },
+  "private": true,
+  "scripts": {
+    "test": "vitest",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "build": "tsc -p tsconfig.json && tsc-alias -p tsconfig.json",
+    "lint": "biome lint src",
+    "lint:fix": "biome check --write src",
+    "typecheck": "tsc --noEmit -p tsconfig.json"
+  },
+  "dependencies": {
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "tsc-alias": "^1.9.0",
+    "typescript": "^5.9.3",
+    "vitest": "^4.1.10"
+  }
+}

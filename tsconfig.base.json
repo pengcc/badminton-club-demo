@@ -1,0 +1,23 @@
+{
+  "files": [],
+  "references": [
+    { "path": "shared/types" },
+    { "path": "apps/api" },
+    { "path": "apps/web" }
+  ],
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": ".",
+    "composite": true,
+    "paths": {
+      "@shared/*": ["shared/*"],
+      "@shared-types/*": ["shared/types/src/*"]
+    }
+  }
+}

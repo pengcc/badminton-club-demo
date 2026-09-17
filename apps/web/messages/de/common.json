@@ -1,0 +1,837 @@
+{
+  "showcase": {
+    "disclosure": "Portfolio-Demo mit fiktiven Beispieldaten. Keine aktuellen Vereinsangebote, Kontaktaufnahme oder Anmeldung zu realen Aktivitäten.",
+    "identity": "Diese nicht produktive Portfolio-Demo ist nicht die offizielle DCBV-Website.",
+    "legalPending": "Die endgültigen Angaben zum Betreiber und Datenschutz werden vor einer öffentlichen Veröffentlichung anhand verifizierter Fakten ergänzt. Diese vorläufige Information ist kein vollständiges Impressum und keine vollständige Datenschutzerklärung."
+  },
+  "club_name": "Badminton Club Demo",
+  "address": "Adresse",
+  "club_address_placeholder": "Fiktiver Demonstrationsort – keine Besuchsadresse",
+  "contact_info_placeholder": "demo@example.invalid",
+  "login": "Anmelden",
+  "register": "Registrieren",
+  "logout": "Abmelden",
+  "genderLabels": {
+    "male": "Männlich",
+    "female": "Weiblich",
+    "unknown": "Nicht angegeben"
+  },
+  "pagination": {
+    "range": "Einträge {start} bis {end} von {total}",
+    "rangeCompact": "{start}–{end} / {total}",
+    "perPage": "Einträge pro Seite:",
+    "perPageCompact": "Pro Seite",
+    "perPageLabel": "Einträge pro Seite",
+    "page": "Seite {current} von {total}",
+    "pageCompact": "{current} / {total}",
+    "previous": "Vorherige Seite",
+    "next": "Nächste Seite"
+  },
+  "birthdayPicker": {
+    "label": "Geburtsdatum",
+    "year": "Jahr",
+    "month": "Monat",
+    "day": "Tag",
+    "olderYears": "Frühere Jahre anzeigen",
+    "newerYears": "Spätere Jahre anzeigen"
+  },
+  "email": "E-Mail",
+  "home": "Startseite",
+  "dashboard": "Dashboard",
+  "about_us": "Über uns",
+  "training_time": "Trainingszeiten",
+  "trial_training": "Schnuppertraining",
+  "documents": "Unterlagen",
+  "documents_none": "Derzeit sind keine öffentlichen Unterlagen verfügbar.",
+  "documents_unavailable": "Die öffentlichen Unterlagen können derzeit nicht geladen werden.",
+  "document_version_date": "Stand: {date}",
+  "about_p1": "Badminton Club Demo",
+  "about_p2": "Portfolio-Demo mit fiktiven Beispieldaten. Keine aktuellen Vereinsangebote, Kontaktaufnahme oder Anmeldung zu realen Aktivitäten.",
+  "about_p3": "Portfolio-Demo mit fiktiven Beispieldaten. Keine aktuellen Vereinsangebote, Kontaktaufnahme oder Anmeldung zu realen Aktivitäten.",
+  "about_p4": "Portfolio-Demo mit fiktiven Beispieldaten. Keine aktuellen Vereinsangebote, Kontaktaufnahme oder Anmeldung zu realen Aktivitäten.",
+  "contact_p1": "Portfolio-Demo mit fiktiven Beispieldaten. Keine aktuellen Vereinsangebote, Kontaktaufnahme oder Anmeldung zu realen Aktivitäten.",
+  "contact_club": "Für Fragen zum Verein",
+  "contact_membership": "Für Schnuppertraining und Mitgliedsantrag",
+  "trial_p1": "Portfolio-Demo mit fiktiven Beispieldaten. Keine aktuellen Vereinsangebote, Kontaktaufnahme oder Anmeldung zu realen Aktivitäten.",
+  "trial_p2": "Eine gewählte Zeit ist nur eine unverbindliche Präferenz und keine Buchung.",
+  "membership_application": "Aufnahmeantrag",
+  "sepa_mandate": "SEPA Basis Lastschriftmandat",
+  "fee_regulation": "Beitragsordnung",
+  "statutes": "Satzung",
+  "imprint": "Impressum",
+  "privacy_policy": "Datenschutz",
+  "accessibility": {
+    "skipToContent": "Zum Hauptinhalt springen"
+  },
+  "monday": "Montag",
+  "tuesday": "Dienstag",
+  "wednesday": "Mittwoch",
+  "thursday": "Donnerstag",
+  "friday": "Freitag",
+  "saturday": "Samstag",
+  "sunday": "Sonntag",
+  "navigation": {
+    "home": "Startseite",
+    "about": "Über uns",
+    "training": "Trainingszeiten",
+    "trial": "Schnuppertraining",
+    "contact": "Kontakt",
+    "documents": "Dokumente",
+    "teams": "Mannschaften",
+    "activities": "Aktivitäten",
+    "join": "Mitmachen",
+    "language": "Sprache",
+    "openMenu": "Navigationsmenü öffnen",
+    "closeMenu": "Navigationsmenü schließen",
+    "menuTitle": "Navigation",
+    "discoveryLabel": "Navigation zur Vereinserkundung",
+    "discoveryMenuLabel": "Menü zur Vereinserkundung",
+    "languageSelector": "Sprache wählen",
+    "tryDemo": "Admin-Demo"
+  },
+  "userMenu": {
+    "title": "Kontomenü",
+    "close": "Kontomenü schließen",
+    "account": "Mein Konto",
+    "role": "Rolle: {role}"
+  },
+  "uiError": {
+    "title": "Etwas ist schiefgelaufen",
+    "description": "Dieser Inhalt konnte nicht angezeigt werden. Bitte versuchen Sie es erneut.",
+    "retry": "Erneut versuchen"
+  },
+  "homepage": {
+    "mainMessageUnavailable": "Die Willkommensnachricht des Vereins kann derzeit nicht geladen werden."
+  },
+  "seo": {
+    "home": {
+      "title": "Badminton Club Demo",
+      "description": "Badminton Club Demo: Portfolio-Demo mit fiktiven Beispieldaten. Keine aktuellen Vereinsangebote, Kontaktaufnahme oder Anmeldung zu realen Aktivitäten."
+    },
+    "teams": {
+      "title": "Mannschaften | Badminton Club Demo",
+      "description": "Badminton Club Demo: Portfolio-Demo mit fiktiven Beispieldaten. Keine aktuellen Vereinsangebote, Kontaktaufnahme oder Anmeldung zu realen Aktivitäten."
+    },
+    "activities": {
+      "title": "Aktivitäten | Badminton Club Demo",
+      "description": "Badminton Club Demo: Portfolio-Demo mit fiktiven Beispieldaten. Keine aktuellen Vereinsangebote, Kontaktaufnahme oder Anmeldung zu realen Aktivitäten."
+    },
+    "membership": {
+      "title": "Mitgliedschaft | Badminton Club Demo",
+      "description": "Badminton Club Demo: Portfolio-Demo mit fiktiven Beispieldaten. Keine aktuellen Vereinsangebote, Kontaktaufnahme oder Anmeldung zu realen Aktivitäten."
+    },
+    "tasterSession": {
+      "title": "Schnuppertraining | Badminton Club Demo",
+      "description": "Badminton Club Demo: Portfolio-Demo mit fiktiven Beispieldaten. Keine aktuellen Vereinsangebote, Kontaktaufnahme oder Anmeldung zu realen Aktivitäten."
+    },
+    "recruitment": {
+      "title": "Mannschaftssuche | Badminton Club Demo",
+      "description": "Badminton Club Demo: Portfolio-Demo mit fiktiven Beispieldaten. Keine aktuellen Vereinsangebote, Kontaktaufnahme oder Anmeldung zu realen Aktivitäten."
+    }
+  },
+  "visitUs": {
+    "title": "Besuchen Sie uns",
+    "openingHours": "Öffnungszeiten",
+    "none": "Derzeit sind keine öffentlichen Trainingsorte eingetragen.",
+    "unavailable": "Die Trainingsorte können derzeit nicht geladen werden.",
+    "introductionUnavailable": "Die Besuchsinformationen können derzeit nicht geladen werden.",
+    "locations": {
+      "main": {
+        "name": "Demo 1",
+        "address": "Fiktiver Demonstrationsort – keine Besuchsadresse"
+      },
+      "secondary": {
+        "name": "Demo 2",
+        "address": "Fiktiver Demonstrationsort – keine Besuchsadresse"
+      }
+    }
+  },
+  "updates": {
+    "title": "Ankündigungen",
+    "unavailable": "Ankündigungen können derzeit nicht geladen werden.",
+    "empty": {
+      "title": "Keine Ankündigungen",
+      "description": "Derzeit gibt es keine Ankündigungen."
+    },
+    "type": {
+      "info": "Info",
+      "important": "Wichtig",
+      "warning": "Warnung"
+    },
+    "externalLink": "Mehr erfahren",
+    "1": {
+      "title": "Neue Saison beginnt im September",
+      "content": "Für die kommende Saison, suchen wir derzeit nach starken Spieler:innen für unsere Mannschaften.",
+      "date": "01.08.2025"
+    },
+    "2": {
+      "title": "Schnuppertraining vor dem Besuch anfragen",
+      "content": "Bitte senden Sie vor einem Besuch eine Schnuppertraining-Anfrage. Eine gewählte Zeit ist nur eine Präferenz; ein Administrator meldet sich zur Abstimmung.",
+      "date": "01.09.2025"
+    }
+  },
+  "about": {
+    "title": "Über unseren Club",
+    "founded": "Gegründet {year}",
+    "unavailable": "Die Vereinsinformationen können derzeit nicht geladen werden."
+  },
+  "contact": {
+    "title": "Kontakt",
+    "subtitle": "Wir freuen uns von Ihnen zu hören",
+    "none": "Derzeit sind keine öffentlichen Kontaktwege verfügbar.",
+    "unavailable": "Die öffentlichen Kontaktwege können derzeit nicht geladen werden.",
+    "introductionUnavailable": "Die Kontakteinleitung kann derzeit nicht geladen werden.",
+    "general": {
+      "title": "Allgemeine Anfragen",
+      "description": "Für Informationen über den Club"
+    },
+    "membership": {
+      "title": "Mitgliedschaft & Schnuppertraining",
+      "description": "Für Schnuppertraining und Mitgliedsanträge"
+    },
+    "buttons": {
+      "trial_training": "Schnuppertraining anfragen",
+      "membership": "Mitglied werden"
+    }
+  },
+  "participation": {
+    "title": "Mitmachen",
+    "unavailable": "Weitere Informationen sind derzeit nicht verfügbar.",
+    "informationUnavailable": "Die öffentlichen Informationen können derzeit nicht geladen werden.",
+    "taster": {
+      "title": "Schnuppertraining",
+      "action": "Schnuppertraining anfragen",
+      "preparation": "Vorbereitung",
+      "guidance": "Teilnahmehinweise",
+      "followUp": "Wie es weitergeht",
+      "demoUnavailable": "Besucheranfragen sind in dieser öffentlichen Portfolio-Demo nicht verfügbar.",
+      "requestUnavailable": "Anfragen sind vorübergehend nicht verfügbar. Bitte versuche es später erneut."
+    },
+    "membership": {
+      "title": "Mitglied werden",
+      "action": "Mehr zur Mitgliedschaft"
+    },
+    "recruitment": {
+      "title": "In einer Mannschaft spielen",
+      "summary": "Du hast Spielerfahrung? Informiere dich über unsere Mannschaften und die Abstimmung eines Probetrainings.",
+      "action": "Zur Mannschaftssuche"
+    }
+  },
+  "recruitment": {
+    "eyebrow": "Wettkampf-Badminton in Berlin",
+    "title": "Spiele für eine unserer Mannschaften",
+    "unavailable": "Die Informationen zur Mannschaftssuche können gerade nicht geladen werden. Die Seite bleibt erreichbar; versuche es später erneut.",
+    "sectionUnavailable": "Diese Informationen können gerade nicht geladen werden.",
+    "status": {
+      "paused": "Die Mannschaftssuche ist derzeit pausiert",
+      "pausedDescription": "Diese Seite bleibt zur Information verfügbar, aktuell stimmen wir jedoch keine Mannschafts-Probetrainings ab."
+    },
+    "requirements": { "title": "Wen wir suchen" },
+    "teams": {
+      "title": "Unsere Mannschaften",
+      "empty": "Aktuell sind keine öffentlichen Mannschaftsinformationen verfügbar.",
+      "unavailable": "Mannschaftsinformationen können gerade nicht geladen werden.",
+      "detailLink": "Mannschaften im Detail ansehen"
+    },
+    "training": {
+      "title": "Trainingstage und -orte",
+      "empty": "Aktuell sind keine öffentlichen Trainingsorte eingetragen.",
+      "unavailable": "Trainingsorte können gerade nicht geladen werden.",
+      "contextNotice": "Dies sind reguläre Vereinstrainingstage, keine bestätigten Termine für ein Mannschafts-Probetraining. Die Details werden individuell abgestimmt.",
+      "detailLink": "Trainingsorte und -zeiten"
+    },
+    "contact": {
+      "channel": "Kontaktweg",
+      "wechatLabel": "WeChat / verantwortliche Person",
+      "wechatUnavailable": "Für diesen Kontakt ist derzeit kein QR-Code hinterlegt. Nutze bitte den E-Mail-Kanal.",
+      "emailLabel": "E-Mail",
+      "emailAction": "E-Mail senden",
+      "unavailable": "Der ausgewählte Kontakt für die Mannschaftssuche ist derzeit nicht verfügbar. Wir setzen nicht automatisch einen anderen Kontaktweg ein."
+    },
+    "process": {
+      "title": "Ablauf des Probetrainings",
+      "responsible": {
+        "title": "Verantwortliche Person kontaktieren",
+        "description": "Nimm über WeChat oder E-Mail Kontakt mit der verantwortlichen Person auf, stell dich kurz vor und bekunde dein Interesse an einem Probetraining."
+      },
+      "tryout": {
+        "title": "Probetraining vereinbaren",
+        "description": "Nachdem die verantwortliche Person deinen Hintergrund kennengelernt hat, vereinbart sie ein passendes Probetraining und die Teilnahme am Mannschaftstraining."
+      },
+      "evaluation": {
+        "title": "Einschätzung und Einstieg",
+        "description": "Nach Probetraining und Gespräch beurteilt das Trainerteam die sportliche Passung. Passt es für beide Seiten, kannst du der Mannschaft beitreten."
+      }
+    },
+    "closing": {
+      "title": "Wir freuen uns darauf, dich auf dem Feld zu treffen",
+      "description": "Gemeinsam spielen. Gemeinsam besser werden!"
+    }
+  },
+  "membershipInformation": {
+    "open": "Der Verein nimmt derzeit neue Mitgliedsanträge an.",
+    "closed": "Der Verein nimmt derzeit keine neuen Mitgliedsanträge an.",
+    "statusUnavailable": "Der aktuelle Aufnahmestatus kann derzeit nicht geladen werden.",
+    "types": "Mitgliedschaftsarten",
+    "path": "Weg zur Mitgliedschaft",
+    "preparation": "Vorbereitung des Antrags",
+    "studentProof": "Studierendennachweis",
+    "controlledApplication": "Der formelle Mitgliedsantrag bleibt kontrolliert und ist nicht als öffentliche Registrierung verfügbar.",
+    "recoveryLink": "Bestehenden Mitgliedsantrag ansehen",
+    "tasterLink": "Zum Schnuppertraining",
+    "contactLink": "Kontakt aufnehmen"
+  },
+  "emailChangeVerification": {
+    "loadingTitle": "E-Mail-Änderung wird bestätigt",
+    "loadingDescription": "Bitte warten Sie, während wir Ihre E-Mail-Änderung bestätigen.",
+    "successTitle": "E-Mail bestätigt",
+    "successDescription": "Ihre E-Mail-Adresse wurde erfolgreich aktualisiert.",
+    "newEmail": "Ihre neue E-Mail-Adresse",
+    "loginGuidance": "Sie können sich jetzt mit Ihrer neuen E-Mail-Adresse anmelden.",
+    "redirecting": "Sie werden in Kürze zu Ihrem Konto weitergeleitet.",
+    "accountAction": "Zum Konto",
+    "errorTitle": "Bestätigung fehlgeschlagen",
+    "errorDescription": "Wir konnten diese E-Mail-Änderung nicht bestätigen.",
+    "invalidGuidance": "Der Bestätigungslink ist möglicherweise ungültig oder abgelaufen.",
+    "retryGuidance": "Fordern Sie die E-Mail-Änderung in Ihrem Konto erneut an.",
+    "homeAction": "Zur Startseite"
+  },
+  "footer": {
+    "imprint": "Impressum",
+    "privacy": "Datenschutz",
+    "copyright": "Alle Rechte vorbehalten.",
+    "navigationLabel": "Rechtliche Informationen"
+  },
+  "applicationForm": {
+    "contactInfo": "Kontaktinformationen",
+    "personalInfo": "Persönliche Informationen",
+    "firstName": "Vorname",
+    "lastName": "Nachname",
+    "email": "E-Mail-Adresse",
+    "address": "Straße und Hausnummer",
+    "postalCode": "Postleitzahl",
+    "city": "Stadt",
+    "country": "Land",
+    "nationality": "Staatsangehörigkeit",
+    "phone": "Telefonnummer",
+    "birthday": "Geburtsdatum",
+    "gender": "Geschlecht",
+    "genderOptions": {
+      "female": "Weiblich",
+      "male": "Männlich",
+      "other": "Divers"
+    },
+    "membershipType": "Mitgliedschaftstyp",
+    "membershipTypeSelection": "Mitgliedschaftstyp auswählen",
+    "membershipTypes": {
+      "regular": "Reguläre Mitgliedschaft",
+      "student": "Studenten-Mitgliedschaft"
+    },
+    "sepaTitle": "SEPA-Lastschriftverfahren",
+    "addSEPADebit": "SEPA-Lastschriftinformationen hinzufügen",
+    "debitFrequency": "Zahlungsrhythmus",
+    "debitOptions": {
+      "quarterly": "Vierteljährlich",
+      "annually": "Jährlich"
+    },
+    "accountHolderNote": "Kontoinhaberangaben (falls abweichend vom Antragsteller):",
+    "accountHolderSelection": "Kontoinhaber-Informationen",
+    "accountHolderDetails": "Kontoinhaber-Details",
+    "accountHolderOptions": {
+      "same": "Antragsteller",
+      "different": "Andere Person als Kontoinhaber"
+    },
+    "accountHolderPreview": "Kontoinhaber-Informationen (basierend auf Antragstellerdaten):",
+    "accountHolderName": "Name",
+    "accountHolderFirstName": "Vorname des Kontoinhabers",
+    "accountHolderLastName": "Nachname des Kontoinhabers",
+    "accountHolderAddress": "Adresse des Kontoinhabers",
+    "bankName": "Name der Bank",
+    "bic": "BIC/Swift-Code",
+    "iban": "IBAN"
+  },
+  "validation": {
+    "required": "Dieses Feld ist erforderlich",
+    "email": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
+    "phone": "Bitte geben Sie eine gültige Telefonnummer ein",
+    "birthday": "Bitte geben Sie ein gültiges Datum ein (Mindestalter 14)",
+    "invalidIBAN": "Bitte geben Sie eine gültige deutsche IBAN ein",
+    "invalidName": "Bitte geben Sie einen gültigen Namen ein",
+    "minLength": "Name muss mindestens 2 Zeichen haben"
+  },
+  "pages": {
+    "membership": "Mitgliedsantrag",
+    "membershipInformation": "Mitgliedschaft",
+    "tasterSession": "Schnuppertraining",
+    "recruitment": "Mannschaftssuche",
+    "imprint": "Impressum"
+  },
+  "registrationAccess": {
+    "checking": "Registrierungszugang wird geprüft…",
+    "unavailableTitle": "Registrierungslink nicht verfügbar",
+    "unavailableDescription": "Dieser Registrierungslink fehlt, ist abgelaufen oder nicht mehr aktiv. Bitte fragen Sie den Verein nach einem aktuellen Link."
+  },
+  "registrationAccessAdmin": {
+    "title": "Kontrollierter Registrierungszugang",
+    "description": "Ein gemeinsamer Link gewährt Zugang zum Antragsformular. Jeder Antrag muss weiterhin administrativ genehmigt werden.",
+    "loading": "Registrierungslink wird geladen",
+    "loadFailed": "Der Status des Registrierungslinks konnte nicht geladen werden.",
+    "refreshFailed": "Der aktuelle Link konnte nicht aktualisiert werden. Der zuletzt geladene Stand bleibt sichtbar.",
+    "retry": "Erneut versuchen",
+    "status": "Aktueller Status",
+    "noLink": "Es wurde noch kein Link erstellt.",
+    "activeGeneration": "Aktuelle Version {generation}",
+    "expired": "Kein aktiver Link. Der vorherige Link ist abgelaufen.",
+    "expires": "Läuft ab: {date}",
+    "doesNotExpire": "Kein automatischer Ablauf",
+    "expiryLabel": "Gültigkeit",
+    "expiry30Days": "30 Tage",
+    "expiry90Days": "90 Tage",
+    "expiry180Days": "180 Tage",
+    "expiryNone": "Kein automatischer Ablauf",
+    "languageLabel": "Linksprache",
+    "generate": "Registrierungslink erstellen",
+    "rotate": "Link ungültig machen und neu erstellen",
+    "generated": "Registrierungslink erstellt",
+    "replaced": "Registrierungslink ersetzt",
+    "updateFailed": "Registrierungslink konnte nicht aktualisiert werden",
+    "currentLink": "Aktueller Registrierungslink",
+    "linkUnavailable": "Aktueller Link kann nicht angezeigt werden",
+    "linkUnavailableDescription": "Diese bestehende Version bleibt gültig, aber ihr vollständiger Link wurde nicht gespeichert. Ersetzen Sie sie nur, wenn Sie einen neuen abrufbaren Link benötigen.",
+    "copyLabel": "Registrierungslink kopieren",
+    "copied": "Link kopiert",
+    "copyFailed": "Link konnte nicht kopiert werden"
+  },
+  "tasterSession": {
+    "title": "Schnuppertraining anfragen",
+    "subtitle": "Erzählen Sie uns kurz von sich und wählen Sie, falls verfügbar, eine Wunschzeit. Ein Administrator meldet sich.",
+    "playerLevel": "Welche Beschreibung passt am besten?",
+    "levels": {
+      "beginner": {
+        "label": "Anfänger",
+        "description": "Ich bin neu im Badminton oder habe wenig Erfahrung."
+      },
+      "experienced": {
+        "label": "Erfahren",
+        "description": "Ich habe bereits regelmäßig Badminton gespielt."
+      }
+    },
+    "preference": {
+      "title": "Wunschzeit",
+      "nonBinding": "Dies ist nur eine unverbindliche Präferenz, keine Buchung oder bestätigte Teilnahme.",
+      "loading": "Aktuelle Präferenzen werden geladen…",
+      "loadFailed": "Die Präferenzen konnten nicht geladen werden.",
+      "retry": "Erneut versuchen",
+      "none": "Aktuell gibt es keine passende aktive Option. Sie können die Anfrage trotzdem absenden; ein Administrator meldet sich zur Abstimmung."
+    },
+    "form": {
+      "name": "Vollständiger Name",
+      "email": "E-Mail-Adresse",
+      "message": "Zusätzliche Nachricht (optional)",
+      "submit": "Anfrage absenden",
+      "submitting": "Wird gesendet..."
+    },
+    "validation": {
+      "required": "Dieses Feld ist erforderlich.",
+      "name": "Bitte geben Sie mindestens zwei Zeichen ein.",
+      "email": "Bitte geben Sie eine gültige E-Mail-Adresse ein."
+    },
+    "errors": {
+      "pendingExists": "Für diese E-Mail-Adresse gibt es bereits eine offene Anfrage. Ein Administrator meldet sich.",
+      "rateLimited": "Es wurden zu viele technische Anfragen gesendet. Bitte versuchen Sie es später erneut.",
+      "preferenceChanged": "Die Präferenzoptionen haben sich geändert. Prüfen Sie die aktuellen Optionen und senden Sie die Anfrage erneut.",
+      "generic": "Die Anfrage konnte nicht gesendet werden. Bitte versuchen Sie es erneut."
+    },
+    "success": {
+      "title": "Anfrage eingereicht",
+      "message": "Ihre Anfrage wurde gespeichert. Eine gewählte Zeit ist nur eine Präferenz; ein Administrator meldet sich.",
+      "submitAnother": "Eine weitere Anfrage senden"
+    },
+    "admin": {
+      "title": "Schnuppertraining-Anfragen",
+      "description": "Besucher nachverfolgen, ein endgültiges Ergebnis erfassen und die Warteschlange verwalten.",
+      "loading": "Anfragen werden geladen…",
+      "loadFailed": "Anfragen konnten nicht geladen werden.",
+      "retry": "Erneut versuchen",
+      "close": "Schließen",
+      "empty": "Keine passenden Anfragen.",
+      "actionConflict": "Diese Anfrage wurde geändert. Prüfen Sie den aktuellen Stand, bevor Sie es erneut versuchen.",
+      "actionFailed": "Die Aktion wurde nicht abgeschlossen. Aktualisieren Sie die Warteschlange und versuchen Sie es erneut.",
+      "retryFailed": "Die E-Mail-Wiederholung wurde nicht abgeschlossen. Aktualisieren Sie die Warteschlange und prüfen Sie den aktuellen Zustellstatus.",
+      "stats": {
+        "total": "Gesamt",
+        "pending": "Offen",
+        "invited": "Eingeladen",
+        "declined": "Abgelehnt",
+        "archived": "Archiviert"
+      },
+      "filters": {
+        "status": "Status",
+        "level": "Besucherkategorie",
+        "archive": "Archivfilter",
+        "all": "Alle",
+        "activeOnly": "Archivierte ausblenden",
+        "includeArchived": "Archivierte einschließen",
+        "archivedOnly": "Nur archivierte"
+      },
+      "levels": { "beginner": "Anfänger", "experienced": "Erfahren" },
+      "status": {
+        "pending": "Offen",
+        "invited": "Eingeladen",
+        "declined": "Abgelehnt"
+      },
+      "delivery": {
+        "not_requested": "Nicht angefordert",
+        "in_progress": "Wird gesendet",
+        "sent": "Gesendet",
+        "failed": "Fehlgeschlagen",
+        "uncertain": "Unklar"
+      },
+      "columns": {
+        "visitor": "Besucher",
+        "preference": "Präferenz",
+        "status": "Status",
+        "delivery": "E-Mail-Zustellung",
+        "actions": "Aktionen"
+      },
+      "nonBinding": "Unverbindliche Präferenz",
+      "noPreference": "Keine Präferenz; Zeit abstimmen",
+      "messageLabel": "Besuchernachricht",
+      "notesLabel": "Administratornotizen",
+      "archived": "Archiviert",
+      "retryEmail": "E-Mail wiederholen",
+      "uncertainRetryWarning": "Das Ergebnis des Anbieters ist unklar. Eine Wiederholung kann die E-Mail doppelt senden.",
+      "disposition": "Ergebnis setzen",
+      "archive": "Archivieren",
+      "unarchive": "Wiederherstellen",
+      "dispositionTitle": "Besuchergebnis erfassen",
+      "outcome": "Ergebnis",
+      "declineReason": "Ablehnungsgrund",
+      "declineReasons": {
+        "noCapacity": "Keine Kapazität",
+        "other": "Anderer Grund"
+      },
+      "declineReasonDetails": "Begründung",
+      "recipientLanguageGuidance": "Schreibe diese sichtbare Begründung für den Besucher auf {language}. Wenn eine Ergebnis-E-Mail gesendet wird, wird sie unverändert übernommen.",
+      "adminNotes": "Administratornotizen",
+      "adminNotesGuidance": "Nur intern. Diese Notizen werden nicht in die E-Mail an den Besucher aufgenommen.",
+      "sendEmail": "Ergebnis-E-Mail an den Besucher senden",
+      "terminalWarning": "Eingeladen und abgelehnt sind in diesem Schritt endgültig. Ein E-Mail-Fehler macht das Ergebnis nicht rückgängig.",
+      "saving": "Wird gespeichert…",
+      "confirm": "Ergebnis bestätigen"
+    }
+  },
+  "guestPlay": {
+    "title": "Gastspielanfrage",
+    "subtitle": "Bitten Sie um Erlaubnis, Freunde oder Familie zu einer Vereins-Spielzeit mitzubringen.",
+    "guestCount": "Anzahl der Gäste",
+    "selectSession": "Vereins-Spielzeit",
+    "permissionNotice": "Dies ist eine Erlaubnisanfrage, keine Buchung oder Garantie für Spielzeit.",
+    "form": {
+      "messageLabel": "Zusätzliche Nachricht (Optional)",
+      "messagePlaceholder": "Was sollte das Vereinsteam wissen?",
+      "selectPlaceholder": "Datum, Zeit und Ort auswählen",
+      "selectRequired": "Bitte wählen Sie eine Vereins-Spielzeit.",
+      "guestOption": "{count, plural, one {# Gast} other {# Gäste}}",
+      "submit": "Anfrage absenden",
+      "submitting": "Wird gesendet..."
+    },
+    "success": {
+      "description": "Ihre Erlaubnisanfrage wurde gespeichert. Der E-Mail-Versand erfolgt getrennt.",
+      "cancelled": "Ihre ausstehende Anfrage wurde storniert.",
+      "command": "Die Anfrage wurde aktualisiert.",
+      "retry": "Der erneute Versand wurde verarbeitet."
+    },
+    "status": {
+      "pending": "Ausstehend",
+      "approved": "Genehmigt",
+      "declined": "Abgelehnt",
+      "cancelled": "Storniert"
+    },
+    "myRequests": {
+      "title": "Meine Anfragen",
+      "subtitle": "Ihre eingereichten Erlaubnisanfragen",
+      "noRequests": "Sie haben noch keine Gästespiel-Anfragen eingereicht.",
+      "newRequest": "Neue Anfrage"
+    },
+    "states": {
+      "loadingOpportunities": "Vereins-Spielzeiten werden geladen...",
+      "noOpportunities": "In den nächsten 21 Tagen sind derzeit keine Gastspielmöglichkeiten verfügbar.",
+      "loadingRequests": "Gastspielanfragen werden geladen...",
+      "staleRequests": "Die zuletzt gespeicherten Ergebnisse werden angezeigt; die Aktualisierung ist fehlgeschlagen."
+    },
+    "errors": {
+      "opportunities": "Vereins-Spielzeiten konnten nicht geladen werden.",
+      "requests": "Gastspielanfragen konnten nicht geladen werden.",
+      "submit": "Die Anfrage konnte nicht eingereicht werden.",
+      "cancel": "Die Anfrage konnte nicht storniert werden. Bitte aktualisieren und erneut versuchen.",
+      "command": "Die Aktion konnte nicht abgeschlossen werden. Bitte aktualisieren und erneut versuchen.",
+      "conflict": "Die Anfrage wurde inzwischen geändert. Der aktuelle Stand wurde neu geladen. Bitte prüfen Sie ihn vor einem erneuten Versuch."
+    },
+    "actions": {
+      "retry": "Erneut versuchen",
+      "close": "Schließen",
+      "details": "Details",
+      "cancelRequest": "Anfrage stornieren",
+      "approve": "Genehmigen",
+      "decline": "Ablehnen",
+      "correctToApproved": "Auf genehmigt korrigieren",
+      "correctToDeclined": "Auf abgelehnt korrigieren",
+      "archive": "Archivieren",
+      "restore": "Wiederherstellen",
+      "retryDelivery": "E-Mail erneut senden"
+    },
+    "admin": {
+      "title": "Gastspielanfragen",
+      "subtitle": "Erlaubnisanfragen und Versandstatus prüfen.",
+      "all": "Alle Ergebnisse",
+      "active": "Aktive Einträge",
+      "archived": "Archiviert",
+      "empty": "Keine Anfragen entsprechen den Filtern.",
+      "search": "Nach Name oder E-Mail suchen",
+      "statusFilter": "Ergebnisfilter",
+      "archiveFilter": "Archivfilter",
+      "detailsTitle": "Details der Gastspielanfrage",
+      "requestDetails": "Anfragedetails",
+      "member": "Mitglied",
+      "status": "Ergebnis",
+      "actions": "Administratoraktionen",
+      "internalNotes": "Interne Administratornotizen",
+      "correctionReason": "Erforderlicher Korrekturgrund",
+      "pastApprovalBlocked": "Eine Genehmigung ist nicht möglich, weil die angefragte Zeit vorbei ist.",
+      "notifications": "E-Mail-Versand",
+      "attempts": "{count, plural, one {# Versuch} other {# Versuche}}",
+      "deliveryWarning": "Der Versand ist fehlgeschlagen oder ungewiss; die fachliche Aktion bleibt erfolgreich.",
+      "stats": {
+        "total": "Gesamt",
+        "pending": "Ausstehend",
+        "approved": "Genehmigt",
+        "declined": "Abgelehnt",
+        "cancelled": "Storniert",
+        "archived": "Archiviert"
+      },
+      "notificationKinds": {
+        "memberReceipt": "Eingangsbestätigung",
+        "administratorAlert": "Administratorhinweis",
+        "decisionEmail": "Entscheidungs-E-Mail"
+      },
+      "notificationStatus": {
+        "not_attempted": "Nicht versucht",
+        "not_configured": "Nicht konfiguriert",
+        "sending": "Wird gesendet",
+        "sent": "Gesendet",
+        "failed": "Fehlgeschlagen",
+        "uncertain": "Ungewiss"
+      }
+    }
+  },
+  "errors": {
+    "404": "Seite nicht gefunden",
+    "500": "Interner Serverfehler",
+    "network": "Netzwerkfehler",
+    "unauthorized": "Unbefugter Zugriff",
+    "forbidden": "Zugriff verweigert"
+  },
+  "player": {
+    "skillLevel": "Spielstärke",
+    "skillLevels": {
+      "beginner": "Anfänger",
+      "intermediate": "Fortgeschritten",
+      "advanced": "Erfahren",
+      "professional": "Profi"
+    },
+    "positions": {
+      "singles": "Einzel",
+      "doubles": "Doppel",
+      "mixed-doubles": "Mixed-Doppel"
+    },
+    "roles": {
+      "player": "Spieler",
+      "captain": "Kapitän",
+      "vice-captain": "Vize-Kapitän"
+    },
+    "ranking": "Ranking",
+    "availability": "Verfügbarkeit",
+    "isActive": "Aktiver Spieler",
+    "teamAffiliations": "Team-Mitgliedschaften"
+  },
+  "team": {
+    "teamType": "Team-Typ",
+    "teamTypes": {
+      "competitive": "Wettkampf",
+      "recreational": "Freizeit",
+      "youth": "Jugend",
+      "mixed": "Gemischt"
+    },
+    "maxMembers": "Maximale Mitglieder",
+    "captain": "Kapitän",
+    "viceCaptain": "Vize-Kapitän",
+    "members": "Mitglieder",
+    "description": "Beschreibung"
+  },
+  "teams": {
+    "pageTitle": "Unsere Mannschaften",
+    "matchLevel": "Spielklasse",
+    "noTeams": "Keine Mannschaften verfügbar.",
+    "unavailable": "Die Mannschaften können derzeit nicht geladen werden.",
+    "introductionUnavailable": "Die Mannschaftseinleitung kann derzeit nicht geladen werden.",
+    "recruitment": {
+      "title": "Interesse an Wettkampf-Badminton?",
+      "description": "Informiere dich über unsere vereinsweite Mannschaftssuche und die Abstimmung eines Probetrainings.",
+      "action": "Mannschaftssuche ansehen"
+    }
+  },
+  "activities": {
+    "pageTitle": "Aktivitäten",
+    "noActivities": "Keine Aktivitäten verfügbar.",
+    "unavailable": "Aktivitäten können derzeit nicht geladen werden.",
+    "watchVideo": "Video ansehen",
+    "openImage": "Bild {number} zu {name} öffnen",
+    "lightboxTitle": "Bildergalerie zu {name}",
+    "lightboxImage": "{name}, Bild {number} von {total}",
+    "closeGallery": "Bildergalerie schließen",
+    "previousImage": "Vorheriges Bild",
+    "nextImage": "Nächstes Bild",
+    "pagination": "Aktivitäten-Seiten",
+    "page": "Seite {page}",
+    "pageStatus": "Seite {page} von {total}",
+    "pageOutOfRange": "Seite {page} ist nicht verfügbar.",
+    "returnToAvailable": "Verfügbare Aktivitäten anzeigen",
+    "previous": "Zurück",
+    "next": "Weiter"
+  },
+  "membershipApplicant": {
+    "verifyTitle": "E-Mail-Adresse bestätigen",
+    "accessTitle": "Mitgliedsantrag ansehen",
+    "emailPrivacy": "Ein einmalig verwendbarer E-Mail-Link schützt Ihren gespeicherten Antrag.",
+    "email": "E-Mail-Adresse",
+    "send": "Sicheren Link senden",
+    "sending": "Wird gesendet…",
+    "requestFailed": "Der sichere Link konnte nicht angefordert werden. Bitte versuchen Sie es erneut.",
+    "retry": "Erneut versuchen",
+    "sent": "Wenn die Anfrage berechtigt ist, erhalten Sie in Kürze einen einmalig verwendbaren Link. Er läuft nach 30 Minuten ab.",
+    "title": "Mitgliedsantrag",
+    "status": "Status: {status}",
+    "statusLabels": {
+      "draft": "Entwurf",
+      "pending": "In Prüfung",
+      "approved": "Genehmigt",
+      "rejected": "Abgelehnt",
+      "withdrawn": "Zurückgezogen"
+    },
+    "loading": "Antrag wird geladen…",
+    "sessionInvalid": "Diese Zugriffssitzung ist ungültig oder abgelaufen. Fordern Sie einen neuen Link an.",
+    "accessOpening": "Ihr Antrag wird geöffnet…",
+    "accessInvalid": "Dieser einmalig verwendbare Link ist ungültig oder abgelaufen. Fordern Sie auf der Mitgliedschaftsseite einen neuen Link an.",
+    "retentionNotice": "Datenschutz: Inaktive Entwürfe werden nach 30 Tagen gelöscht. Eingereichte Anträge bleiben während der Prüfung erhalten; genehmigte, abgelehnte oder zurückgezogene Anträge und private Nachweise werden nach 90 Tagen gelöscht. Mitgliedskonto, Bankdaten und Einrichtungsnachweis genehmigter Mitglieder bleiben davon getrennt.",
+    "personal": "Persönliche Angaben",
+    "verifiedEmail": "Bestätigte E-Mail-Adresse",
+    "select": "Auswählen…",
+    "germany": "Deutschland",
+    "motivation": "Motivation",
+    "banking": "Bankdaten",
+    "addBank": "Bankdaten jetzt hinzufügen",
+    "removeBank": "Gespeicherte Bankdaten entfernen",
+    "frequency": "Abbuchungshäufigkeit",
+    "quarterly": "Vierteljährlich",
+    "annually": "Jährlich",
+    "bankLater": "Sie können den Antrag ohne Bankdaten absenden und diese während der Prüfung nachreichen. Vollständige Bankdaten sind vor der Genehmigung erforderlich.",
+    "requiredToSubmit": "Zum Absenden erforderlich",
+    "optional": "Optional",
+    "missingRequiredCount": "{count, plural, one {# Pflichtfeld fehlt noch} other {# Pflichtfelder fehlen noch}}",
+    "fieldNeedsCorrection": "Prüfen Sie diese Angabe.",
+    "decision": "Entscheidung",
+    "save": "Speichern",
+    "saveSuccess": "Auf dem Server gespeichert. Sie können später sicher fortfahren.",
+    "saveFailed": "Speichern fehlgeschlagen. Ihre Änderungen sind weiterhin ungespeichert.",
+    "submit": "Antrag absenden",
+    "submitSuccess": "Der Antrag wurde zur Prüfung eingereicht. Während der Prüfung können Sie ihn noch korrigieren.",
+    "submitFailed": "Absenden fehlgeschlagen. Vervollständigen Sie alle erforderlichen persönlichen Angaben und die Mitgliedschaftsart.",
+    "submitNeedsCorrection": "Der Antrag muss korrigiert werden. Prüfen Sie die markierten Felder.",
+    "proofTitle": "Studierendennachweis",
+    "proofGuidance": "Der Nachweis ist beim Absenden optional, sollte aber zeitnah eingereicht werden. Ein fehlender Nachweis kann die Prüfung verzögern. Laden Sie höchstens zwei PDF-, JPEG- oder PNG-Dateien mit jeweils bis zu 10 MB hoch. HEIC wird nicht unterstützt; konvertieren Sie die Datei zuerst.",
+    "proofRemove": "Entfernen",
+    "proofSize": "{size} KB",
+    "proofSave": "Nachweisdateien speichern",
+    "proofSaveSuccess": "Die Nachweisdateien wurden privat gespeichert.",
+    "proofSaveFailed": "Der Nachweis konnte nicht hochgeladen werden. Verwenden Sie höchstens zwei PDF-, JPEG- oder PNG-Dateien mit jeweils bis zu 10 MB.",
+    "documentsTitle": "Aktuelle Dokumente",
+    "documentsGuidance": "Dokumente werden aus den zuletzt gespeicherten Daten erzeugt und nicht vom Verein gespeichert.",
+    "receiptReset": "Gespeicherte Änderungen haben ein zuvor erhaltenes unterschriebenes Dokument ungültig gemacht. Erzeugen, unterschreiben und übermitteln Sie das betroffene Dokument erneut.",
+    "downloadApplication": "Antrags-PDF herunterladen",
+    "downloadSepa": "SEPA-PDF herunterladen",
+    "documentGenerateFailed": "Das aktuelle Dokument konnte nicht erzeugt werden. Speichern Sie vollständige Daten und versuchen Sie es erneut.",
+    "emailCurrentDocuments": "Aktuelle PDFs an {email} senden",
+    "applicationDocument": "Mitgliedsantrag",
+    "sepaDocument": "SEPA-Mandat",
+    "emailSelectedDocuments": "Ausgewählte PDFs senden",
+    "emailDocumentsSuccess": "Die aktuellen Dokumente wurden an die bestätigte E-Mail-Adresse gesendet.",
+    "emailDocumentsFailed": "Die Dokumente konnten nicht per E-Mail gesendet werden.",
+    "changeEmail": "Bestätigte E-Mail-Adresse ändern",
+    "verifyNewEmail": "Neue E-Mail bestätigen",
+    "emailChangeSuccess": "Wenn die Änderung zulässig ist, wird ein Bestätigungslink an die neue Adresse gesendet.",
+    "emailChangeFailed": "Die Änderung der E-Mail-Adresse konnte nicht gestartet werden.",
+    "communicationLanguage": "Sprache für Nachrichten zum Antrag",
+    "localeChangeFailed": "Die Nachrichtensprache konnte nicht geändert werden. Bitte versuchen Sie es erneut.",
+    "localeLabels": {
+      "de": "Deutsch",
+      "en": "Englisch",
+      "zh": "Chinesisch"
+    },
+    "withdraw": "Antrag zurückziehen",
+    "confirmWithdraw": "Rücknahme bestätigen",
+    "withdrawDescription": "Dies beendet den Zugriff sofort. Für einen neuen Antrag gelten Wartezeit und Erstellungslimits.",
+    "cancel": "Abbrechen",
+    "confirmWithdrawAction": "Ja, zurückziehen",
+    "withdrawSuccess": "Der Antrag wurde zurückgezogen. Diese Antragssitzung ist jetzt geschlossen.",
+    "withdrawFailed": "Der Antrag konnte nicht zurückgezogen werden. Bitte versuchen Sie es erneut.",
+    "leaveTitle": "Seite mit ungespeicherten Änderungen verlassen?",
+    "leaveDescription": "Ihre letzten Änderungen wurden noch nicht auf dem Server gespeichert.",
+    "saveAndLeave": "Entwurf speichern und verlassen",
+    "leaveWithoutSaving": "Ohne Speichern verlassen",
+    "continueEditing": "Weiter bearbeiten",
+    "saveLeaveFailed": "Nicht alle Änderungen konnten gespeichert werden. Sie bleiben auf dieser Seite; Ihre Änderungen sind weiterhin ungespeichert.",
+    "saveLeavePartialFailed": "Die Antragsdaten wurden gespeichert, aber die Nachweisänderungen sind weiterhin ungespeichert. Sie bleiben auf dieser Seite.",
+    "saveLeaveProofPartialFailed": "Die Nachweisänderungen wurden gespeichert, aber die Antragsdaten sind weiterhin ungespeichert. Sie bleiben auf dieser Seite."
+  },
+  "setupDelivery": {
+    "sent": "Die E-Mail zur Passworteinrichtung wurde gesendet.",
+    "failed": "Die Aufnahme war erfolgreich, aber die E-Mail konnte nicht gesendet werden. Eine erneute Ausstellung ist möglich.",
+    "uncertain": "Die Aufnahme war erfolgreich, der E-Mail-Versand konnte jedoch nicht bestätigt werden.",
+    "notRequired": "Die Aufnahme war erfolgreich. Das bestehende Passwort bleibt gültig.",
+    "reissue": "Einrichtungs-E-Mail neu ausstellen",
+    "reissuing": "Wird neu ausgestellt…",
+    "reissued": "Eine neue Einrichtungs-E-Mail wurde gesendet; der vorherige Link ist ungültig.",
+    "reissueFailed": "Die Einrichtungs-E-Mail konnte nicht neu ausgestellt werden."
+  },
+  "accountEstablishment": {
+    "deferred": "Mitglied eingerichtet. Jetzt wurde keine E-Mail zur Passworteinrichtung gesendet.",
+    "sent": "Das Mitglied wurde angelegt und die E-Mail zur Passworteinrichtung gesendet.",
+    "failed": "Das Mitglied wurde angelegt, aber die E-Mail konnte nicht gesendet werden.",
+    "uncertain": "Das Mitglied wurde angelegt, aber der E-Mail-Versand konnte nicht bestätigt werden.",
+    "notRequired": "Das Mitglied wurde angelegt. Die bestehenden Zugangsdaten bleiben gültig."
+  },
+  "setupReissue": {
+    "sent": "Eine neue E-Mail zur Passworteinrichtung wurde gesendet.",
+    "failed": "Die neue E-Mail zur Passworteinrichtung konnte nicht zugestellt werden.",
+    "uncertain": "Der Versand der neuen E-Mail zur Passworteinrichtung konnte nicht bestätigt werden.",
+    "requestFailed": "Die E-Mail zur Passworteinrichtung konnte nicht neu ausgestellt werden."
+  },
+  "accountSetup": {
+    "header": "Kontoeinrichtung",
+    "state": {
+      "ready": "Einrichtung abgeschlossen",
+      "required": "Einrichtung erforderlich",
+      "expired": "Einrichtungslink abgelaufen"
+    },
+    "delivery": {
+      "sent": "Aktuelle Einrichtungs-E-Mail gesendet",
+      "failed": "Aktuelle Zustellung fehlgeschlagen",
+      "uncertain": "Aktuelle Zustellung unbestätigt",
+      "not_attempted": "Kein aktuelles Zustellergebnis"
+    },
+    "reissue": "Einrichtungs-E-Mail neu ausstellen",
+    "reissuing": "Wird neu ausgestellt…",
+    "reissueFor": "Passworteinrichtung für {name} neu ausstellen"
+  }
+}

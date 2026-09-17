@@ -1,0 +1,68 @@
+{
+  "name": "badminton-club-demo",
+  "version": "1.0.0",
+  "description": "Curated badminton club application demo",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "bootstrap:local-env": "node .repo-tools/scripts/bootstrap-local-env.mjs",
+    "dev": "node .repo-tools/scripts/dev-session.mjs",
+    "dev:api": "pnpm --filter @club/api dev",
+    "dev:status": "node .repo-tools/scripts/dev-session-control.mjs --mode status",
+    "dev:web": "pnpm --filter @club/web dev",
+    "build": "pnpm --filter @club/shared-types build && pnpm --filter @club/api build && pnpm --filter @club/web build",
+    "build:api": "pnpm --filter @club/api build",
+    "build:web": "pnpm --filter @club/web build",
+    "build:types": "pnpm --filter @club/shared-types build",
+    "clean:deep": "pnpm -r exec rm -rf dist .next tsconfig.tsbuildinfo node_modules/.cache 2> /dev/null || true",
+    "clean": "pnpm -r exec rm -rf dist .next tsconfig.tsbuildinfo 2> /dev/null || true",
+    "build:fresh": "pnpm clean && pnpm build",
+    "build:deep": "pnpm clean:deep && pnpm build",
+    "start:api": "pnpm --filter @club/api start",
+    "start:web": "pnpm --filter @club/web start",
+    "start": "pnpm -r --parallel --filter \"@club/api\" --filter \"@club/web\" start",
+    "lint": "biome lint .",
+    "format": "biome format --write .",
+    "check": "biome check .",
+    "check:write": "biome check --write .",
+    "typecheck": "pnpm --filter @club/shared-types exec rm -rf dist tsconfig.tsbuildinfo && pnpm build:types && pnpm -r --if-present typecheck",
+    "test:web": "pnpm --filter @club/web test",
+    "test:api": "pnpm --filter @club/api test",
+    "seed:data": "pnpm --filter @club/api seed:data",
+    "db:reset": "pnpm --filter @club/api db:reset",
+    "audit:showcase-public-content": "pnpm --filter @club/api audit:showcase-public-content",
+    "reconcile:showcase-public-content": "pnpm --filter @club/api reconcile:showcase-public-content",
+    "bootstrap:fresh-public-demo": "pnpm --filter @club/api bootstrap:fresh-public-demo",
+    "bootstrap:production-content": "pnpm --filter @club/api bootstrap:production-content",
+    "bootstrap:super-admin": "pnpm --filter @club/api bootstrap:super-admin",
+    "recover:super-admin": "pnpm --filter @club/api recover:super-admin",
+    "recover:dev-api": "node .repo-tools/scripts/dev-session-control.mjs --mode recover",
+    "local:production": "node .repo-tools/scripts/local-production.mjs start",
+    "local:production:down": "node .repo-tools/scripts/local-production.mjs down",
+    "validate:delivery": "pnpm validate && pnpm test:persistence",
+    "pr:open-or-update": "node .repo-tools/scripts/repository-publication.mjs --mode pr-open-or-update",
+    "pr:merge": "node .repo-tools/scripts/repository-publication.mjs --mode pr-merge",
+    "safety:guard": "node .repo-tools/scripts/safety-guard.mjs",
+    "validate": "pnpm check && pnpm typecheck && pnpm test && FRONTEND_URL=${FRONTEND_URL:-http://localhost:3000} pnpm build",
+    "test": "pnpm test:workspace && pnpm test:repo-tools",
+    "test:workspace": "pnpm --filter @club/shared-types test --run && pnpm --filter @club/web test --run && pnpm --filter @club/api test --run --project ordinary",
+    "test:persistence": "MONGO_TEST_SERVER_MODE=${MONGO_TEST_SERVER_MODE:-testcontainers} pnpm --filter @club/api test --run --project persistence",
+    "test:repo-tools": "node --test \".repo-tools/scripts/**/*.test.mjs\"",
+    "check:runtime-readiness": "pnpm --filter @club/api check:runtime-readiness",
+    "mongo:docker:start": "docker compose -f .repo-tools/development/compose.mongo.yml up --wait --wait-timeout 75 mongo-rs"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.5.3"
+  },
+  "engines": {
+    "node": ">=24.0.0 <25",
+    "pnpm": ">=10.0.0"
+  },
+  "pnpm": {
+    "overrides": {
+      "@types/react": "19.2.17",
+      "@types/react-dom": "19.2.3",
+      "zod": "4.4.3"
+    }
+  }
+}

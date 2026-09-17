@@ -1,0 +1,2 @@
+export const ORDINARY_AUTH_SESSION_COOKIE = 'club_session';
+export const SESSION_INVALID_ERROR_CODE = 'SESSION_INVALID';

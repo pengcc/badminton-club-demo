@@ -1,0 +1,5 @@
+# Private release-source governance; public development tooling remains included.
+/.codex/ export-ignore
+/.project/ export-ignore
+/AGENTS.md export-ignore
+/.repo-tools/scripts/agent-hooks/ export-ignore
