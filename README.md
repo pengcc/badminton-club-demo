@@ -24,7 +24,7 @@ Canonical demo records remain protected; temporary editing is limited to scratch
 Matches. Account/security, private-data, and side-effecting actions are deliberately restricted by
 the API. The retained application is broader than this Demo Admin surface.
 
-**Hosted demo:** the verified live URL will be added here after deployment acceptance.
+**Hosted demo:** https://p01--badminton-demo-web--dq4xzclzf7zm.code.run/
 
 Once available, open the hosted site, choose **Try the admin demo**, then use **Fill demo
 credentials** on Login. Explore **Members / Matches / Content**. Optionally start the 30-minute
