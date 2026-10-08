@@ -88,6 +88,8 @@ function administratorTermination(
 describe('membership termination workflows', () => {
   beforeEach(() => {
     vi.clearAllMocks();
+    vi.useFakeTimers({ toFake: ['Date'] });
+    vi.setSystemTime(new Date('2026-08-15T12:00:00.000Z'));
     HTMLElement.prototype.hasPointerCapture = () => false;
     HTMLElement.prototype.setPointerCapture = () => {};
     HTMLElement.prototype.releasePointerCapture = () => {};
@@ -108,6 +110,10 @@ describe('membership termination workflows', () => {
       isError: false,
       refetch: vi.fn(),
     });
+  });
+
+  afterEach(() => {
+    vi.useRealTimers();
   });
 
   it('shows an open member request and removes duplicate submission', () => {

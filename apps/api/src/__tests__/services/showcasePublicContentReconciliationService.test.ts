@@ -80,7 +80,10 @@ describe('Showcase public-content operator input and defaults', () => {
         (_, index) => `0a0a0a0a-0000-4000-8000-00000000000${index + 1}`
       )
     );
-    for (const row of locations) expect(row.imageUrl).toBe('');
+    expect(locations.map((row) => row.imageUrl)).toEqual([
+      '/images/location-tu.jpeg',
+      '/images/location-pu.jpeg',
+    ]);
     expect(
       JSON.stringify([
         defaults,
